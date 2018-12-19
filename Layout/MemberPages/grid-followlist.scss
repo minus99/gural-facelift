@@ -1,0 +1,220 @@
+/*
+ * Default
+ ========================================================================== */
+.ems-member-page {
+    .ems-page-default-follow-list {
+        padding: 20px 0;
+        
+        >.page-top-title>span {
+            border-bottom: 0;
+        }
+
+        .report-holder {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+    }
+
+    .ems-page-default-follow-list-empty,
+    .ems-page-order-empty,
+    .ems-page-coupon-empty {
+        .img {
+            img {
+                max-width: 160px;
+                margin-bottom: 20px;
+            }
+        }
+
+        >.page-top-title>span {
+            border-bottom: 1px solid #dcdcdc;
+        }
+
+        .ems-tab-grids .navigation-js {
+            display: none;
+        }
+    }
+
+    .ems-grid-default-follow-price,
+    .ems-grid-default-stock,
+    .ems-grid-default-coupons {
+        .ems-grid-row {
+            position: relative;
+            padding: 16px 40px 16px 100px;
+            min-height: 105px;
+
+            .ems-grid-select {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                top: 50%;
+                left: 0;
+                margin-top: -10px;
+            }
+
+            .ems-grid-name {
+                a {
+                    font-size: 15px;
+                    line-height: 20px;
+                    letter-spacing: 0;
+                }
+            }
+
+            .ems-grid-date {
+                &:empty {
+                    &:before {
+                        content: '-';
+                    }
+                }
+            }
+
+            .ems-grid-img {
+                position: absolute;
+                top: 50%;
+                left: 25px;
+                margin-top: -38px;
+                width: 60px;
+                height: 75px;
+
+                a[id$="imageHref"] {
+                    display: none;
+                }
+
+                a img {
+                    width: 60px;
+                }
+            }
+
+            .ems-grid-price {
+                font-family: $brandon;
+                font-weight: 700;
+                font-size: 18px;
+                color: #000000;
+
+                &:before {
+                    content: "₺";
+                    font-family: arial;
+                    font-size: 16px;
+                    font-weight: 700;
+                    letter-spacing: 0;
+                    margin-right: -3px;
+                }
+            }
+
+            .ems-grid-remove {
+                position: absolute;
+                top: 10px;
+                right: 0;
+            }
+        }
+    }
+}
+
+
+/*
+ * Media Query
+ ========================================================================== */
+@supports (grid-area: auto) {
+    .ems-member-page {
+        @media screen and (min-width: $breakpoint-medium) {
+            .ems-page-default-follow-list {
+                padding: 0 30px 0 30px;
+
+                .report-holder {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+
+            .ems-grid-default-follow-price,
+            .ems-grid-default-stock,
+            .ems-grid-default-coupons {
+                margin-top: 20px;
+
+                .ems-grid-header:first-child {
+                    display: grid;
+                    grid-template-rows: minmax(0, auto);
+                    grid-template-columns: 40px 80px 1fr 1fr 1fr 60px;
+                    grid-gap: 10px;
+                    padding-top: 7px;
+                    padding-bottom: 7px;
+                    border-bottom: 1px solid $alto;
+                    background: $wildSand;
+                    padding-left: 10px;
+                    padding-right: 10px;
+
+                    >div {
+                        span {
+                            font-family: $proxima;
+                            font-weight: 600;
+                            color: $dustyGray;
+                            font-size: 12px;
+                        }
+
+                        &.ems-grid-img,
+                        &.ems-grid-remove {
+                            span {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                .ems-grid-row {
+                    grid-template-columns: 40px 80px 1fr 1fr 1fr 50px;
+                    grid-gap: 10px;
+                    padding: 10px 10px;
+                    min-height: inherit;
+
+                    .ems-grid-select {
+                        position: inherit;
+                        top: inherit;
+                        left: inherit;
+                        margin-top: 0;
+                    }
+
+                    .ems-grid-name {
+                        a {
+                            font-size: 12px;
+                            line-height: 18px;
+                            letter-spacing: 0.3px;
+                        }
+                    }
+
+                    .ems-grid-img {
+                        position: inherit;
+                        top: inherit;
+                        left: inherit;
+                        margin-top: inherit;
+                        width: inherit;
+                        height: inherit;
+
+                        a img {
+                            width: 80px;
+                        }
+                    }
+
+                    .ems-grid-remove {
+                        position: inherit;
+                        top: inherit;
+                        right: inherit;
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            .ems-grid-default-coupons {
+
+                .ems-grid-header:first-child,
+                .ems-grid-row {
+                    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                }
+
+                .ems-grid-row {
+                    min-height: 75px;
+                }
+            }
+        }
+    }
+}

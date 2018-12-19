@@ -1,0 +1,82 @@
+// Name:            Homepage Banner
+// Description:     
+//
+// ========================================================================
+
+// Banner Button Mobile
+// ========================================================================
+.btn-mobile-banner{
+    padding: 10px 16px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+
+    font-size: 16px;
+    line-height: 18px;
+    border: 1px solid $wildSand;
+    font-weight: 600;
+    span{
+        margin-left: auto;
+    }
+    i{
+        margin-left: auto;
+        font-size: 13px;
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+// Homepage Banner
+// ========================================================================
+.hp-banner-holder{
+}
+.hp-banner-item{
+    margin-bottom: 30px;
+}
+.hp-banner-content{
+    background-color: $wildSand;
+    .hp-title{
+        color: $white;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 22px;
+
+        position: absolute;
+        left: 15px;
+        top: 15px;
+    }
+    .hp-img{
+        font-size: 0;
+    }
+}
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        // Homepage Banner
+        // ========================================================================
+        .hp-banner-holder{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .hp-banner-item{
+            margin-bottom: 0px;
+            width: calc((100% - 30px) / 2);
+        }
+        .hp-banner-content{
+            .hp-title{
+                left: 30px;
+                top: 30px;
+            }
+            .hp-button{
+                position: absolute;
+                left: 30px;
+                bottom: 30px;
+                z-index: 10;
+            }
+        }
+
+
+    }
+}

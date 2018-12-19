@@ -1,0 +1,33 @@
+.flormar-main > *{ grid-area: NNN; }
+
+/* Top Bar */
+.top-bar{ grid-area: TBR !important; }
+
+/* Header */
+header{ grid-area: HDR !important; }
+
+/* Aside Menü */
+aside{ grid-area: ASD !important; }
+
+/* Main */
+main{ grid-area: MAI !important; }
+
+/* Footer */
+footer{ grid-area: FTR !important; }
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        
+        .flormar-main {
+            display: grid;
+            grid-template-columns: minmax(40px, 1fr) 1fr 70px;
+            grid-template-rows: 40px 70px minmax(calc(100vh - 110px), auto) minmax(0, auto);
+            grid-template-areas: 
+                "TBR TBR TBR"
+                "HDR HDR ASD"
+                "MAI MAI ASD"
+                "NNN NNN ASD"
+                "FTR FTR FTR";
+        }
+    }
+}

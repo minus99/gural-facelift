@@ -1,0 +1,160 @@
+//
+// Static:       Nav 
+//
+// ========================================================================
+$nav-main-sub-nav-height:              430px;
+
+
+.nav-main-holder{
+
+}
+.navbar-main{
+    display: none;
+}
+
+/*
+ * Navbar Holder
+ ========================================================================== */
+ @supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .navbar-main{
+            display: block;
+            margin-left: 16px;
+            .lvl-1{
+                display: flex;
+                > li{
+                    > a{
+                        position: relative;
+                        display: inline-flex;
+                        align-items: center;
+                        height: $navbarHeight;
+
+                        font-family: $proxima;
+                        font-size: 15px;
+                        line-height: 18px;
+                        color: $black;
+                        padding: 0 8px;
+                        margin: 0 8px;
+                        &:after{
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            width: 100%;
+                            height: 0px;
+                            background: $black;
+                            transition: all .333s ease-in-out;
+                        }
+                    }
+                    &:hover{
+                        > a{
+                            &:after{
+                                height: 3px;
+                            }
+                        }
+                    }
+                }
+                &.selected{
+                    .nav-main-sub-nav{
+                        display: block !important;
+                    }
+                }
+            }
+        }
+        .nav-main-sub-nav{
+            position: absolute;
+            //top: $navbarHeight;
+            left: 0;
+            z-index: 10;
+            width: calc(100% + 70px);
+            background: $white;
+            overflow: hidden;
+            height: 0;
+            visibility: hidden;
+            transition: all .33s cubic-bezier(.25, .75, .25, .75);
+        }
+        .nav-holder{
+            display: flex;
+            height: $nav-main-sub-nav-height;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: $white;
+
+            transition: all .33s cubic-bezier(.25, .75, .25, .75);
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        .navbar-main{
+            .lvl-1{
+                > li{
+                    &.selected{
+                        .nav-main-sub-nav{
+                            visibility: visible;
+                            height: $nav-main-sub-nav-height;
+                            z-index: 11;
+                        }
+                        .nav-holder{
+                            transform: translateY(0);
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav-left-holder{
+            width: 340px;
+            padding: 40px 20px 40px 150px;
+            background-color: $dustyGray;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            > a{
+                font-family: $brandon;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 30px;
+                text-transform: uppercase;
+            }
+            .nav-subMenu{
+                margin-top: 20px;
+                font-family: $proxima;
+                font-size: 15px;
+                line-height: 24px;
+            }
+        }
+
+        .nav-menu-holder{
+            width: calc(100% - 340px);
+            padding: 40px;
+        }
+        .lvl-2{
+            display: flex;
+            > li{
+                margin-right: 75px;
+                > a{
+                    font-family: $brandon;
+                    font-size: 18px;
+                    line-height: 30px;
+                    font-weight: 500;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+        .lvl-3{
+            margin-top: 20px;
+            > li{
+                > a{
+                    font-family: $proxima;
+                    font-size: 15px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}

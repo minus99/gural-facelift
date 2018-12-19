@@ -1,0 +1,127 @@
+//-------------------------------------------//
+//----- PLH STYLES
+//-------------------------------------------//
+//?plh=true
+.anaBody > div[ondblclick][style] {
+    position: relative;
+    z-index: 9999;
+    * {
+        font-family: arial;
+        font-size: 13px;
+    }
+    h3 {
+        line-height: 1.5;
+        padding: 10px;
+        margin-bottom: 0;
+        border-bottom: 1px solid #000;
+        user-select: none;
+        cursor: pointer;
+    }
+    div {
+        padding: 10px 15px;
+        border-bottom: 1px solid #7b7b7b;
+    }
+}
+
+//-------------------------------------------//
+//----- PAGING
+//-------------------------------------------//
+.icerikListePagingUst{
+    display: none;
+}
+.urunListePagingAlt{
+    width: 100%;
+    max-width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+.urunPaging_pageNavigation,
+.icerikListePagingAlt{
+    display: flex;
+    align-items: center;
+    [id$="lblPaging"]{
+        display: inline-flex;
+        > span,
+        > a{
+            position: relative;
+            padding: 8px 7px;
+            margin: 0 5px;
+
+            font-family: $proxima;
+            font-size: 16px;
+            letter-spacing: .55px;
+            line-height: 20px;
+            text-align: center;
+            &::after{
+                content: "";
+                width: 100%;
+                height: 0;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: $frenchRose;
+                transition: all .200s ease-in-out;
+            }
+            &:hover{
+                &::after{
+                    height: 3px;
+                }
+            }
+        }
+        > span{
+            cursor: default;
+            &::after{
+                height: 3px;
+            }
+        }
+    }
+    
+    
+    [id$="lnkFirstPage"],
+    [id$="lnkPrev"],
+    [id$="lnkNext"],
+    [id$="lnkLastPage"]{
+        display: none;
+    }
+    [id$="lnkTumGoster"]{
+        font-family: $proxima;
+        font-size: 16px;
+        letter-spacing: .55px;
+        line-height: 20px;
+        text-align: center;
+        margin: 0 10px;
+    }
+    [id$="lnkLastPage"],
+    [id$="lnkTumGoster"]{
+        display: inline-block !important;
+    }
+    .tumunuGoster{
+        margin-left: 25px;
+    }
+}
+
+.urunListePagingAlt{
+    td[align="left"],
+    td[align="right"]{
+        display: none;
+        width: 0 !important;
+    }
+}
+
+
+//-------------------------------------------//
+//----- PRELOADING
+//-------------------------------------------//
+#infscr-loading{
+    width: 100% !important;
+    text-align: center;
+    //color: $cl3;
+    font-size: 14px;
+    line-height: 24px;
+    img{
+        width: 75px;
+    }
+    div{
+        display: none;
+    }
+}

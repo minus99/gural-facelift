@@ -1,0 +1,351 @@
+//-------------------------------------------//
+//----- FORM ELEMENTS DEFAULT
+//-------------------------------------------//
+input, textarea, select{
+    outline: 0 !important;
+    box-shadow: 0 !important;
+
+    color: $emperor;
+    font-size: 14px;
+
+    width: 100%;
+    
+    display: inline-block;
+    vertical-align: middle;
+}
+
+//-------------------------------------------//
+//----- INPUT STYLE
+//-------------------------------------------//
+input:not([type="checkbox"]):not([type="radio"]){
+    height: 44px;
+    padding: 15px 13px;
+    border-radius: 5px;
+    border: 1px solid $emperor;
+    background-color: $white;
+    
+    &:focus{
+        border: 1px solid $emperor;
+    }
+
+    &[id$="txtUYM_TELEFON"]{
+        width: 100% !important;
+    }
+}
+
+//-------------------------------------------//
+//----- TEXTAREA STYLE
+//-------------------------------------------//
+textarea{
+    width: 100% !important;
+    height: 240px;
+    padding: 16px;
+    border-radius: 5px;
+    border: 1px solid $emperor;
+    background-color: $white;
+    resize: none;
+
+    &:focus{
+        border: 1px solid #003a5c;
+    }
+}
+
+//-------------------------------------------//
+//----- SELECT STYLE
+//-------------------------------------------//
+select{
+    border: 1px solid $emperor;
+    background-color: $white;
+    &:not(.ui-datepicker-month):not(.ui-datepicker-year){
+        padding: 10px 16px;
+        &:focus{
+            border: 1px solid $emperor;
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- STYLER SELECT STYLE
+//-------------------------------------------//
+.sStylerWrp_select{
+    &.sStylerMainWrp{
+        position: relative;
+        display: block;
+    }
+    .sStylerWrp{
+        position: relative;
+        width: 100%;
+        height: 48px;
+        border: 1px solid $emperor;
+        background-color: $white;
+        padding: 10px 36px 10px 16px;
+        display: flex;
+        align-items: center;
+
+        white-space: nowrap;
+        overflow: hidden;
+
+        &:after{
+            position: absolute;
+            right: 16px;
+            top:50%;
+            transform: translateY(-50%);
+            @extend [class^="icon-"];
+            @extend .icon-arrow-bottom:before;
+            font-size: 8px;
+        }
+        .sStyleHolder{
+            overflow: hidden;
+        }
+    }
+    select{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        height: 48px;
+        width: 100% !important;
+    }
+}
+
+.sStylerWrp_checkbox{
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+    .cStyler{
+        border: 1px solid $emperor;
+        border-radius: 3px;
+        width: 18px;
+        height: 18px;
+        position: relative;
+        transition: all .333s ease-in-out;
+        &::before{
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            background: $white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: all .333s ease-in-out;
+        }
+        &.checked{
+            border-color: $frenchRose;
+            &::before{
+                background: $frenchRose;
+            }
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- CHECKBOX AND RADIO STYLE
+//-------------------------------------------//
+input[type="checkbox"], input[type="radio"]{
+    -webkit-appearance: none;
+    border: 1px solid $emperor;
+    border-radius: 3px;
+    background-color: $white;
+    transition: background .2s ease;
+}
+
+//-------------------------------------------//
+//----- CHECKBOX STYLE
+//-------------------------------------------//
+input[type="checkbox"]{
+    width: 18px !important;
+    height: 18px;
+    padding: 0;
+}
+input[type="checkbox"]:checked{
+    border-color: $frenchRose;
+    background-color: $frenchRose;
+}
+
+//-------------------------------------------//
+//----- RADIO STYLE
+//-------------------------------------------//
+input[type="radio"]{
+    width: 14px !important;
+    height: 14px;
+    border-radius: 50%;
+    padding: 0;
+}
+input[type="radio"]:checked{
+    border-color: $frenchRose;
+    background-color: $frenchRose;
+}
+
+//-------------------------------------------//
+//----- EMS FORM STYLE
+//-------------------------------------------//
+.ems-form-inner{
+    .ems-field{
+        + .ems-field{
+            margin-top: 15px;
+        }
+    }
+}
+.ems-form-label{
+    pointer-events: none;
+    
+    font-family: $proxima;
+    font-size: 12px;
+    font-weight: 600;
+    color: $dustyGray;
+    margin-bottom: 6px;
+    &:empty{
+        display: none;
+    }
+}
+
+.ems-form-obj{
+    &.obj-check{
+        display: flex;
+        align-items: flex-start;
+        .checkbox{
+            display: inline-flex;
+        }
+        .sStylerWrp_checkbox{
+            position: relative;
+        }
+        > span:last-child{
+            font-size: 16px;
+            color: $emperor;
+            line-height: 1.44;
+            //margin-top: 5px;
+            a{
+                text-decoration: underline !important;
+            }
+        }
+        input{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100% !important;
+            height: 100%;
+            background-color: initial;
+            border: 0;
+            cursor: pointer;
+        }
+    }
+}
+
+.ems-form-err{
+    .ems-form-label{
+        color: $black;
+    }
+    .ems-form-obj{
+        input:not([type="checkbox"]):not([type="radio"]),
+        select,
+        textarea{
+            border: 1.35px solid $frenchRose;
+        }
+    }
+}
+
+.zorunluFont{
+    &:before{
+        content: "*";
+        margin-right: 2px;
+    }
+}
+
+.ems-field-phone{
+    .ems-form-obj{
+        [id$="txtUYE_CEPTELEFONALAN"]{
+            width: 50px !important;
+            margin-right: 15px;
+        }
+        [id$="txtUYE_CEPTELEFON"]{
+            width: calc(100% - 65px) !important;
+        }
+    }
+}
+
+
+/*Captcha*/
+.ems-field-captcha{
+    [id$="divCaptcha"]{
+        display: flex;
+        flex-wrap: wrap;
+        br{
+            display: none;
+        }
+        #imgCaptcha{
+            order: 1;
+            width: initial;
+        }
+
+        [id$="lbfUYE_KONTROLKODU"]{
+            order: 3;
+            width: 100%;
+            margin-top: 15px;
+            @extend .ems-form-label;
+        }
+
+        [id$="txtUYE_KONTROLKODU"]{
+            order: 4;
+        }
+
+        .captchaYenile{
+            order: 2;
+            display: inline-flex;
+            align-items: center;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+    }
+}
+
+
+
+//-------------------------------------------//
+//----- ERROR STYLE
+//-------------------------------------------//
+
+$alert-error-color:                 #721c24;
+$alert-error-background:            #f8d7da;
+$alert-error-border:                #f5c6cb;
+
+$alert-success-color:               #155724;
+$alert-success-background:          #d4edda;
+$alert-success-border:              #c3e6cb;
+
+$alert-info-color:                  #155724;
+$alert-info-background:             #d4edda;
+$alert-info-border:                 #c3e6cb;
+.ems-message{
+    width: 100%;
+    font-family: $proxima;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.5;
+
+    border-width: 1px;
+    border-style: solid;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 5px;
+    &:empty{
+        display: none;
+    }
+    &.ems-message-error{
+        color: $alert-error-color;
+        background-color: $alert-error-background;
+        border-color: $alert-error-border;
+    }
+    &.ems-message-success{
+        color: $alert-success-color;
+        background-color: $alert-success-background;
+        border-color: $alert-success-border;
+    }
+    &.ems-message-info{
+        color: $alert-info-color;
+        background-color: $alert-info-background;
+        border-color: $alert-info-border;
+    }
+}

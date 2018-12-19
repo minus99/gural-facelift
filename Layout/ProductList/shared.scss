@@ -1,0 +1,19 @@
+.ems-product-list{
+    .ems-prd-list-paging{
+        display: none;
+    }
+}
+
+
+/*
+ * Media Query
+ ========================================================================== */
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .ems-product-list{
+            .ems-prd-list-paging{
+                display: block;
+            }
+        }
+    }
+}

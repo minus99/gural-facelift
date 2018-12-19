@@ -1,0 +1,37 @@
+// Name:            Footer Bottom Holder
+// Description:     
+//
+// ========================================================================
+.footer-bottom-holder{
+}
+
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .footer-bottom-holder{
+            max-width: 1260px;
+            margin: 0 auto;
+            padding: 30px 0 35px;
+            border-top: 1px solid #DCDCDC;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 12px;
+            color: $gray;
+            .footer-nav-holder{
+                ul{
+                    display: inline-flex;
+                }
+                li{
+                    margin-right:15px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    a{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+// Name:            Counter Footer
+// Description:     
+//
+// ========================================================================
+.footer-counter{
+    display: none;
+    background: $alabaster;
+}
+.counter-wrp{
+    display: flex;
+}
+
+.counter-group{
+    display: inline-flex;
+    margin: 40px auto;
+}
+.counter-item{
+    display: inline-flex;
+    align-items: center;
+    margin: 0 50px;
+    .numb-count,
+    .numb-type{
+        font-family: $brandon;
+        font-size: 55px;
+        font-weight: 500;
+        line-height: 79px;
+    }
+    .desc{
+        max-width: 140px;
+        font-size: 15px;
+        line-height: 18px;
+        margin-left: 30px;
+    }
+}
+
+
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .footer-counter{
+            display: block;
+        }
+    }
+}

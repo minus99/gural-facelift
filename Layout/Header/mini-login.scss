@@ -1,0 +1,152 @@
+/*
+ * Üye Giriş
+ ========================================================================== */
+ .mod-mini-login{
+    .mod-mini-login-header{
+        [id$="lbfkutuUyeGiris1"]{
+            a{
+                height: $navbarHeight;
+                display: flex;
+                align-items: center;
+                padding: 0 40px 0 20px;
+    
+                font-family: $proxima;
+                font-size: 15px;
+                color: $black;
+            }
+        }
+        [id$="lbhKUTU_HESABIM"]{
+            cursor: pointer;
+            height: $navbarHeight;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+    
+            font-family: $proxima;
+            font-size: 15px;
+            color: $black;
+            span + span{
+                margin-left: 3px;
+            }
+            i{
+                font-size: 12px;
+                margin-left: 15px;
+                transition: all 333ms ease-in-out;
+            }
+        }
+    }
+    .mod-mini-login-body{
+        position: relative;
+        .sub{
+            display: none;
+            &.login{
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 346px;
+                background: $wildSand;
+
+                height: 0;
+                overflow: hidden;
+                transition: height 333ms ease-in-out;
+
+                .ems-user-info{
+                    margin: 10px 10px 0;
+                    padding: 15px 20px 20px;
+                    border-bottom: 1px solid $alto;
+                    display: flex;
+                    align-items: center;
+                    .pp{
+                        margin-right: 20px;
+                        width: 70px;
+                        height: 70px;
+                        overflow: hidden;
+                        font-size: 0;
+                    }
+                    .holder{
+                        .user-name{
+                            font-family: $proxima;
+                            font-size: 18px;
+                            font-weight: 600;
+                            color: $black;
+                            margin-bottom: 10px;
+                        }
+                        .btnKutuLogout{
+                            font-family: $proxima;
+                            font-size: 15px;
+                            color: $black;
+                            &:hover{
+                                color: $frenchRose;
+                            }
+                        }
+                    }
+                }
+                .ems-user-pages{
+                    margin: 10px 0 10px 10px;
+                    padding: 15px 20px;
+                    a{
+                        font-family: $proxima;
+                        font-size: 15px;
+                        line-height: 2;
+                        color: #181818;
+                        &:hover{
+                            color: $frenchRose;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mod-mini-login-footer{
+        display: none;
+    }
+    
+    &.opened{
+        .mod-mini-login-header{
+            [id$="lbhKUTU_HESABIM"]{
+                background: $wildSand;
+                i{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .mod-mini-login-body{
+            .sub.login{
+                visibility: visible;
+                opacity: 1;
+                height: 342px;
+            }
+        }
+    }
+}
+
+
+.ems-logoff {
+    .sub.login,
+    [id$="lbfKUTU_HESABIM"]{ display: none !important; }
+    
+}
+.ems-login {
+    .sub.logoff,
+    [id$="lbfkutuUyeGiris1"]{ display: none !important; }
+}
+
+
+/*
+ * Media Query
+ ========================================================================== */
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        
+        /*
+         * Üye Giriş
+         ========================================================================== */
+        .kutuUyeGiris{
+            .kutuHeaderUyeGiris{
+                display: inline-block;
+            }
+        }
+
+    }
+}

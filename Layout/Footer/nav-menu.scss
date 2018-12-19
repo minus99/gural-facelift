@@ -1,0 +1,77 @@
+// Name:            Footer Nav Menu
+// Description:     
+//
+// ========================================================================
+.footer-nav-groups{
+    display: none;
+}
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .footer-nav-groups{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 80px;
+        }
+        .footer-nav-title{
+            color: $gray;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 18px;
+            margin-bottom: 10px;
+            cursor: default;
+        }
+        .footer-nav-holder{
+            li{
+                a{
+                    font-size: 14px;
+                    color: $gray;
+                    transition: all .333s ease-in-out;
+                    &:hover{
+                        color: $frenchRose;
+                    }
+                }
+            }
+            &.withOutIcon{
+                li{
+                    a{
+                        position: relative;
+                        line-height: 27px;
+                        &:after{
+                            content: "";
+                            width: 0;
+                            height: 1px;
+                            background: $frenchRose;
+                            transition: all .333s ease-in-out;
+                            position: absolute;
+                            left: 0;
+                            bottom: 5px;
+                        }
+                        &:hover{
+                            color: $frenchRose;
+                            &:after{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            &.withIcon{
+                li{
+                    margin-bottom: 25px;
+                    a{
+                        display: flex;
+                        align-items: center;
+                        i{
+                            font-size: 22px;
+                            margin-right: 15px;
+                        }
+                        span{
+                            margin-top: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

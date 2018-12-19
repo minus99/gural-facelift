@@ -1,0 +1,142 @@
+//
+// Static:       Navbar
+//
+// ========================================================================
+
+$navbarHeight:                              70px;
+
+
+/*
+ * Navbar Holder
+ * header-> menünün arkadan gelmesi için büle
+ ========================================================================== */
+/*
+ .top-bar{
+    position: relative;
+    z-index: 1001;
+}
+*/
+
+.navbar-holder{
+    max-width: $defaultMaxWidth;
+    display: flex;
+    align-items: center;
+    height: $navbarHeight;
+    padding: 20px;
+    border-bottom: 1px solid $wildSand;
+    background: #fff;
+}
+
+
+/*
+ * Hamburger
+ ========================================================================== */
+.navbar-item-hamburger{
+    margin-right: 30px;
+}
+.btnMenu{
+    font-size: 30px;
+}
+
+
+/*
+ * Arama
+ ========================================================================== */
+.navbar-item-search{
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+
+/*
+ * Sepet
+ ========================================================================== */
+ .kutuSepet{
+    .kutuBodySepet,
+    .kutuFooterSepet{
+        display: none;
+    }
+}
+
+.btnCart{
+    font-size: 26px;
+    color: $wildStrawberry;
+    padding: 5px;
+
+    position: relative;
+    .cartCount{
+        position: absolute;
+        left: 50%;
+        bottom: 8px;
+        transform: translateX(-50%);
+        width: 100%;
+
+        font-family: $proxima;
+        text-align: center;
+        font-size: 12px;
+        color: $white;
+    }
+}
+
+
+/*
+ * Media Query
+ ========================================================================== */
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        /*
+        header{
+            position: relative;
+            z-index: 1000;
+        }
+        */
+        
+        /*
+         * Navbar Holder
+         ========================================================================== */
+        .navbar-holder{
+            max-width: initial;
+            padding: 0 0 0 40px;
+            border-bottom: 0px;
+        }
+
+        /*
+         * Arama
+         ========================================================================== */
+        .navbar-item-search{
+            margin-right: 0px;
+        }
+
+
+        /*
+         * Üye Giriş
+         ========================================================================== */
+        .kutuUyeGiris{
+            .kutuHeaderUyeGiris{
+                display: inline-block;
+            }
+        }
+
+        /*
+         * Sepet
+         ========================================================================== */
+        .navbar-item-mini-member{ 
+            margin-left: 20px;
+        }
+        .kutuSepet{
+            .kutuHeaderSepet{
+                display: none;
+            }
+        }
+        .btnSignin{
+            height: $navbarHeight;
+            display: inline-flex;
+            align-items: center;
+            padding: 0 40px 0 20px;
+            font-size: 15px;
+            line-height: 18px;
+        }
+
+
+    }
+}

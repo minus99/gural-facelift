@@ -1,0 +1,37 @@
+/*
+ * Media Query
+ ========================================================================== */
+ @supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        /* Reset in Items */
+        .ems-product-list > *{ grid-area: nnn; }
+        /* Cover Holder*/
+        .ems-product-list-cover{ grid-area: CVR; }
+        /* List Holder */
+        .ems-product-list-holder{ grid-area: HLD; }
+        
+        .ems-product-list{
+            display: grid;
+            grid-template-columns: 40px 1fr;
+            grid-template-rows: minmax(0, auto);
+            grid-template-areas: 
+                ". CVR"
+                ". HLD"
+                ". nnn";
+        }
+
+        
+        .ems-prd-list-header > *{ grid-area: nnn; }
+        .ems-prd-list-filter-button{ grid-area: FLT; }
+        .ems-list-prd-count{ grid-area: COU; }
+        .ems-prd-list-sort{ grid-area: SRT; }
+        .ems-prd-list-header{
+            display: grid;
+            grid-template-columns: 80px minmax(0, auto) minmax(0, auto) 2fr minmax(0, auto) 3fr 80px;
+            grid-template-rows: minmax(0, auto);
+            grid-template-areas: 
+                ". FLT COU . SRT . .";
+        }
+        
+    }
+}

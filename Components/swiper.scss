@@ -1,0 +1,45 @@
+// Name:            Swiper
+// Description:     Styles of general
+//
+// ========================================================================
+.swiper-container{
+    .swiper-inner{
+        overflow: hidden;
+    }
+    .swiper-pagination{
+        //display: none;
+    }
+
+    //
+    .swiper-pagination-bullet {
+        border: 2px solid #ffF;
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        opacity: 1;
+        transition: all .333s ease-in-out;
+        &.swiper-pagination-bullet-active{
+            background: rgba(0, 0, 0, 0);
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        width: initial;
+        height: initial;
+        margin-top: 0;
+        transform: translateY(-50%);
+        
+        background-image: none;
+    }
+    &.no-controls{
+        .swiper-button-prev,
+        .swiper-button-next{
+            display: none;
+        }
+    }
+}

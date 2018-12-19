@@ -1,0 +1,107 @@
+//
+// Component:       Widget
+//
+// ========================================================================
+.widget-holder{
+    display: block;
+    padding: 60px 0 70px 0;
+
+    .widget-header{
+        text-align: center;
+        margin-bottom: 30px;
+        &:before{
+            content: "";
+            display: inline-block;
+            width: 40px;
+            height: 2px;
+            background: $black;
+            margin-bottom: 10px;
+        }
+    }
+
+    .widget-title{
+        font-family: $brandon;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+
+    .widget-inner{
+        .swiper-inner{
+            .ems-prd{
+                width: 50%;
+            }
+        }
+    }
+    
+
+    .system-widget{
+        &.no-result{
+            display: none !important;
+        }
+    }
+}
+
+
+
+
+/*
+ * Desktop
+ *  
+ ========================================================================== */
+ @supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .widget-holder{
+            display: block;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 0 60px 0;
+            .widget-header{
+                margin-bottom: 15px;
+                &:before{
+                    width: 50px;
+                    height: 3px;
+                    margin-bottom: 13px;
+                }
+            }
+            .widget-title{
+                font-size: 30px;
+                line-height: 43px;
+            }
+            .widget-desc{
+                font-size: 16px;
+                line-height: 19px;
+
+                max-width: 402px;
+                margin: 0 auto;
+            }
+            .widget-inner{
+                margin: 0 60px;
+                .swiper-inner{
+                    
+                }
+                .swiper-button-prev,
+                .swiper-button-next{
+                    width: 37px;
+                    height: 37px;
+                    border-radius: 50%;
+                    border: 1px solid $alto;
+                    font-size: 10px;
+                    color: $black;
+                }
+                .swiper-button-prev{
+                    left: -15px;
+                    transform: translate(-100%, -50%);
+                }
+                .swiper-button-next{
+                    right: -15px;
+                    transform: translate(100%, -50%);
+                }
+            }
+            .widget-footer{
+                margin-top: 5px;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+/*
+ * Default
+ ========================================================================== */
+.ems-member-page {
+
+    span[id$="lbfURN_KDVDAHIL"],
+    span.pb1 {
+        display: none;
+    }
+
+    .ems-grid-default {
+        width: 100%;
+        .ems-grid-header {
+            display: none;
+        }
+        .ems-grid-row{
+            width: 100%;
+            border-bottom: 1px solid $alto;
+            .sStylerWrp_checkbox{
+                margin-right: 0;
+                .cStyler{
+                    border-radius:18px; 
+                    border-color: $gray;
+                    &:before{border-radius: 10px;}
+                }
+            }
+            .ems-grid-select,
+            .ems-grid-remove{
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .ems-grid-remove{
+                a.btnDefault{
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    span{
+                        i{line-height: 30px;}
+                        i.icon-crossed,i.icon-crossed:before{
+                            font-size: 12px;
+                            color: $dustyGray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+ * Media Query
+ ========================================================================== */
+ @supports (grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .ems-member-page {
+            .ems-grid-default {
+                display: grid;
+                grid-template-rows: minmax(0, auto);
+    
+                .ems-grid-row {
+                    display: grid;
+                    grid-template-rows: minmax(0, auto);
+                    align-items: center;
+                    .ems-grid-remove{
+                        a.btnDefault{
+                            span{
+                                i.icon-crossed,i.icon-crossed:before{
+                                    color: #000000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+//
+// Component:       Banner Featured Products
+//
+// ========================================================================
+.bnr-featured-prd-wrapper{
+}
+
+.bnr-featured-prd-holder{
+
+}
+
+
+/*
+ * Desktop
+ *  
+ ========================================================================== */
+ @supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .bnr-featured-prd-wrapper{
+            padding: 60px 0;
+        }
+        .bnr-featured-prd-holder{
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .bnr-featured-prd-item{
+            display: flex;
+            .btn-features-prd{
+                position: absolute;
+                bottom: 10%;
+                width: 212px;
+                padding: 10px;
+                height: 40px;
+                z-index: 10;
+            }
+
+            &.left{
+                .btn-features-prd{
+                    right: 5%;
+                }
+            }
+            &.right{
+                .btn-features-prd{
+                    left: 5%;
+                }
+            }
+        }
+        .bnr-featured-prd-item-inner{
+            position: relative;
+            font-size: 0;
+            width: 100%;
+        }
+        
+    }
+}

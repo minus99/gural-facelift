@@ -1,0 +1,169 @@
+//
+// Static:       Aside Menu
+//
+// ========================================================================
+$navbar-height:                 70px;
+$top-field-height:              40px;
+
+.aside-menu{
+    position: relative;
+    z-index: 20;
+    background: $white;
+    border-left:1px solid #d8d8d8;
+}
+
+.aside-menu-holder{
+    position: sticky;
+    top: 0;
+    //height: calc(100vh - 40px);
+    height: 100vh;
+}
+
+.aside-menu-inner{
+
+}
+
+.aside-menu-list{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    //height: calc(100vh - 70px);
+    height: 100vh;
+    padding-bottom: 30px;
+    .aside-item{
+        > a{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 0;
+            font-size: 20px;
+            color: $black;
+
+            height: 70px;
+            position: relative;
+            transition: all 333ms ease-in-out;
+            > span{
+                position: absolute;
+                top: 80%;
+                transform: translateY(-50%);
+                width: 100%;
+                height: 14px;
+                font-family: $proxima;
+                font-size: 12px;
+                text-align: center;
+                color: $frenchRose;
+
+                visibility: hidden;
+                opacity: 0;
+                transition: all 333ms ease-in-out;
+            }
+        } 
+        .aside-nav-holder{
+            position: absolute;
+            right: 70px;
+            top: 0px;
+            width: 0;
+            height: 100%;
+            background: $white;
+            overflow: hidden;
+            visibility: hidden;
+            transition: all 333ms ease-in-out;
+        }
+        .aside-nav{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 350px;
+        }
+        &:hover{
+            > a{
+                color: $frenchRose;
+                span{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+        &.selected{
+            > a{
+                color: $frenchRose;
+                span{
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            }
+            .aside-nav-holder{
+                width: 350px;
+                visibility: visible;
+            }
+        }
+    }
+
+    /* Cart Represent*/
+    .aside-item-cart{
+        margin-bottom: auto;
+        > a{
+            position: relative;
+            height: $navbar-height;
+            display: flex;
+            align-items: center;
+            font-size: 26px;
+            color: $wildStrawberry;
+            .count{
+                position: absolute;
+
+            }
+        }
+    }
+
+    /* Scroll Top */
+    .aside-item-scroll-top{
+        margin-top: auto;
+        margin-bottom: 40px;
+        > a{
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            font-size: 20px;
+            color: $black;
+        }
+    }
+
+
+    
+
+    .aside-nav{
+        padding: 0 20px;
+    }
+
+    /**/
+    .aside-nav-header{
+        display: flex;
+        align-items: center;
+        padding: 17px 0;
+        border-bottom: 1px solid $alto;
+    }
+    .aside-nav-title{
+        font-family: $proxima;
+        font-size: 18px;
+        letter-spacing: .6px;
+        color: $black;
+        margin-left: 20px;
+    }
+    .aside-nav-prd-count{
+        font-family: $proxima;
+        font-size: 14px;
+        color: $gray;
+        margin-left: auto;
+    }
+}
+
+/*
+ * Media Query
+ ========================================================================== */
+ @supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+
+    }
+}

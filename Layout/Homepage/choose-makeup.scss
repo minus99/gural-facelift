@@ -1,0 +1,101 @@
+//
+// Component:       Choose Makeup
+//
+// ========================================================================
+.choose-makeup-holder{
+
+}
+
+
+/*
+ * Desktop
+ *  
+ ========================================================================== */
+ @supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+
+        .choose-makeup-holder{
+            background: $softPeach;
+            padding: 54px 80px 56px 90px;
+        }
+        .choose-makeup-header{
+            text-align: center;
+            .title{
+                font-family: $brandon;
+                font-size: 30px;
+                font-weight: 500;
+                line-height: 43px;                
+            }
+            .desc{
+                font-family: $proxima;
+                font-size: 16px;
+                line-height: 19px;
+                max-width: 402px;
+                margin: 0 auto;
+            }
+        }
+        .choose-makeup-wrapper{
+            margin-top: 50px;
+        }
+        .choose-makeup-list{
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                width: calc( (100% - 60px ) / 3 );
+                margin-right: 30px;
+                margin-bottom: 30px;
+                &:nth-child(3n){
+                    margin-right: 0;
+                }
+            }
+        }
+        .choose-makeup-item-img{
+            font-size: 0;
+        }
+
+        .choose-makeup-item-footer{
+            background-color: $white;
+            padding: 22px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .choose-makeup-item-title{
+            font-family: $proxima;
+            font-size: 20px;
+            line-height: 24px;
+        }
+        .choose-makeup-item-btn{
+            color: $gray;
+            *{
+                transition: all 333ms ease-in-out;
+            }
+            span{
+                font-family: $proxima;
+                font-size: 14px;
+                line-height: 17px;
+            }
+            i{
+                margin-left: 10px;
+                font-size: 8px;
+            }
+        }
+
+        .choose-makeup-list{
+            li{
+                &:hover{
+                    .choose-makeup-item-btn{
+                        span{
+                            color: $frenchRose;
+                        }
+                        i{
+                            margin-left: 5px;
+                            color: $frenchRose;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

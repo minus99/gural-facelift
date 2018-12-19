@@ -1,0 +1,35 @@
+/*
+ * Icomoon
+ ========================================================================== */
+@include fontFace('icomoon', '/styles/fonts/icomoon/icomoon', normal, normal);
+
+
+/*
+ * Brandon
+ ========================================================================== */
+/* Black */
+@include fontFace('brandon', '/styles/fonts/brandon/brandongrotesque-black-webfont', 800, normal);
+/* Bold */
+@include fontFace('brandon', '/styles/fonts/brandon/brandongrotesque-bold-webfont', 700, normal);
+/* Medium */
+@include fontFace('brandon', '/styles/fonts/brandon/brandongrotesque-medium-webfont', 500, normal);
+/* Regular */
+@include fontFace('brandon', '/styles/fonts/brandon/brandongrotesque-regular-webfont', 400, normal);
+
+/* Light */
+@include fontFace('brandon', '/styles/fonts/brandon/brandongrotesque-light-webfont', 200, normal);
+
+
+/*
+ * Proxima
+ ========================================================================== */
+/* Bold */
+@include fontFace('proxima', '/styles/fonts/proximanova/proximanova-bold-webfont', 700, normal);
+/* Semi bold - weight 700 */
+@include fontFace('proxima', '/styles/fonts/proximanova/proximanova-semibold-webfont', 600, normal);
+/* Semi bold - weight 500 */
+@include fontFace('proxima', '/styles/fonts/proximanova/proximanova-semibold-webfont', 500, normal);
+/* Regular */
+@include fontFace('proxima', '/styles/fonts/proximanova/proximanova-regular-webfont', 400, normal);
+/* Light */
+@include fontFace('proxima', '/styles/fonts/proximanova/proximanova-light-webfont', 300, normal);

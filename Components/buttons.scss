@@ -1,0 +1,170 @@
+// Name:            Button
+// Description:     Styles for buttons
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+$default-font-family:                   $proxima;
+$default-font-size:                     15px;
+$default-font-weight:                   600;
+$default-line-height:                   18px;
+$default-border-radius:                 5px;
+$default-padding:                       15px;
+
+$big-font-family:                       $brandon;
+$big-font-size:                         16px;
+$big-font-weight:                       bold;
+$big-letter-spacing:                    .5px;
+$big-line-height:                       23px;
+$big-padding:                           16px 98px;
+
+
+$hover-color:                           $white;
+$hover-background:                      $frenchRose;
+$hover-border-color:                    $frenchRose;
+
+$primary-color:                         $white;
+$primary-background:                    $black;
+$primary-border-color:                  $black;
+
+$primary-ligth-color:                   $black;
+$primary-ligth-background:              $white;
+$primary-ligth-border-color:            $white;
+
+$secondary-color:                       $white;
+$secondary-background:                  none;
+$secondary-border-color:                $white;
+
+$secondary-dark-color:                  $black;
+$secondary-dark-background:             none;
+$secondary-dark-border-color:           $alto;
+
+$alternative-color:                     $black;
+$alternative-background:                $wildSand;
+$alternative-border-color:              $wildSand;
+
+$inactive-color:                        $wildSand;
+$inactive-background:                   $dustyGray;
+$inactive-border-color:                 $dustyGray;
+
+/* Style modifiers
+ ========================================================================== */
+
+/*
+ * Default
+ */
+
+.btn{
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+
+    font-family: $default-font-family;
+    font-size: $default-font-size;
+    font-weight: $default-font-weight;
+    line-height: $default-line-height;
+    border-radius: $default-border-radius;
+    border-width: 1px;
+    border-style: solid;
+    padding: $default-padding;
+    transition: all 333ms ease-in-out;
+    
+    max-width: 100%;
+    width: 300px;
+    height: 50px;
+
+    &:hover, &:focus{
+        color: $hover-color !important;
+        background: $hover-background;
+        border-color: $hover-border-color;
+    }
+}
+
+/*
+ * Primary
+ */
+.btn-primary{
+    color: $primary-color;
+    background: $primary-background;
+    border-color: $primary-border-color;
+}
+
+/*
+ * Primary Light
+ */
+ .btn-primary-light{
+    color: $primary-ligth-color;
+    background: $primary-ligth-background;
+    border-color: $primary-ligth-border-color;
+}
+
+/*
+ * Secondary
+ */
+.btn-secondary{
+    color: $secondary-color;
+    background: $secondary-background;
+    border-color: $secondary-border-color;
+}
+
+/*
+ * Secondary Dark
+ */
+.btn-secondary-dark{
+    color: $secondary-dark-color;
+    background: $secondary-dark-background;
+    border-color: $secondary-dark-border-color;
+}
+/*
+ * Alternative
+ */
+.btn-alternative{
+    color: $alternative-color;
+    background: $alternative-background;
+    border-color: $alternative-border-color;
+}
+
+/*
+ * Inactive
+ */
+.btn-inactive{
+    color: $inactive-color;
+    background: $inactive-background;
+    border-color: $inactive-border-color;
+}
+
+
+/*
+ * Big Type
+ */
+.btn-big{
+    font-family: $big-font-family;
+    font-size: $big-font-size;
+    font-weight: $big-font-weight;
+    letter-spacing: $big-letter-spacing;
+    line-height: $big-line-height;
+    padding: $big-padding;
+    
+    min-width: 420px;
+    height: 55px;
+}
+
+.btnLogin,
+.btnYeniUyeKaydet{
+    @extend .btn;
+    @extend .btn-primary;
+
+    height: 40px;
+    line-height: 10px;
+    width: 240px;
+}
+
+.btnFacebookLogin{
+    @extend .btn;
+    @extend .btn-alternative;
+}

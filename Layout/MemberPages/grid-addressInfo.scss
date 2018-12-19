@@ -1,0 +1,143 @@
+/*
+ * Default
+ ========================================================================== */
+.ems-member-page {
+    .same-address, .ems-page-new-address > .page-top-title {
+        display: none;
+    }
+
+    .ems-page-default-address {
+        padding:10px 20px 50px 20px;
+        .ems-page-new-address{
+            padding:20px 0 0 0;
+        }
+        .ems-address-form{
+            div[id$="plhAdresYokLabel1"]{                
+                border:none;
+                background: none;
+                margin: 0;
+                padding: 0;
+                > span{
+                    min-height: 250px;
+                    padding: 40px 0 0 0;
+                    display: block;
+                    color: $black;
+                    font-size: 22px;
+                    padding-bottom: 40px;
+                    border-bottom: 1px solid $alto;
+                    &:before{
+                        content:'';
+                        background: url(/images/frontend/adress-empty.svg) center center no-repeat;
+                        display: block;
+                        width: 200px;
+                        height: 200px;
+                        margin: 0 auto;
+                    }
+                }
+                > span:empty{display: none;}
+            }
+        }
+    }
+}
+
+.ems-grid-default-address {
+    .ems-grid-row {
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .ems-grid-address-select {
+            display: none;
+        }
+        .ems-grid-address-name{
+            width: calc(100% - 40%);
+            font-family: $proxima;
+            font-weight: 600;
+            .adresTip2{display: none;}
+        }
+        .ems-grid-address{
+            font-size: 12px;
+            color: #000000;
+            letter-spacing: 0.3px;
+            line-height: 18px;
+            margin-top: 7px;
+        }
+        .ems-address-buttons {
+            position: absolute;
+            top: 15px;
+            right: 0;
+
+            >a {
+                display: inline-block;
+                padding: 5px;
+                font-size: 12px;
+                color: $dustyGray;
+                letter-spacing: 0.3px;
+            }
+        }
+    }
+    .add-new-address{
+        text-align: center;
+        .btnDefault {
+            display: inline-block;
+            width: 100%;
+            max-width: 200px;
+            border-radius: 5px;
+            background: $black;
+            padding: 12px 5px;
+            margin-top: 30px;
+            span{
+                color: $white;
+            }
+        }
+    }
+}
+
+/*
+ * Media Query
+ ========================================================================== */
+@supports (grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .ems-member-page {
+            .ems-page-default-address {
+                padding: 0 30px 0 30px;
+            }
+            .ems-page-default-address{
+                .ems-page-new-address{
+                    padding-top: 0;
+                }
+            }
+        }
+
+        .ems-grid-default-address {
+            .ems-grid-row {
+                padding-top: 15px;
+                padding-bottom: 10px;
+
+                .ems-grid-address-name {
+                    width: auto;
+                }
+
+                .ems-address-buttons {
+                    position: inherit;
+                    top: inherit;
+                    right: inherit;
+                    > a{
+                        &:first-child{padding-left: 0;}
+                    }
+                }
+            }
+            .add-new-address{
+                text-align: left;
+                .btnDefault {
+                    text-align: center;
+                    max-width: 240px;
+                    @include transition();
+                    &:hover{
+                        background: $frenchRose;
+                    }
+                }
+            }
+        }
+    }
+}
