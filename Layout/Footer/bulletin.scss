@@ -2,64 +2,13 @@
 // Description:     
 //
 // ========================================================================
-.mini-bulletin{
-    .ems-field{
-        &:nth-child(2){
-            margin-top: 10px;
-        }
-    }
-}
 
-.mini-bulletin-title{
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 18px;
-    color: $gray;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.bulletin-form{
-    position: relative;
-    .mailHolder{
-
-    }
-    .sendHolder{
-        display: inline-flex;
-        position: absolute;
-        right: 3px;
-        top: 3px;
-    }
-}
-
-.btnBultenGonder{
-    background: $black;
-    color: $white;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 14px;
-    text-align: center;
-    
-    min-width: 88px;
-    padding: 15px 10px;
-    border-radius: 3px;
-}   
 
 
 
 
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
-        .mini-bulletin{
-            margin-top: 30px;
-        }
-        .mini-bulletin-title{
-            text-align: left;
-            margin-bottom: 12px;
-        }
-        
-        .btnBultenGonder{
-            min-width: 138px;
-        }
+
     }
 }

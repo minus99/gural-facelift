@@ -2,15 +2,10 @@
 // Description:     
 //
 // ========================================================================
-.footer-logo-holder{
-    display: none;
-}
 
 
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
-        .footer-logo-holder{
-            display: block;
-        }
+
     }
 }

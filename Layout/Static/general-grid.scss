@@ -1,13 +1,12 @@
-.flormar-main > *{ grid-area: NNN; }
-
-/* Top Bar */
-.top-bar{ grid-area: TBR !important; }
+.main-wrapper > *{ grid-area: NNN; }
 
 /* Header */
-header{ grid-area: HDR !important; }
+header{ grid-area: HDR !important; border:1px solid green;}
 
-/* Aside Menü */
-aside{ grid-area: ASD !important; }
+/* Aside Left Menü */
+aside{ grid-area: ASD !important; border:1px solid blue;}
+
+.right-col{grid-area: RGH !important;}
 
 /* Main */
 main{ grid-area: MAI !important; }
@@ -18,16 +17,23 @@ footer{ grid-area: FTR !important; }
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
         
-        .flormar-main {
+        .main-wrapper {
             display: grid;
-            grid-template-columns: minmax(40px, 1fr) 1fr 70px;
-            grid-template-rows: 40px 70px minmax(calc(100vh - 110px), auto) minmax(0, auto);
+            //grid-template-columns: minmax(300px,auto) 1fr;
+            //grid-template-rows:  80px minmax(700px,auto) 80px;
+            //grid-template-columns:1fr minmax(260px,auto) minmax(1660px,auto) 1fr;
+            grid-template-rows: minmax(0, auto);
             grid-template-areas: 
-                "TBR TBR TBR"
-                "HDR HDR ASD"
-                "MAI MAI ASD"
-                "NNN NNN ASD"
-                "FTR FTR FTR";
+                "HDR HDR HDR HDR"
+                "MAI MAI MAI MAI"
+                "FTR FTR FTR FTR";
+        }
+        .page-content{
+            display: grid;
+            grid-template-columns:1fr minmax(260px,auto) minmax(1660px,auto) 1fr;
+            grid-template-rows: minmax(0, auto);
+            grid-template-areas:
+            ". ASD RGH .";
         }
     }
 }

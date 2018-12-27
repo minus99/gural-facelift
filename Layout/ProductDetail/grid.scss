@@ -3,37 +3,6 @@
     grid-area: nnn;
 }
 
-/**/
-.alignment-right{ grid-area: ALG; }
-
-/* Image Gallery */
-.ems-prd-zoom{ grid-area: IMG; }
-
-/* Name */
-.ems-prd-name-holder{ grid-area: TTL; }
-
-/* Color Palette */
-.ems-prd-grup-wrapper{ grid-area: SEL; }
-
-/* Price */
-.ems-prd-price{ grid-area: PRC; }
-
-/* Add To Cart */
-.ems-prd-add-to-cart{ grid-area: CRT; }
-
-
-/* Product Description Holder */
-.ems-prd-detail-wrp{ grid-area: DET; }
-
-/* Description */
-.ems-prd-description{ grid-area: DSC; }
-
-/* Price Down */
-.ems-prd-price-btn{ grid-area: PBT; }
-
-/* Comment */
-.ems-prd-comment-group{ grid-area: CMM; }
-
 
 /*
  * Media Query
@@ -41,40 +10,7 @@
  @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
         
-        .ems-prd-detail-inner{
-            display: grid;
-            grid-template-columns: 1fr minmax(auto, 500px) 2% minmax(auto, 450px) 1fr;
-            grid-template-rows: minmax(0, auto);
-            grid-template-areas: 
-                ". IMG . ALG ."
-                ". IMG . CMM ."
-                ". IMG . TTL ."
-                ". IMG . DSC ."
-                ". IMG . PRC ."
-                ". IMG . SEL ."
-                ". IMG . CRT ."
-                ". IMG . PBT ."
-                ". IMG . . ."
-                "DET DET DET DET DET"
-                ". nnn nnn nnn .";
-        }
-
-
-        .ems-prd-detail-wrp > *{ grid-area: nnn; }
-        .ems-prd-features{ grid-area: FTS; }
-        .ems-features-set{ grid-area: FST; }
-        .ems-prd-last-comment{ grid-area: CMM; }
-        .ems-prd-detail-wrp{
-            display: grid !important;
-            grid-template-columns: 1fr minmax(auto, 500px) 2% minmax(auto, 450px) 1fr;
-            grid-template-rows: minmax(0, auto);
-            grid-template-areas: 
-                ". FTS . CMM ."
-                ". FST . CMM ."
-                ". nnn nnn nnn .";
-
-        }
-
+       
         
     }
 }

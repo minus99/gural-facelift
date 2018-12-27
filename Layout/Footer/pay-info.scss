@@ -2,53 +2,11 @@
 // Description:     
 //
 // ========================================================================
-.footer-pay-info{
-    max-width: 375px;
-    border-top: 1px solid $wildSand;
-    padding: 15px;
-}
-.pay-info-wrp{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.pay-info-item{
-    display: inline-flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 15px 0px;
-    width: calc((100% - 57px) / 3);
-    margin-right: 28.5px;
-    &:nth-child(3n){
-        margin-right: 0;
-    }
-    .pay-icon{
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 60px;
-    }
-    .pay-title{
-        margin-top: 7px;
-        color: $emperor;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 17px;
-    }
-    .pay-subDesc{
-        color: $gray;
-        font-size: 12px;
-        line-height: 14px;
-    }
-
-}
 
 
 
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
-        .footer-pay-info{
-            display: none;
-        }
+       
     }
 }

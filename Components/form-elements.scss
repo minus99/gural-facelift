@@ -91,7 +91,7 @@ select{
             top:50%;
             transform: translateY(-50%);
             @extend [class^="icon-"];
-            @extend .icon-arrow-bottom:before;
+            @extend .icon-arrowdown:before;
             font-size: 8px;
         }
         .sStyleHolder{

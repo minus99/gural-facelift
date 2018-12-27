@@ -11,57 +11,7 @@
  ========================================================================== */
  @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
-        .ems-product-list-cover{
-            position: relative;
-        }
-
-
-
-        .prd-list-cover-holder{
-            height: 250px;
-        }
-        .prd-list-cover{
-            display: flex;
-            align-items: center;
-            height: 100%;
-
-            padding: 0 80px;
-            
-            background-repeat: no-repeat;
-            background-position: center right;
-        }
-        .prd-list-cover-title{
-            font-family: $brandon;
-            font-size: 46px;
-            font-weight: 500;
-            letter-spacing: 0.77px;
-            line-height: 65px;
-        }
-
-
-        .urunNavigasyon{
-            position: absolute;
-            left: 20px;
-            top: 20px;
-            > span{
-                font-size: 0;
-                > a{
-                    font-family: $proxima;
-                    font-size: 13px;
-                    line-height: 16px;
-                    color: $dustyGray;
-                    text-transform: lowercase;
-                    &::first-letter {
-                        text-transform: uppercase;
-                    }
-                    &:not(:last-child):after{
-                        content: "/";
-                        display: inline-block;
-                        margin: 0 10px;
-                    }
-                }
-            }
-        }
+       
 
     }
 }

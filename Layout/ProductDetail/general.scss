@@ -7,18 +7,6 @@
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
 
-        .ems-product-detail{
-            .prd-info{
-                padding-top: 16px;
-            }
-        
-            /* Brandcrumb */
-            .ems-brandcrumb{
-                position: relative;
-                z-index: 10;
-                margin-left: 40px;
-            }
-        }
 
     }
 }

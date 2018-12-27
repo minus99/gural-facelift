@@ -3,31 +3,8 @@
  ========================================================================== */
  @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
-        /* Reset in Items */
-        .ems-homepage > *{ grid-area: nnn; }
+       
+
         
-        .hp-main-slider{ grid-area: SLD; }
-        .hp-banner-dual{ grid-area: BDL; }
-        .hp-widget-perfect-fit{ grid-area: WPF; }
-        .hp-choose-makeup{ grid-area: CHO; }
-        .hp-featured-prd{ grid-area: FEA; }
-        .hp-best-sellers{ grid-area: BST; }
-        .hp-beauty-secrets{ grid-area: BSC; }
-        
-        .ems-homepage{
-            display: grid;
-            grid-template-columns: 40px minmax(auto, calc(100% - 40px));
-            grid-template-rows: minmax(0, auto);
-            grid-template-areas: 
-                ". SLD"
-                ". BDL"
-                ". WPF"
-                "CHO CHO"
-                ". FEA"
-                ". BST"
-                "BSC BSC"
-                //". nnn"
-                ;
-        }        
     }
 }

@@ -1,8 +1,5 @@
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
-        nav.top-bar,
-        header{
-            z-index: 20;
-        }
+
     }
 }
