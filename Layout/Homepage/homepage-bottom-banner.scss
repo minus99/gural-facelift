@@ -4,7 +4,7 @@
 // ========================================================================
 
 
-.homepage-banner{
+.homepage-bottom-banner{
     &.grid-container{
         @include get-flex(flex,center,center);
         flex-wrap: wrap;
@@ -69,14 +69,15 @@
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
        
-        .homepage-banner{
+        .homepage-bottom-banner{
+            margin-top:50px !important;
             &.grid-container{
                 width:inherit;
                 display: grid;
                 grid-template-rows: auto;
                 grid-template-columns: minmax(auto, 635px) minmax(auto, 635px);
                 grid-column-gap: 20px;
-                grid-template-areas: "a b";
+                grid-template-areas: "x y";
                 margin:inherit;
                 .grid-item{
                     margin-bottom:inherit;
@@ -103,11 +104,11 @@
                             }
                         }
                     }
-                    &.grid-item-a {
-                        grid-area: a;
+                    &.grid-item-x {
+                        grid-area: x;
                     }
-                    &.grid-item-b {
-                        grid-area: b;
+                    &.grid-item-y {
+                        grid-area: y;
                     }
                 }
             }

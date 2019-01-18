@@ -1,12 +1,52 @@
+/* Navbar Logo & Right Menu */
 
+.navbar-holder{
+    @include get-flex(flex,center,space-around);
+    flex-wrap: wrap;
+    .navbar-item-search-mobile{
+        width:33%;
+        @include get-flex(flex,center,flex-start);
+    }
+    .navbar-item-logo{
+        width:94px;
+    }
+    .navbar-item-right{
+        @include get-flex(flex,center,flex-end);
+        height:48px;
+        width:33%;
+    }
+}
 
 
 /*  Media Query ========= */
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
-        
-        .navbar-holder{
-            width:100%;
+        .site-header{
+            display: flex;
+            .navbar-holder{
+                width: 100%;
+                grid-area: NBH;
+                display: grid;    
+                height:inherit;
+                grid-template-columns: minmax(240px , 1fr) minmax(auto,600px) minmax(240px , 1fr);
+                grid-template-areas: "LGO SCH NBR";
+                > div{
+                    width:inherit !important;
+                }
+                .navbar-item-logo{
+                    grid-area: LGO;
+                    width:inherit;
+                    .logo{
+                        width:110px;
+                    }
+                }
+                .navbar-item-right{
+                    grid-area: NBR;
+                    > div{
+                        margin-left:42px;
+                    }
+                }
+            }
         }
 
     }

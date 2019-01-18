@@ -4,12 +4,9 @@
 input, textarea, select{
     outline: 0 !important;
     box-shadow: 0 !important;
-
-    color: $emperor;
+    color: $grey-9;
     font-size: 14px;
-
     width: 100%;
-    
     display: inline-block;
     vertical-align: middle;
 }
@@ -21,11 +18,11 @@ input:not([type="checkbox"]):not([type="radio"]){
     height: 44px;
     padding: 15px 13px;
     border-radius: 5px;
-    border: 1px solid $emperor;
+    border: 1px solid $grey-d;
     background-color: $white;
     
     &:focus{
-        border: 1px solid $emperor;
+        border: 1px solid $light-grey;
     }
 
     &[id$="txtUYM_TELEFON"]{
@@ -190,11 +187,10 @@ input[type="radio"]:checked{
 }
 .ems-form-label{
     pointer-events: none;
-    
     font-family: $proxima;
     font-size: 12px;
     font-weight: 600;
-    color: $dustyGray;
+    color: $charcoal-grey;
     margin-bottom: 6px;
     &:empty{
         display: none;

@@ -7,13 +7,37 @@
 /*
  * Arama
  ========================================================================== */
-
-
-
-.btnArama{
-    @extend .btnDefault ;
-
+.navbar-holder{
+    .navbar-item-search{
+        background: $light-grey-three;
+        border-radius: 3px;
+        width:94%;
+        .kutuArama{
+            .kutuArama_lnkHizliUrun , .kutuHeaderArama{
+                display: none !important;
+            }
+            .kutuBodyArama{
+                display: flex;
+                .kutuArama_aramaText{
+                    width:100%;
+                    input{  
+                        color:$charcoal-grey;
+                        background: none;
+                        border:none;
+                    }
+                }
+                .kutuArama_btnArama{
+                    .btnArama{
+                        padding: inherit;
+                        background: inherit;
+                        color:$charcoal-grey !important;
+                    }
+                }
+            }
+        }
+    }
 }
+
 
 
  /*
@@ -22,7 +46,11 @@
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
 
-        
+        .navbar-holder{
+            .navbar-item-search{
+                grid-area: SCH;
+            }
+        }
 
 
     }

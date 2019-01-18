@@ -45,3 +45,10 @@
 	-webkit-transition: #{$transition};
 	-o-transition: #{$transition};
 }
+
+/* Display Flex  */
+@mixin  get-flex($display , $align , $justify)  {
+	display: $display;
+	align-items: $align;
+	justify-content: $justify;
+}

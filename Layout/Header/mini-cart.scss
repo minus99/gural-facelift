@@ -1,0 +1,261 @@
+.navbar-holder{
+    .navbar-item-mini-cart{
+        grid-area: CRT;
+    }
+}
+
+.mini-cart-ready{
+    overflow: hidden !important;
+}
+.mod-mini-cart{
+    .mod-mini-cart-header{
+        .ems-cart-info{
+            position: relative;
+            > span{
+                @include get-flex(flex,center,center);
+                cursor: pointer;
+                font-family: $proxima;
+                font-size: 15px;
+                font-weight: 400;
+            }
+            #lblUrunAdet{
+                position: absolute;
+                right:3px;
+                top:3px;
+                width: 17px;
+                height:17px;
+                background: $charcoal-grey;
+                color:$white;
+                font-size:10px;
+                border-radius: 100%;
+            }
+            [id$="lbfKUTU_URUN"]{
+                display: none;
+            }
+        }
+    }
+    .mod-mini-cart-body{
+        top: 0;
+        right: -100%;
+        position: fixed;
+        width: 384px;
+        background: transparent;
+        height: 100vh;
+        overflow: hidden;
+        z-index: 20;
+        transition: right 333ms ease-in;
+        background: $white;
+        display: block;
+        padding:30px;
+        .mod-mini-cart-title{
+            > span{
+                font-family: $proxima;
+                font-weight: 500;
+                font-size:16px;
+                border-bottom:1px solid $white-two;
+                padding-bottom:20px;
+                @include get-flex(flex,center,space-between);
+                .ems-mini-cart-close{
+                    i{
+                        font-size:26px;
+                    }
+                }
+            }
+        }
+        .mod-mini-cart-col-products{
+            .kutuSepet_urunYok{
+                background: #f7f7f7;
+                @include get-flex(flex,center,center);
+                text-align: center;
+                margin-top:20px;
+                height:360px;
+                > span{
+                    display: block;
+                    width:100%;
+                    font-family: $proxima;
+                    font-weight: 400;
+                    font-size:16px;
+                    margin-top:3px;
+                    .mod-mini-cart-img{
+                        i{
+                            font-size:80px;
+                        }
+                    }
+                    .mod-mini-cart-empty-text{
+                        display: block;
+                        width:100%;
+                    }
+                    .btnDefaultMiniCart{
+                        margin-top:40px;
+                        min-width: 210px;
+                        padding:15px;
+                    }
+                }
+            }
+            .kutuSepet_icerik{
+                .ems-col{
+                    display: flex;
+                    flex-wrap: wrap;
+                    border-bottom:1px solid #ddd;
+                    padding:20px 0px;
+                    .cart-prd-left{
+                        width:40%;
+                        .cart-prd-image{
+                            width:130px;
+                        }
+                    }
+                    .cart-prd-right{
+                        width:60%;
+                        padding-left:10px;
+                        position: relative;
+                        .cart-prd-name{
+                            color:$charcoal-grey;
+                            width:98px;
+                            font-size:12px;
+                            font-family: $proxima;
+                            font-weight: 400;
+                        }
+                        .cart-prd-amount{
+                            margin-top:10px;
+                            font-family: $proxima;
+                            font-size:12px;
+                            color:$charcoal-grey;
+                            font-weight: 400;
+                        }
+                        .cart-prd-unit-price{
+                            font-family: $proxima;
+                            font-size:12px;
+                            color:$charcoal-grey;
+                            font-weight: 400;
+                        }
+                        .cart-prd-unit-price-discount{
+                            font-family: $proxima;
+                            font-size:12px;
+                            color:$charcoal-grey;
+                            font-weight: 400;
+                            > span{
+                                display: block;
+                            }
+                        }
+                        .cart-prd-remove{
+                            position: absolute;
+                            right:0px;
+                            top:0px;    
+                            a{
+                                span{
+                                    display: none;
+                                }
+                                i{
+                                    font-size:26px;
+                                }
+                            }
+                        }
+                    }
+                    .cart-prd-bottom{
+                        width:100%;
+                        @include get-flex(flex,center,space-between);
+                        .iControl{
+                            border:1px solid $grey-c;
+                            border-radius: 3px;
+                            font-size:12px;
+                            font-family: $proxima;
+                            font-weight: 600;
+                            margin-top:5px;
+                            > div{
+                                width:130px;
+                                @include get-flex(flex,center,space-between);
+                            }
+                        }
+                        .cart-prd-price{
+                            margin-top:5px;  
+                            font-family: $proxima;
+                            font-weight: bold;
+                            font-size:14px;
+                            color:$charcoal-grey;
+                            .first{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .mod-mini-cart-col-total{
+            .mod-mini-cart-col-label{
+                @include get-flex(flex,center,space-between);
+                font-family: $proxima;
+                font-size:15px;
+                font-weight: bold;
+            }
+            .mod-mini-cart-col-link{
+                margin-top:20px;
+                a{
+                    border-radius: 3px;
+                    background: #222;   
+                    color:$white;
+                    font-size:17px;
+                    font-weight: $proxima;
+                    font-weight: bold;
+                    padding: 20px;
+                    width:100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    &.opened{
+        .vail{
+            visibility: visible;
+            opacity: 1;
+        }
+        .mod-mini-cart-inner{
+            .mod-mini-cart-body{
+                right:0;
+                overflow: visible;
+            }
+        }
+    }
+}
+
+
+
+
+
+.basket-empty{
+    .mod-mini-cart{
+        .mod-mini-cart-body{
+            .mod-mini-cart-col-total{
+                display: none;
+            }
+        }
+    }
+}
+.basket-full{
+    .mod-mini-cart{
+        .mod-mini-cart-body{
+            .mod-mini-cart-body-inner{
+                .mod-mini-cart-col-products{
+                    position: absolute;
+                    overflow-y: auto;
+                    width: 324px;
+                    height: calc(100% - 230px);
+                }
+                .mod-mini-cart-col-total{
+                    bottom: 0;
+                    width:324px;
+                    height:150px;
+                    position: absolute;
+                    padding-top:20px;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}
+
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        
+    }
+}

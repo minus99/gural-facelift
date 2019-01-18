@@ -29,11 +29,29 @@ $big-padding:                           16px 98px;
  * Default
  */
 
-.btnDefault{
-    
+%btn, .btnDefault{
+    text-align: center;
+    border-radius: 3px;
+    background: $black;
+    color:$white !important;
+    font-family: $proxima;
+    font-size:17px;
+    padding: 21.5px;
+    font-weight: bold;
     &:hover, &:focus{
 
     }
+}
+
+.btnFacebookLogin{
+    text-align: center;
+    border-radius: 3px;
+    font-size:15px;
+    font-family: $proxima;
+    font-weight:bold;
+    background: $facebook;
+    color:$white;
+    padding:18.5px;
 }
 
 /*
@@ -90,6 +108,3 @@ $big-padding:                           16px 98px;
 
 }
 
-.btnFacebookLogin{
-    
-}

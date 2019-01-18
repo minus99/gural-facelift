@@ -1,0 +1,109 @@
+/* Homepage Second Banner Categories */
+
+.grid-item-c {
+    grid-area: c;
+}
+.grid-item-d {
+    grid-area: d;
+}
+.grid-item-f {
+    grid-area: f;
+}
+.grid-item-e {
+    grid-area: e;
+}
+
+.homepage-categories-banner-title{
+    margin-bottom:27px;
+    span{
+        display: block;
+        text-align: center;
+        font-family: $gilroy;
+        font-size:22px;
+        font-weight: 400;
+        color:$black;
+        &:last-child{
+            font-weight: bold;
+        }
+    }
+    
+}
+.homepage-categories-banner{
+    display: flex;    
+    .grid-item{
+        position: relative;
+        width:52%;
+        a{
+            font-size:0px;
+            display: block;
+            height:100%;
+            margin-left:10px;
+            img{
+                width: 100%;
+                height:100%;
+            }
+            .title{
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                font-size: 22px;
+                transform: translate(-50% , -50%);
+                text-align: center;
+                color: $white;
+                font-weight: bold;
+                font-family: $gilroy;
+                min-width:calc(100% - 10px);
+                margin-left:5px;
+            }
+            i{
+                display: none;
+            }
+        }
+        
+    }
+}
+
+
+
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+
+        .homepage-categories-banner{
+            margin-top:50px;
+            &.grid-container {
+                display: grid;            
+                grid-column-gap: 15px;
+                grid-row-gap: 10px;
+                grid-template-areas: 
+                "c d f"
+                "c d e";
+                .grid-item{
+                    position: relative;
+                    width:inherit;
+                    border:inherit;
+                    a{
+                        border:inherit;
+                        margin:inherit;
+                        .title{
+                           min-width: 237px;
+                            font-size: 35px;
+                            margin-left:inherit;
+                        }
+                        i{
+                            position: absolute;
+                            right:10px;
+                            bottom:10px;
+                            &::before{
+                                color:$white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+
+    }
+}

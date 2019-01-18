@@ -1,39 +1,28 @@
 .main-wrapper > *{ grid-area: NNN; }
 
 /* Header */
-header{ grid-area: HDR !important; border:1px solid green;}
+header{ grid-area: HDR !important;}
+aside{grid-area: ASD !important;}
+main{ grid-area: MAI !important;width:100%;max-width: 1290px;margin:0 auto;}
+footer{grid-area: FTR !important;width:100%;max-width:1290px;margin:0 auto;border:1px solid red;}
 
-/* Aside Left Menü */
-aside{ grid-area: ASD !important; border:1px solid blue;}
 
-.right-col{grid-area: RGH !important;}
 
-/* Main */
-main{ grid-area: MAI !important; }
-
-/* Footer */
-footer{ grid-area: FTR !important; }
 
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
         
         .main-wrapper {
             display: grid;
-            //grid-template-columns: minmax(300px,auto) 1fr;
-            //grid-template-rows:  80px minmax(700px,auto) 80px;
-            //grid-template-columns:1fr minmax(260px,auto) minmax(1660px,auto) 1fr;
-            grid-template-rows: minmax(0, auto);
+            grid-template-rows:80px minmax(500px, auto) 80px;
+            grid-row-gap: 40px;
+            grid-template-columns:50px minmax(0 ,300px) minmax(0 , 1fr) 50px;
             grid-template-areas: 
-                "HDR HDR HDR HDR"
-                "MAI MAI MAI MAI"
-                "FTR FTR FTR FTR";
+                ". HDR HDR ."
+                ". ASD MAI ."
+                ". ASD FTR .";
         }
-        .page-content{
-            display: grid;
-            grid-template-columns:1fr minmax(260px,auto) minmax(1660px,auto) 1fr;
-            grid-template-rows: minmax(0, auto);
-            grid-template-areas:
-            ". ASD RGH .";
-        }
+
     }
 }
+

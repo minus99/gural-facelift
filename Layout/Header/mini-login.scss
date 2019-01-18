@@ -1,16 +1,245 @@
 /*
  * Üye Giriş
  ========================================================================== */
-.ems-logoff {
-    .sub.login,
-    [id$="lbfKUTU_HESABIM"]{ display: none !important; }
-    
+.ems-logoff{
+    .mini-cart-ready{
+        overflow: hidden !important;
+    }
 }
-.ems-login {
-    .sub.logoff,
-    [id$="lbfkutuUyeGiris1"]{ display: none !important; }
+body{
+    &.mini-login-ready{
+        .vail{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
 }
 
+.mod-mini-login{
+    .mod-mini-login-header{
+        > span{
+            @include get-flex(flex !important,center,center)
+            cursor: pointer;
+            font-family: $proxima;
+            font-size: 15px;
+            font-weight: 400;
+        }
+    }
+}
+
+.ems-login{
+    &.mini-login-ready{
+        overflow-y: inherit;
+        .vail{
+            top:80px;
+        }
+    }
+    .mod-mini-login{
+        .mod-mini-login-inner{
+            position: relative;
+            .mod-mini-login-header{
+                .login{
+                    display: block;
+                }
+                .logoff{
+                    display: none;
+                }
+            }
+            .mod-mini-login-body{
+                overflow: hidden;
+                max-height: 396px;
+                height:0px;
+                width:243px;
+                position: absolute;
+                right:0px;
+                top:60px;
+                background: $white;
+                z-index: 2000;
+                opacity: 0;
+                visibility: hidden;
+                transition: all .33s;
+                border-bottom-left-radius: 3px;
+                border-bottom-right-radius: 3px;
+                padding:10px 30px 30px 30px;
+                .ems-form{
+                    .form-title{
+                        display: none;
+                    }
+                    .ems-field{
+                        &.ya-da{
+                            display: none;
+                        }
+                        &.ems-field-multiple{
+                            display: none;
+                        }
+                    }
+                }
+                .ems-user-pages{
+                    .ems-col{
+                        font-family: $gilroy;
+                        font-size:15px;
+                        font-weight: bold;
+                        padding:10px 0px;
+                    }
+                    .ems-mini-logout{
+                        margin-top:20px;
+                        .btnKutuLogout{
+                            width:100%;
+                            border:1px solid #ddd;
+                            border-radius: 3px;
+                            padding: inherit;
+                            background: inherit;
+                            color:$dark !important;
+                            span{
+                                padding:3px;
+                                width:100%;
+                                @include get-flex(flex,center,space-around);
+                                font-size:15px;
+                                font-family: $proxima;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+        }   
+        &.opened{
+            .mod-mini-login-body{
+                opacity: 1;
+                visibility: visible;
+                height: 396px;
+            }
+        }
+    }
+}   
+
+
+
+
+
+.ems-logoff{
+    .mod-mini-login{
+        .mod-mini-login-header{
+            > div{
+                cursor: pointer;
+                > span{
+                    display: flex;
+                    align-items: center;
+                }
+                
+            }
+        }
+        
+        .mod-mini-login-body{
+            position: fixed;
+            top:0px;
+            right:-100%;;
+            background: $white;
+            width:395px;
+            padding: 30px;
+            height:100vh;
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transition: 333ms ease-in;
+            .form-title{
+                @include get-flex(flex,center,space-between);
+                margin-bottom:23px;
+                padding-bottom:10px;
+                border-bottom:1px solid $white-two;
+                span{
+                    font-family: $proxima;
+                    font-weight: 600;
+                    font-size:16px;
+                }
+                i{
+                    font-size:26px;
+                }
+            }
+            .ems-form-inner{
+                .ems-field{
+                    &.ya-da{
+                        text-align: center;
+                        margin:20px 0px;
+                        font-family: $gilroy;
+                        font-weight: 500;
+                        font-size:14px;
+                    }
+                    &.text{
+                        margin-top:20px;
+                    }
+                    &.ems-field-multiple{
+                        margin-bottom:40px;
+                        margin-top:10px;
+                        @include get-flex(flex,center,space-between);
+                        > span{
+                            font-size:12px;
+                            font-family: $proxima;
+                            font-weight: 400;
+                        }
+                        a{
+                            font-size:12px;
+                            font-family: $gilroy;
+                            font-weight: 400;
+                            text-decoration: underline;
+                        }
+                    }
+                    .btnKutuLogin{
+                        display: block;
+                        padding:21px;
+                    }
+                    .pageLogin_btnFacebookLoginKutu{
+                        table{
+                            display: table !important;
+                            width:100%;
+                            .btnFacebookLoginKutu{
+                                @extend .btnFacebookLogin;
+                                padding:18px;
+                                width:100%;
+                            }
+                        }
+                    }
+                    .lnkUyeOlmak{
+                        display: block;
+                        border:1px solid $black;
+                        border-radius: 3px;
+                        text-align: center;
+                        color:#0f1015;
+                        font-size:15px;
+                        font-family: $proxima;
+                        font-weight: bold;
+                        padding:18px;
+                    }
+                }
+            }
+        }
+        &.opened{
+            .mod-mini-login-body{
+                opacity: 1;
+                visibility: visible;
+                right:0px;
+            }
+        }
+    }
+}
+
+
+.ems-login{
+    .login{
+        display: block;
+    }
+    .logoff{
+        display: none;
+    }
+}
+.ems-logoff{
+    .login{
+        display: none;
+    }
+    .logoff{
+        display: block;
+    }
+}
 
 /*
  * Media Query
@@ -21,7 +250,13 @@
         /*
          * Üye Giriş
          ========================================================================== */
-      
+
+         .navbar-holder{
+            .navbar-item-mini-member{
+                grid-area: MMB;
+            }
+        }
+        
 
     }
 }

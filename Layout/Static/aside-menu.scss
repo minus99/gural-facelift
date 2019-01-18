@@ -3,12 +3,81 @@
 //
 // ========================================================================
 
+.aside-menu{
+    display: none;
+}
+
 
 /*
  * Media Query
  ========================================================================== */
  @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
+       
+        .aside-menu{
+            display: grid;
+            .kutuKategori{
+                position: relative;
+                .kutuHeaderKategori{
+                    display: none;
+                }
+                .kutuBodyKategori{
+                    position: sticky;
+                    top:0px;
+                    .menuView{
+                        max-width: 260px;          
+                        li.s1{
+                            font-family: $gilroy;
+                            font-weight: bold;
+                            font-size:15px;    
+                            position: relative;
+                            > a{
+                                padding: 12.5px 0px;
+                            }
+                            > ul {
+                                display: none;
+                                margin-left:10px;
+                                li.s2{
+                                    font-family: $proxima;
+                                    font-weight: 400;
+                                    font-size:15px;
+                                    color:$grey-6;
+                                    > a{
+                                        padding:5.5px;
+                                    }
+                                    &.opened{
+                                        color:$black;
+                                    }
+                                }
+                            }
+                            &.sub-items{
+                                > b{
+                                    position: absolute;
+                                    left:-40px;
+                                    width:40px;
+                                    height:40px;
+                                    top:0px;
+                                    &:after{
+                                        content:"\e942";
+                                        font-family: "icomoon";
+                                        font-size:40px;
+                                        color:#aaa !important;
+                                        font-weight: 100;
+                                    }
+                                }
+                            }
+                            &.opened{
+                                > b{
+                                    &::after{
+                                        content:"\e939";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
     }
 }
