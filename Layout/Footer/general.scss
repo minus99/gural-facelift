@@ -6,15 +6,30 @@
 
 // Scroll Top Button
 // ========================================================================
-.scroll-top-btn{
-    width: 100%;
-    border-radius: 0;
-    font-size: 9px;
-    line-height: 22px;
-}
+
 
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
-        
+        footer{
+            border:1px solid yellow;
+            display: grid;
+            grid-template-rows: 100px 400px 100px;
+            grid-template-areas: 
+            "FT"
+            "FC"
+            "FB";
+            .footer-top{
+                border:1px solid blue;
+                grid-area: FT;
+            }
+            .footer-content{
+                border:1px solid grey;
+                grid-area: FC;
+            }
+            .footer-bottom{
+                border:1px solid red;
+                grid-area: FB;
+            }
+        }        
     }
 }

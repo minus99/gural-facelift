@@ -110,10 +110,10 @@ select{
     align-items: center;
     margin-right: 10px;
     .cStyler{
-        border: 1px solid $emperor;
+        border: 1px solid $grey-d;
         border-radius: 3px;
-        width: 18px;
-        height: 18px;
+        width: 16px;
+        height: 16px;
         position: relative;
         transition: all .333s ease-in-out;
         &::before{
@@ -129,9 +129,9 @@ select{
             transition: all .333s ease-in-out;
         }
         &.checked{
-            border-color: $frenchRose;
+            border-color: $grey-d;
             &::before{
-                background: $frenchRose;
+                background: $grey-d;
             }
         }
     }
@@ -142,7 +142,7 @@ select{
 //-------------------------------------------//
 input[type="checkbox"], input[type="radio"]{
     -webkit-appearance: none;
-    border: 1px solid $emperor;
+    border: 1px solid $grey-d;
     border-radius: 3px;
     background-color: $white;
     transition: background .2s ease;
@@ -155,10 +155,12 @@ input[type="checkbox"]{
     width: 18px !important;
     height: 18px;
     padding: 0;
+    position: absolute;
+    opacity: 0;
 }
 input[type="checkbox"]:checked{
-    border-color: $frenchRose;
-    background-color: $frenchRose;
+    border-color: $grey-d;
+    background-color: $grey-d;
 }
 
 //-------------------------------------------//
@@ -181,7 +183,7 @@ input[type="radio"]:checked{
 .ems-form-inner{
     .ems-field{
         + .ems-field{
-            margin-top: 15px;
+            margin-top: 20px;
         }
     }
 }
@@ -189,9 +191,9 @@ input[type="radio"]:checked{
     pointer-events: none;
     font-family: $proxima;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 400;
     color: $charcoal-grey;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     &:empty{
         display: none;
     }
@@ -252,11 +254,11 @@ input[type="radio"]:checked{
 .ems-field-phone{
     .ems-form-obj{
         [id$="txtUYE_CEPTELEFONALAN"]{
-            width: 50px !important;
-            margin-right: 15px;
+            width: 90px !important;
+            margin-right: 10px;
         }
         [id$="txtUYE_CEPTELEFON"]{
-            width: calc(100% - 65px) !important;
+            width: calc(100% - 100px) !important;
         }
     }
 }
