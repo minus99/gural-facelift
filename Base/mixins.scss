@@ -52,3 +52,27 @@
 	align-items: $align;
 	justify-content: $justify;
 }
+
+/*  Scroll Bar */
+
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+
+		/* width */
+		::-webkit-scrollbar {
+			width: 3px;
+		}
+		
+		/* Track */
+		::-webkit-scrollbar-track {
+			background: #efefef; 
+		}
+		
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: #d2cac5; 
+		}
+	}
+}
+  

@@ -2,12 +2,49 @@
 // Description:     
 //
 // ========================================================================
-.footer-bottom-holder{
-}
 
+.footer-bottom-wrapper{
+    @include get-flex(flex,center,space-between);
+    margin:25px 0px 30px 0px;
+    flex-wrap: wrap;
+    > div {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        &:nth-child(3){
+            img{
+                width: 129px;
+            }
+        }
+    }
+    .footer-mobile-nav{
+        margin-bottom:25px;
+        a{
+            font-family: $gilroy;
+            font-weight: bold;
+            font-size:15px;
+            color:$charcoal-grey;
+            margin:0 30px;
+        }
+    }
+}
 
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
+
+        .footer-bottom-wrapper{
+            flex-wrap: inherit;
+            > div {
+                justify-content: flex-start;
+                width: 230px;
+                &:nth-child(3){
+                    justify-content: center;
+                }
+                img{
+                    width:unset;
+                }
+            }
+        }
 
     }
 }

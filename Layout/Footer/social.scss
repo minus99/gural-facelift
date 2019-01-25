@@ -1,0 +1,40 @@
+// Name:            Footer Content Bulletin 
+// Description:     
+//
+// ========================================================================
+
+
+
+.footer-content{
+    .footer-social{
+        @include get-flex(flex,center,center);
+        margin-top:20px;
+        > div{
+            margin:0px 15px;
+            i{
+                border-radius: 100%;
+                border:1px solid $grey-a;
+                font-size:50px;
+            }
+        }
+    }
+}
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+
+        .footer-content{
+            .footer-social{
+                margin-top:30px;
+                > div{
+                    margin:0px;
+                    margin-left:25px;
+                    i{
+                        font-size:40px;
+                    }
+                }
+            }
+        }
+
+    }
+}

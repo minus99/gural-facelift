@@ -14,7 +14,7 @@ footer{grid-area: FTR !important;width:100%;}
         
         .main-wrapper {
             display: grid;
-            grid-template-rows:80px minmax(500px, auto) 80px;
+            grid-template-rows:80px minmax(500px, auto) auto;
             grid-row-gap: 40px;
             grid-template-columns:50px minmax(0 ,300px) minmax(0 , 1fr) 50px;
             grid-template-areas: 

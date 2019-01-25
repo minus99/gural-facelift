@@ -1,14 +1,82 @@
-// Name:            Footer Bulletin
+// Name:            Footer Content Bulletin 
 // Description:     
 //
 // ========================================================================
 
 
 
-
+.footer-bulletin{
+    .mini-bulletin{
+        margin-top:30px;
+        @include get-flex(flex,center,center);
+        width:100%;
+        flex-wrap: wrap;
+        &-title{
+            width: 300px;
+            padding:0px 20px;
+            margin:0 auto;
+            text-align: center;
+            font-family: $proxima;
+            font-weight: 400;
+            color:$dark;
+        }
+        .bulletin-form{
+            min-width: 335px;
+            margin-top:10px;
+            @include get-flex(flex,center,space-between);
+            position: relative;
+            .mailHolder{
+                width:100%;
+                border-radius: 3px;
+            }
+            .sendHolder{
+                position: absolute;
+                right:2px;
+                .btnBultenGonder{
+                    padding: inherit;
+                    background: $white;
+                    color:$charcoal-grey !important;
+                }
+            }
+        }
+        .mini-bulletin-message{
+           span{
+            @extend .ems-message;
+            display: block;
+            width:inherit;
+            margin-left:0px;
+           }
+        }
+    }
+}
 
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
+
+        .footer-bulletin{
+            @include get-flex(flex,flex-end,flex-end);
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            .mini-bulletin{
+                margin-top:0px;
+                display: inherit;
+                .mini-bulletin-title{
+                    padding: 0px;
+                    width:inherit;
+                }
+                .mini-bulletin-message{
+                    span{
+                        max-width:335px;
+                        margin-left:37px;
+                    }
+                 }
+                .mailHolder{
+                    width:335px;
+                    margin-left:37px;
+                }
+            }
+
+        }
 
     }
 }

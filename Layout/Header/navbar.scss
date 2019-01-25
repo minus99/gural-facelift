@@ -3,8 +3,9 @@
 .navbar-holder{
     @include get-flex(flex,center,space-around);
     flex-wrap: wrap;
-    .navbar-item-search-mobile{
+    .navbar-item-alternate-icons{
         width:33%;
+        visibility: hidden;
         @include get-flex(flex,center,flex-start);
     }
     .navbar-item-logo{

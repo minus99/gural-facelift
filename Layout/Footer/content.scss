@@ -1,0 +1,22 @@
+// Name:            Footer Content
+// Description:     
+//
+// ========================================================================
+
+
+
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+
+        .footer-content{
+            @include get-flex(flex,flex-start,space-between);
+            padding:45px 0px 50px 0px;
+            > div{
+                width:50%;
+                height: 100%;
+            }
+        }
+
+    }
+}

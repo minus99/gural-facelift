@@ -1,0 +1,61 @@
+// Name:            Footer Top Area Icons
+// Description:     
+//
+// ========================================================================
+
+
+.footer-top{
+    border-top:1px solid $white-two;
+    border-bottom: 1px solid $white-two;
+    > div{
+        height: 100%;
+    }
+}
+.footer-icons {
+    padding: 20px;
+    height: 100%;
+    @include get-flex(flex,center,space-between);
+    > div {
+        @include get-flex(flex,center,center);
+        cursor: pointer;
+        flex-wrap: wrap;
+        text-align: center;
+        i {
+            font-size: 50px;
+        }
+        span {
+            font-size: 12px;
+            font-family: $proxima;
+            font-weight: bold;
+            color: $black;
+            margin-top:10px;
+            margin-left:0px;
+        }
+    }
+}
+
+
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+
+        .footer-icons {
+            padding:0px 60px;
+            height: 100%;
+            > div {
+                flex-wrap: inherit;
+                text-align: inherit;
+                width:200px;
+                i {
+                    font-size: 60px;
+                }
+                span {
+                    font-size: 15px;
+                    margin-left: 20px;
+                    margin-top:0px;
+                }
+            }
+        }
+
+    }
+}
