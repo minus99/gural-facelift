@@ -1,4 +1,14 @@
-.ems-product-list{
+.page-PrdList{
+    .navbar-holder{
+        .navbar-item-search{
+            display: none;
+        }
+        .navbar-item-alternate-icons{
+            .icon-search{
+                visibility: visible;    
+            }
+        }
+    }
     .ems-prd-list-paging{
         display: none;
     }
@@ -10,7 +20,17 @@
  ========================================================================== */
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
-        .ems-product-list{
+        .page-PrdList{
+            .navbar-holder{
+                .navbar-item-search{
+                    display: block;
+                }
+                .navbar-item-alternate-icons{
+                    .icon-search{
+                        visibility: hidden;    
+                    }
+                }
+            }
             .ems-prd-list-paging{
                 display: block;
             }

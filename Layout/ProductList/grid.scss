@@ -1,11 +1,65 @@
 /*
  * Media Query
  ========================================================================== */
+    .ems-page-list{
+        .grid-container{        
+            .grid-column {
+                width:94.7%;
+                margin:0 auto;
+            }
+        }
+    }
+
+    /* Grid Areas */
+
+    .ems-page-list{
+        .grid-container{
+            .grid-column-brd{
+                grid-area: brd;
+            }
+            .grid-column-cat{
+                grid-area: cat;
+            }
+            .grid-column-bnr{
+                grid-area: bnr;
+            }
+            .grid-column-prd{
+                grid-area: prd;
+            }
+            .grid-column-flt{
+                grid-area: flt;
+            }
+        }
+    }
+
  @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
        
 
+        .ems-page-list{
+            .grid-container{
+                grid-template-columns: 100%;
+                display: grid;
+                grid-template-areas: 
+                "bnr"
+                "brd"
+                "cat"
+                "prd"
+                ;
+                .grid-column {
+                    width:inherit !important;
+                    margin:inherit !important;
+                }
+            }
+        }
       
         
     }
+}
+
+
+
+
+.pageContact p{
+    margin-left:0px;
 }

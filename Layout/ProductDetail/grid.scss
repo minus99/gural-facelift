@@ -1,8 +1,15 @@
-/* Reset in Items */
-.ems-prd-detail-inner > *{
-    grid-area: nnn;
-}
+/* Product Detail Page */ 
 
+ul.emosInfinite{
+    display: flex;
+    flex-wrap: inherit;
+}
+.mousetrap{
+    display: none;
+}
+.zoom-gallery.gallery-ready{
+    display: block;
+}
 
 /*
  * Media Query
@@ -10,7 +17,29 @@
  @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
         
-       
+       .ems-page-detail{
+           border:1px solid red;
+           display: grid;
+           grid-template-columns: 100%;
+           > .grid-column{
+               border:1px solid red;
+           }
+           .grid-column-dtl{
+                border:1px solid blue;
+                .ems-prd-detail-inner{
+                    border:1px solid red;
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    .inner-row-1{
+                        border:1px solid blue;
+                    }
+                    .inner-row-2{
+                        margin-left:130px;
+                        border:1px solid red;
+                    }
+                }
+           }    
+       }
         
     }
 }

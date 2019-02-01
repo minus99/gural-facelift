@@ -12,6 +12,9 @@
 
 /* Zoom Main Slider */
 .product-detail-slider{
+    .swiper-left-column{
+        display: none;
+    }
     .product-slide-inner{
         .cloud-zoom{
             position: relative;
@@ -78,6 +81,9 @@
     left: 0;
     background: #FFF;
     display: none;
+    &.gallery-ready{
+        display: block;
+    }
 }
 
 /*
@@ -88,8 +94,7 @@
         
         /* Zoom Main Slider */  
         .product-detail-slider{
-            max-width: 500px;
-            padding: 0 65px;
+
         }
 
     }

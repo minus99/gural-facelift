@@ -2,38 +2,44 @@
 // Component:       Product List Header
 //
 // ========================================================================
-.ems-prd-list-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid $alto;
-}
-.ems-prd-list-filter-button{
-    .btn-filter{
-
+.ems-page-list{
+    .grid-column-brd{
+        @include get-flex(flex,center,space-between);
+        width:100% !important;
+        padding:12.5px;
+        background: $light-grey;
+        .product-list-navigasyon{
+            .urunNavigasyon{
+                > span{
+                    color:$charcoal-grey;
+                    a{
+                    &:not(:first-child){
+                            &:before{
+                                content:' / ';
+                                margin-left:2px;
+                            }
+                        }
+                    }
+                    &.navigasyonSeviye3{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .ems-prd-list-filter-button{
+            @include get-flex(inline-flex,center,flex-end);
+            .btn-filter{
+                &:last-child{
+                    border:1px solid $black;
+                    color:$black;
+                    font-weight: 400;
+                    padding: 9px;
+                    border-radius: 3px;
+                }
+            }
+        }
     }
 }
-
-/* List Product Count */
-.ems-list-prd-count{
-    display: inline-flex;
-    align-items: center;
-    cursor: default;
-
-    font-family: $proxima;
-    font-size: 13px;
-    line-height: 16px;
-    color: $dustyGray;
-    .count{
-        margin-right: 3px;
-    }
-}
-
-.ems-prd-list-view{
-
-}
-
 
 /*
  * Desktop
@@ -41,68 +47,31 @@
  ========================================================================== */
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
-        .ems-prd-list-header{
-            margin: 15px 0 25px;
-            border-bottom: 0;
-        }
 
-        /* List Filter Button */
-        .ems-prd-list-filter-button{
-            .btn-filter{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 116px;
-                padding: 10px 0;
-                border-radius: 5px;
-                background: $black;
-
-                font-family: $proxima;
-                font-size: 13px;
-                font-weight: 700;
-                line-height: 16px;
-                color: $white;
-                i{
-                    font-size: 14px;
-                    margin-right: 12px;
-                }
-            }
-        }
-
-        /* List Product Count */
-        .ems-list-prd-count{
-            margin-left: 20px;
-        }
-        
-
-        /* List Sort */
-        .ems-prd-list-sort {
-            display: inline-flex;
-            align-items: center;
-            ul{
-                display: flex;
-                align-items: center;
-                li{
-                    a{
-                        font-family: $proxima;
-                        font-size: 13px;
-                        line-height: 16px;
-                        color: $dustyGray;
-
-                        padding: 6px 13px;
-                        border: 1px solid $white;
-                        border-radius: 15px;
-                        transition: all .200s ease-in-out;
+        .ems-page-list{
+            .grid-column-brd{
+                background: $white;
+                padding:12.5px 0px;
+                .product-list-navigasyon{
+                    .urunNavigasyon{
+                        > span{
+                            color:$grey-6;
+                        }
                     }
-                    &:hover,
-                    &.selected{
-                        a{
-                            border-color: $alto;
-                            color: $black;
+                }
+                .ems-prd-list-filter-button{
+                    .btn-filter{
+                        &:first-child{
+                            @include get-flex(flex,center,center);
+                            font-weight: bold;
+                            i::before{
+                                color:$black;
+                            }
                         }
                     }
                 }
             }
         }
+    
     }
 }

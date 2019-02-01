@@ -1,0 +1,44 @@
+//
+// Component:       Product List Categories Swiper
+//
+// ========================================================================
+
+.ems-page-list{
+    .grid-column-cat{
+        width:100% !important;
+        margin-left:2.3% !important;
+        padding:15px 0px 30px 0px;
+        .swiper-slide{
+            width:auto;
+            a{
+                border:1px solid $grey-d;
+                margin-right:8px;
+                border-radius: 3px;
+                padding:8px;
+                color:$dark;
+                font-size:15px;
+                &.active{
+                    border:1px solid $black;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*
+ * Desktop *  
+ ========================================================================== */
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+
+        .ems-page-list{
+            .grid-column-cat{
+                margin-left:0px !important;
+            }
+        }
+
+    }
+}
