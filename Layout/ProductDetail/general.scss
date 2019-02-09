@@ -1,4 +1,14 @@
-
+.ems-page-detail{
+    .navbar-hide-icons{
+        visibility: visible !important;
+        .header-search-btn{
+            display: none;
+        }
+    }
+    .navbar-item-search{
+        display: none;
+    }
+}
 
 
 /*
@@ -7,6 +17,42 @@
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
 
+        .ems-page-detail{
+            .logo{
+                @include get-flex(flex,center,space-between);
+                width:160px !important;
+                .icon-menu{
+                    margin-right:10px;
+                    display: block !important;
+                }
+            }
+            .main-wrapper{
+                grid-template-areas: 
+                ". HDR HDR ."
+                ". MAI MAI ."
+                ". FTR FTR ." !important;
+                aside{
+                    display: none;
+                }
+            }
+
+            .navbar-item-search{
+                display: block;
+            }
+        }
+        .ems-page-detail{
+            .aside-active{
+                .main-wrapper{
+                    grid-template-areas: 
+                    ". HDR HDR ."
+                    ". ASD MAI ."
+                    ". ASD FTR ." !important;
+                    aside{
+                        display: block;                                            
+                    }
+                }
+            }
+        }
 
     }
 }

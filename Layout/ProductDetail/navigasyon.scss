@@ -1,0 +1,29 @@
+//
+// Static:       Product Tabs
+//
+// ========================================================================
+
+    .grid-column-nvg{
+        display: none;
+        .urunNavigasyon > span a:not(:first-child):before{
+            content: ' / ';
+            margin-left: 2px;
+        }
+    }
+
+  
+/*
+ * Media Query
+ ========================================================================== */
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        
+        .grid-column-nvg{
+            display: block;
+            color:$grey-6;
+            padding-bottom:20px;
+        }
+
+    }
+}
+

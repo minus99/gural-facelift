@@ -5,8 +5,10 @@
     flex-wrap: wrap;
     .navbar-item-alternate-icons{
         width:33%;
-        visibility: hidden;
-        @include get-flex(flex,center,flex-start);
+        .navbar-hide-icons{
+            visibility: hidden;
+            @include get-flex(flex,center,flex-start);   
+        }
     }
     .navbar-item-logo{
         width:94px;
@@ -34,11 +36,17 @@
                 > div{
                     width:inherit !important;
                 }
+                .navbar-item-alternate-icons{
+                    display: none;
+                }
                 .navbar-item-logo{
                     grid-area: LGO;
                     width:inherit;
                     .logo{
                         width:110px;
+                    }
+                    .icon-menu{
+                        display: none;
                     }
                 }
                 .navbar-item-right{

@@ -1,14 +1,132 @@
-//
-// Static:       Product Tabs
-//
-// ========================================================================
+.ems-tab-detail{
+    padding:0px !important;
+    margin-top:35px;
+    .ems-tab-inner{
+        padding:0px 20px 120px 20px;
+        background-image:url('/UPLOAD/PRODUCTS/thumb/OSC84YT9404656_1_medium.jpg');
+        background-size:1000px;
+        overflow: hidden;
+        .content-js {
+            > li{
+                border-bottom:1px solid $white;
+                color:$white;
+                .title{
+                    font-size:22px;
+                    font-weight: bold;
+                    font-family: $gilroy;
+                    padding:20px 0px;
+                    @include get-flex(flex,center,space-between);
+                    position: relative;
+                    .icon-minus{
+                        visibility: hidden;
+                        opacity: 0;
+                        position: absolute;
+                        right:-200%;
+                    }
+                    .icon-plus-copy{
+                        opacity: 1;
+                        position: absolute;
+                        right:20px;
+                    }
+                    i::before{
+                        color:$white;
+                    }
+                }
+                .content-detail{
+                    visibility: hidden;
+                    overflow: hidden;
+                    opacity: 0;
+                    height: 0px;
+                    transition-duration:.7s;
+                    transition-property: height,opacity,visibility;
+                    color:$light-grey;
+                    line-height: 1.2;
+                }
+                &.selected{
+                    .title{
+                        padding:10px 0px;
+                        transition: padding .7s;
+                        .icon-minus{
+                            opacity: 1;
+                            visibility: visible;
+                            right:20px;
+                            transition: all .7s;
+                        }
+                        .icon-plus-copy{
+                            opacity: 0;
+                            visibility: hidden; 
+                            right:-200%;
+                            transition: all .7s;
+                        }
+                    }
+                    .content-detail{
+                        visibility: visible;
+                        opacity: 1;
+                        height: auto;
+                        padding:15px;
+                    }             
+                }
+                &:last-child.selected{
+                    .content-detail{
+                        height:auto !important;
+                    }
+                }
+            }
+        }
+    }
+    &.ems-tab-opened{
+        .ems-tab-inner{
+            background-image:url('/UPLOAD/facelift-banner/product-detail/prd-detail-bg.png');
+            background-size:1000px;
+            transition: background-image .33s;
+        }
+    }
+}
 
-  
-/*
- * Media Query
- ========================================================================== */
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
         
+        .ems-tab-detail{
+            .ems-tab-inner{
+                background-image:none;
+                background: $white;
+                transition:inherit;
+                .content-js {
+                    > li{
+                        border-bottom:1px solid $grey-d;
+                        color:$black;
+                        .title{
+                            font-size:15px;
+                            padding:21px 0px !important;
+                            i:before{
+                                color:$grey-a;
+                            }
+                        }
+                        .content-detail{
+                            color:$grey-6;
+                            > div{
+                                transition: inherit;
+                            }
+                        }
+                        &.selected{
+                            border-bottom:none;
+                            .title{
+                            }
+                            .content-detail{
+                                border-top:1px solid $grey-d;
+                                padding:15px 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.ems-tab-opened{
+            .ems-tab-inner{
+                background: none !important;
+            }
+        }
+
+
     }
 }

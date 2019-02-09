@@ -2,18 +2,195 @@
 // Static:       Product Card
 //
 // ========================================================================
+.ems-prd-detail .ems-prd-detail-group .dropdown, .ems-prd-detail .ems-prd-detail-group .sStylerMainWrp , .all-pp-texture , .listeUrunDetayGrup_listeBaslik{
+    display: none !important;
+}
+.UrunListeGrup_listeUrunDetayGrup{
+    .swiper-inner{
+        overflow: hidden;
+    }
+}
 
-    /* Name
-    ========================================================================== */
+.ems-page-detail{
+    .grid-column-dtl{
+        .ems-prd-detail-inner{
+            .inner-row-2{
+                .ems-prd{
+                    display: flex;
+                    flex-wrap: wrap;
+                    color:$charcoal-grey;
+                    > div{
+                        width:100%;
+                        padding:0px 20px;
+                    }
+                    .ems-prd-product-code{
+                        grid-area:ppc;
+                        font-size:14px;
+                        margin-top:20px;
+                        &::before{
+                            content: 'ÜRÜN KODU : ';
+                        }
+                    }
+                    .ems-detail-name{
+                        grid-area:edn;
+                        margin-top:5px;
+                    }
+                    .ems-detail-last-prd , .ems-detail-no-stock{
+                        grid-area:dlp;
+                        margin-top:20px;
+                        font-weight: bold;
+                        color:$carmine;
+                    }
+                    .ems-detail-new-prd {
+                        grid-area:dnp;
+                        font-size:14px;
+                    }
+                    .ems-detail-havale{
+                        grid-area:edh;
+                        margin-top:5px;
+                    }
+                    .ems-detail-price{
+                        grid-area:edp;
+                        @include get-flex(flex,center,flex-start);
+                        margin-top:20px;
+                        &-right{
+                            font-size:15px;
+                            font-weight: bold;
+                            .urunDetay_satisFiyatIkFiyat{
+                                font-weight: 400;
+                                position: relative;
+                                display: block;
+                                span{
+                                    &:after{
+                                        content:'';
+                                        border:2px solid $light-peach;
+                                        left:0px;
+                                        right:0px;
+                                        top:50%;
+                                        transform: translateY(-50%);
+                                        position: absolute;
+                                        z-index: -1;
+                                    }
+                                }
+                            }
+                        }
+                        .ems-detail-discount{
+                            .urunDetay_KazancOran{
+                                @include get-flex(inline-flex !important,center,center);
+                                border-radius: 3px;
+                                margin-right:10px;
+                                width:36px;
+                                height:36px;
+                                background: $light-peach;
+                                color:$black;
+                                &:before{
+                                    content: ' % ';
+                                }
+                            }
+                        }
+                    }
+                    .ems-prd-add-to-cart{
+                        grid-area:edc;
+                        margin-top:25px;
+                        .pnlSepetGrup{
+                            @include get-flex(flex,center,space-between);
+                            flex-wrap: wrap;
+                            .ems-detail-color-btn{
+                                cursor: pointer;
+                                width:calc(50% - 20px);
+                                border-right: 1px solid $grey-d;
+                                @include get-flex(flex,center,space-between);
+                                color:$carmine;
+                                margin-right:20px;
+                                font-weight: bold;
+                            }
+                            .UrunListeGrup_listeUrunDetayGrup{
+                                padding-top:20px;
+                                width:100%;
+                                .swiper-button-prev, .swiper-button-next{
+                                    display: none;
+                                }
+                            }
+                            .urunDetay_urunAdet{
+                                @include get-flex(flex,center,flex-start);
+                                width:50%;
+                                position: relative;
+                                max-width:160px;
+                                color:$black;
+                                font-weight: bold;
+                                .counter-drp{
+                                    display: none;
+                                }
+                                .bottom-btn{
+                                    position: absolute;
+                                    left:0px;
+                                    top:2px;
+                                }
+                                .top-btn{
+                                    position: absolute;
+                                    right:0px;
+                                    top:2px;
+                                }
+                                input{
+                                    padding-left:50px;
+                                    padding-right:85px;
+                                    color:$black;
+                                    font-weight: bold;
+                                    font-size:15px;
+                                }
+                                > span{
+                                    position: absolute;
+                                    right:50px;
+                                    margin-top:1px;
+                                }
+                            }
+                            .urunDetay_btnSepeteAt{
+                                width:100%;
+                                margin-top:10px;
+                                table{
+                                    display: table !important;
+                                    width:100%;
+                                    .btnsepeteAt{
+                                        width:100%;
+                                        text-transform: uppercase;
+                                    }
+                                }
+                            }
+                        }
+                        .urunDetay_btnStokHaberci{
+                            table{
+                                display: table !important;
+                                width: 100%;
+                                *{
+                                    width:100%;
+                                }
+                                .btnStokHaberci{
+                                    text-transform: uppercase;
+                                    background: $grey-a;
+                                }
+                            }
+                        }
+                    }
+                    .ems-detail-btns{
+                        grid-area:edb;
+                        @include get-flex(flex,center,space-between);
+                        margin-top:20px;
+                        > div{
+                            width:49%;
+                            .btnDefault{
+                                width:100%;
+                                @extend .btn-primary;
+                                font-size:15px;
+                            }
+                        }
+                    }
+                }     
+            }
+        }
+    }
+}
 
-    
-    /* Description
-    ========================================================================== */
-   
-    /* Price
-    ========================================================================== */
 
-  
 
 /*
  * Media Query
@@ -21,6 +198,43 @@
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
 
-     
+
+        .ems-page-detail{
+            .grid-column-dtl{
+                .ems-prd-detail-inner{
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    .inner-row-1{
+                    }
+                    .inner-row-2{
+                        margin-left:130px;
+                        .ems-prd{
+                            padding: 0;
+                            display: grid;
+                            grid-template-columns: 100%;
+                            grid-template-areas: 
+                            "ppc"
+                            "edn"
+                            "edp"
+                            "edh"
+                            "dlp"
+                            "dnp"
+                            "edc"
+                            "edb"
+                            ;
+                            .ems-detail-name{
+                                margin-bottom:20px;
+                                font-family: $gilroy;
+                                font-weight: bold;
+                                font-size:25px;
+                            }
+                            .ems-detail-havale{
+                                margin-top:10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -1,14 +1,14 @@
-.page-PrdList{
-    .navbar-holder{
-        .navbar-item-search{
+.ems-page-product-list{
+    .navbar-hide-icons{
+        visibility: visible !important;
+        .header-detail-back-btn{
             display: none;
         }
-        .navbar-item-alternate-icons{
-            .icon-search{
-                visibility: visible;    
-            }
-        }
     }
+    .navbar-item-search{
+        display: none;
+    }
+
     .ems-prd-list-paging{
         display: none;
     }
@@ -20,16 +20,9 @@
  ========================================================================== */
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
-        .page-PrdList{
-            .navbar-holder{
-                .navbar-item-search{
-                    display: block;
-                }
-                .navbar-item-alternate-icons{
-                    .icon-search{
-                        visibility: hidden;    
-                    }
-                }
+        .ems-page-product-list{
+            .navbar-item-search{
+                display: block;
             }
             .ems-prd-list-paging{
                 display: block;
