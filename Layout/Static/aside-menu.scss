@@ -13,17 +13,18 @@
  ========================================================================== */
  @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
-       
+       aside{
+           position: relative;
+       }
         .aside-menu{
             display: grid;
+            position: sticky;
+            top:120px;
             .kutuKategori{
-                position: relative;
                 .kutuHeaderKategori{
                     display: none;
                 }
                 .kutuBodyKategori{
-                    position: sticky;
-                    top:0px;
                     .menuView{
                         max-width: 260px;          
                         li.s1{

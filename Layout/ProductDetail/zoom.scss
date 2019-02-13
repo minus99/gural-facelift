@@ -15,20 +15,31 @@
     .swiper-left-column{
         display: none;
     }
-    .product-slide-inner{
-        .cloud-zoom{
-            position: relative;
-            .color-palatte-img{
-                position: absolute;
-                left: 0;
-                top: 0;
-                z-index: -1;
-                &.active-img{
-                    z-index: 1;
-                }
+    .swiper-slide{
+        a{
+            cursor:zoom-in;
+        }
+        margin-bottom:10px;
+    }
+    .swiper-pagination{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding:0px 20px 20px 0px;
+        &-bullet{
+            margin:0px 12px;
+            width:7px;
+            height: 7px;
+            background: $white !important;
+            opacity: 0.5;
+            transition: all .33s;
+            &-active{
+                width:10px;
+                height:10px;
+                opacity: 1;
             }
         }
-    }
+    }        
 }
 
 /* Zoom Big Slider */
@@ -44,9 +55,77 @@
     left: 0;
     background: #FFF;
     display: none;
-    &.gallery-ready{
-        display: block;
+    &-inner{
+        display: flex;
+        flex-direction: row-reverse;
     }
+    &-header{
+        position:absolute;
+        top:50px;
+        right:50px;
+        z-index: 99;
+    }
+    &-footer{
+        position: absolute;
+        bottom:50px;
+        right:50px;
+        z-index: 99;
+        i:before{
+            color:#a10014;
+        }
+    }
+    .large-wrapper{
+        width:calc(100% - 200px);
+        overflow: hidden;
+        li{
+            height:100vh;
+            img{
+                width:inherit !important;
+            }
+        }
+        .swiper-button-next , .swiper-button-prev{
+            display: none;
+        }
+    }
+    .detail-thumbs-slider{
+        background: $white; 
+        position: absolute;
+        top:50%;
+        left:0px;
+        transform: translateY(-50%);
+        width:200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .thumbs-wrapper{
+        overflow: hidden;
+        ul{
+            height:540px;
+            align-items: center;
+            li{ 
+                width:160px;
+                @include get-flex(flex,center,center);                
+                img{
+                    width:100%;
+                }
+            }
+        }
+        .thumb-swiper-button-next , .thumb-swiper-button-prev {
+            position: absolute;
+            cursor: pointer;
+            z-index: 100;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .thumb-swiper-button-next{
+            bottom:-40px;
+        }
+        .thumb-swiper-button-prev{
+            top:-40px;
+        }
+    }
+    
 }
 
 /*
@@ -62,6 +141,11 @@
                 }
             }
         }
+        .zoom-gallery{
+            &.gallery-ready{
+                display: block;
+            }
+        }  
 
     }
 }

@@ -103,11 +103,46 @@
                                 color:$carmine;
                                 margin-right:20px;
                                 font-weight: bold;
+                                i{
+                                    display: none;
+                                }
+                                .icon-carrot02{
+                                    display: block;
+                                }
+                                &.ems-opened{
+                                    .icon-carrot01{
+                                        display: block;
+                                    }
+                                    .icon-carrot02{
+                                        display: none;
+                                    }
+                                }
                             }
                             .UrunListeGrup_listeUrunDetayGrup{
                                 padding-top:20px;
                                 width:100%;
-                                .swiper-button-prev, .swiper-button-next{
+                                .swiper-slide{
+                                    cursor: pointer;
+                                    position: relative;
+                                    &::before{
+                                        content:'';
+                                        background: rgba(231, 231, 231, 0);
+                                        width:100%;
+                                        height:100%;
+                                        position: absolute;
+                                        pointer-events: none;
+                                    }
+                                    &:hover{
+                                        &::before{
+                                            transition:all .33s;
+                                            background: rgba(231, 231, 231, .5);
+                                        }
+                                    }
+                                }
+                                .swiper-button-prev, .swiper-button-next , .swiper-pagination{
+                                    display: none;
+                                }
+                                &.ems-opened{
                                     display: none;
                                 }
                             }
@@ -150,9 +185,32 @@
                                 table{
                                     display: table !important;
                                     width:100%;
-                                    .btnsepeteAt{
+                                    a.btnsepeteAt{
                                         width:100%;
                                         text-transform: uppercase;
+                                        padding:0px;
+                                        transition: all .33s;
+                                        > span{
+                                            display: block;
+                                            width:100%;
+                                            padding:21.5px;
+                                        }
+                                        .sepete_eklendi{
+                                            background: $green;
+                                            color:$black;
+                                            text-align: left;
+                                            position: relative;
+                                            &:after{
+                                                position: absolute;
+                                                top:50%;
+                                                right:20px;
+                                                transform: translateY(-50%);
+                                                font-size:40px;
+                                                font-family: icomoon;
+                                                font-weight: 400 !important;
+                                                content:'\e919';
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -182,6 +240,28 @@
                                 @extend .btn-primary;
                                 font-size:15px;
                             }
+                        }
+                    }
+                    .ems-detail-icons{
+                        grid-area: edi;
+                        padding:0px;
+                        padding-left:20px;
+                    }
+                    .ems-prd-whatsapp-share{
+                        position: relative;
+                        height:100px;
+                        margin-bottom:30px;
+                        @include get-flex(flex,center,center);
+                        i{
+                            background: $white;
+                            border-radius: 100%;
+                            @include get-flex(flex,center,center);
+                            position: absolute;
+                            width:70px;
+                            height:70px;
+                            left:50%;
+                            transform: translateX(-50%);
+                            top:-25px;
                         }
                     }
                 }     
@@ -221,6 +301,7 @@
                             "dnp"
                             "edc"
                             "edb"
+                            "edi"
                             ;
                             .ems-detail-name{
                                 margin-bottom:20px;

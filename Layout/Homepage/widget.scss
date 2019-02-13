@@ -1,0 +1,45 @@
+
+.homepage-widget{
+    padding-left:20px;
+    margin-bottom:75px;
+    .swiper-pagination{
+        display: none !important;
+    }
+}
+.swiper-widget-title{
+    font-size:22px;
+    font-weight: bold;
+    font-family: $gilroy;
+    margin-bottom:25px;
+}
+
+.widget{
+    margin:top
+}
+@media screen and (max-width: $breakpoint-medium) {
+ 
+    .homepage-widget{
+        ul.emosInfinite{
+            flex-wrap: inherit !important;
+            .ems-prd{
+                width:65% !important;
+                margin-right:40px;
+            }
+        }
+    }
+
+}
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+ 
+        .homepage-widget{
+            margin-top:80px;
+            padding-left:0;
+            ul.emosInfinite{
+                flex-wrap:inherit;
+            }
+        }
+
+    }
+}

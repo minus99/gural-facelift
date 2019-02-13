@@ -8,8 +8,25 @@
     .navbar-item-search{
         display: none;
     }
+    .sticky-header-ready{
+        .header-detail-back-btn{
+            display: block !important;
+        }
+    }
 }
 
+
+.ems-page-detail{
+    .ems-prd-detail{
+        .inner-row-2{
+            position: relative;
+            .ems-prd{
+                position: sticky;
+                top:120px;
+            }
+        }
+    }
+}
 
 /*
  * Media Query

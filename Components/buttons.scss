@@ -64,6 +64,42 @@ $big-padding:                           16px 98px;
     padding:16.5px;
 }
 
+    .btnLine{
+        border: 1px solid #ddd;
+        font-size: 15px;
+        font-family: $proxima;
+        font-weight: 400;
+        text-align: center;
+        border-radius: 3px;
+        display: inline-block;
+        min-width: 180px;
+        position: relative;
+        transform: translateX(-50%);
+        left:50%;
+        padding: 10px 0px;
+        margin:10px 0px;
+    }
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+
+    .btnLine{
+        margin:inherit;
+        padding: inherit;
+        position: absolute;
+        bottom:20px;
+        border:none;
+        color:$white;
+        @include get-flex(flex,center,center);
+        &:after{
+            content:'\e927';
+            font-family: "icomoon";
+            font-size:40px;
+        }
+    }
+
+    }
+}
 /*
  * Primary Light
  */

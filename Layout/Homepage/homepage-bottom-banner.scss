@@ -41,24 +41,35 @@
                         color:$white;
                     }
                 }
-                .btnLine{
-                    border: 1px solid #ddd;
-                    font-size: 15px;
-                    font-family: $proxima;
-                    font-weight: 400;
+                .content-mobile{
                     text-align: center;
-                    border-radius: 3px;
-                    display: inline-block;
-                    min-width: 180px;
-                    position: relative;
-                    transform: translateX(-50%);
-                    left:50%;
-                    padding: 10px 0px;
-                    margin:10px 0px;
+                    font-size: 15px;
+                    color: $black;
+                    margin: 10px 0px 15px 0px;
                 }
             }
             img{
                 width:100%;
+            }
+            &.new-banner-icon{
+                position: relative;
+                &::before{
+                @include get-flex(flex,center,center);
+                content: 'YENİ';
+                position: absolute;
+                z-index: 99;
+                width: 70px;
+                height: 70px;
+                background: $light-peach;
+                text-align: center;
+                border-radius: 100%;
+                transform: rotate(-15deg);
+                top: -12px;
+                left: 20px;
+                font-size:18px;
+                font-family: $gilroy;
+                font-weight: bold;
+                }
             }
         }
     }
@@ -89,26 +100,18 @@
 
                             }
                         }
-                        .btnLine{
-                            margin:inherit;
-                            padding: inherit;
-                            position: absolute;
-                            bottom:20px;
-                            border:none;
-                            color:$white;
-                            @include get-flex(flex,center,center);
-                            &:after{
-                                content:'\e927';
-                                font-family: "icomoon";
-                                font-size:40px;
-                            }
-                        }
                     }
                     &.grid-item-x {
                         grid-area: x;
                     }
                     &.grid-item-y {
                         grid-area: y;
+                    }
+                    &.new-banner-icon{
+                        &::before{
+                            left:-25px;
+                            top:30px;
+                        }
                     }
                 }
             }

@@ -2,14 +2,14 @@
 .grid-one{grid-area: one;}
 .grid-two{grid-area: two;}
 
-.homepage-banner-horizontal-widget{
+.homepage-banner-vertical-widget{
     display: none;
 }
 
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
 
-        .homepage-banner-horizontal-widget{
+        .homepage-banner-vertical-widget{
             &.grid-container{
                 margin-top:50px;
                 display: grid;

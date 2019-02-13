@@ -1,12 +1,27 @@
 .ems-tab-detail{
+    position: relative;
     padding:0px !important;
     margin-top:35px;
+    background-image:url('/UPLOAD/PRODUCTS/thumb/OSC84YT9404656_1_medium.jpg');
+    transition: all .7s;
     .ems-tab-inner{
-        padding:0px 20px 120px 20px;
-        background-image:url('/UPLOAD/PRODUCTS/thumb/OSC84YT9404656_1_medium.jpg');
-        background-size:1000px;
+        position: relative;
+        &:before{
+            transition: background .7s;
+            position: absolute;
+            content:'';
+            background: rgba(69, 69, 69, .3);
+            top:0px;
+            bottom:0px;
+            lefT:0px;
+            right:0px;
+            z-index: 0;
+            pointer-events: none;
+        }
         overflow: hidden;
         .content-js {
+            position: relative;
+            padding:0px 20px 120px 20px;
             > li{
                 border-bottom:1px solid $white;
                 color:$white;
@@ -33,6 +48,7 @@
                     }
                 }
                 .content-detail{
+                    position: relative;
                     visibility: hidden;
                     overflow: hidden;
                     opacity: 0;
@@ -76,18 +92,23 @@
     }
     &.ems-tab-opened{
         .ems-tab-inner{
-            background-image:url('/UPLOAD/facelift-banner/product-detail/prd-detail-bg.png');
-            background-size:1000px;
-            transition: background-image .33s;
+            &:before{
+                background: rgba(69, 69, 69, 1);
+            }
         }
     }
 }
+
 
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
         
         .ems-tab-detail{
+            background-image: none !important;
             .ems-tab-inner{
+                &:before{
+                    content: none !important;
+                }
                 background-image:none;
                 background: $white;
                 transition:inherit;
@@ -119,11 +140,6 @@
                         }
                     }
                 }
-            }
-        }
-        &.ems-tab-opened{
-            .ems-tab-inner{
-                background: none !important;
             }
         }
 

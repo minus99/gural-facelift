@@ -1,0 +1,48 @@
+/* Product Detail Page Sepet Popup*/ 
+
+
+.suggestions-popup{
+    display: none;
+}
+
+.suggestions-popup-ready{
+    .suggestions-popup{
+        display: block;
+        position: fixed;
+        z-index: 2001;
+        height: 640px;
+        width:100%;
+        max-width: 800px;
+        background: $white;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50% , -50%);
+        .custom-popup-header{
+            background: $green;
+            display: flex;
+            > div {
+                width:50%;
+            }   
+        }
+    }
+    .vail.vailCombine{
+        opacity: 1;
+        visibility: visible;
+        z-index: 2000;
+    }
+}
+
+
+/*
+ * Media Query
+ ========================================================================== */
+ @supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        
+
+       
+
+
+        
+    }
+}

@@ -1,0 +1,62 @@
+// Details Icons
+
+.detail-icons-slider{
+    margin-top:40px;
+    .dtl-icons-title{
+        font-size:22px;
+        font-weight: bold;
+        font-family: $gilroy;
+        display: block;
+        text-align:left;
+    }
+    .swiper-inner{
+        margin-top:15px;
+        .swiper-slide{
+            width:120px;
+            height:90px;
+            border-radius: 3px;
+            background: $light-grey;
+            color:$charcoal-grey;
+            @include get-flex(flex,center,center);
+            align-content: space-evenly;
+            flex-wrap:wrap;
+            text-align: center;
+            > span , i{
+                display: block;
+                width:100%;
+            }
+        }
+    }
+    .swiper-button-next , .swiper-button-prev{
+        display: none;
+    }
+}
+
+/*
+ * Media Query
+ ========================== ================================================ */
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        
+        .detail-icons-slider{
+            .swiper-button-next , .swiper-button-prev{
+                display: block;
+                position: absolute;
+                background: $white;
+                border-radius: 100%;
+                transform: initial;
+            }
+            .swiper-button-disabled{
+                display: none;
+            }
+            .swiper-button-next{
+                right:-20px;
+            }
+            .swiper-button-prev{
+                left:-20px;
+            }
+        }
+
+
+    }
+}
