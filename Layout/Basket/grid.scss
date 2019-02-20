@@ -1,0 +1,74 @@
+// Sepet Sayfaları Grid 
+
+.ems-page-basket{
+    .main-wrapper{
+        grid-template-areas: 
+        "HDR"
+        "MAI"
+        "FTR";
+        grid-template-rows: auto !important;
+        grid-template-columns:100% !important;
+        main{
+            max-width: 100% !important;
+            .ems-page-cart{
+                &.grid-container{
+                    .grid-column-hdr{
+                        grid-area: hdr;
+                    }
+                    .grid-column-bnr{
+                        width: 100%;
+                        max-width: 1290px;
+                        margin:0 auto;
+                        grid-area: bnr;
+                    }
+                    .grid-column-crt{
+                        width: 100%;
+                        max-width: 1290px;
+                        margin:0 auto;
+                        grid-area: crt;
+                    }
+                    display: grid;
+                    grid-template-columns:minmax(calc(100% - 100px) , auto);
+                    grid-template-areas: 
+                    "hdr"
+                    "bnr"
+                    "crt"
+                    ;
+                    
+                }
+            }
+        }       
+        aside{
+            display: none;
+        }
+    }
+
+}
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+    .ems-page-basket{   
+        .sticky-header-ready header , header{
+            display: none !important;
+        }
+        .main-wrapper{
+            grid-template-areas: 
+            "MAI"
+            "FTR";
+            grid-template-rows: auto !important;
+            grid-template-columns:100% !important;
+        }
+    }
+        .ems-page-cart{
+            &.grid-container{
+                grid-template-columns:50px minmax(calc(100% - 100px) , auto) 50px !important;
+                grid-template-areas: 
+                ". hdr ."
+                ". bnr ."
+                ". crt ." 
+                !important;
+            }
+        }
+
+    }
+}

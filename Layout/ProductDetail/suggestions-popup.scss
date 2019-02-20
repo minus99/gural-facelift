@@ -6,31 +6,43 @@
 }
 
 .suggestions-popup-ready{
+    overflow: hidden !important;
     .suggestions-popup{
-        display: block;
-        position: fixed;
-        z-index: 2001;
-        height: 640px;
-        width:100%;
-        max-width: 800px;
-        background: $white;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50% , -50%);
-        .custom-popup-header{
-            background: $green;
-            display: flex;
-            > div {
-                width:50%;
-            }   
+            display: block;
+            position: fixed;
+            z-index: 100;
+            bottom:0px;
+            background: $white;
+
+            width:100%;
+            .custom-popup-header , .custom-popup-body{
+                display: none;
+            }
+            .custom-popup-footer{
+                box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+                padding:25px;
+                @include get-flex(flex,center,flex-start);
+                .icon-close-copy{
+                    position: absolute;
+                    right:15px;
+                    font-size:20px;
+                }
+                span{
+                    display: block;
+                    text-align: left;
+                    margin-left:20px;
+                    margin-bottom: 5px;
+                    font-size:13px;
+                    &:first-child{
+                        font-size:16px;
+                        font-family: $gilroy;
+                        font-weight: bold;
+                    }
+                }
+            }
         }
     }
-    .vail.vailCombine{
-        opacity: 1;
-        visibility: visible;
-        z-index: 2000;
-    }
-}
+
 
 
 /*
@@ -39,8 +51,81 @@
  @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
         
-
-       
+        
+.suggestions-popup-ready{        
+        .suggestions-popup{
+            display: block;
+            z-index: 2001;
+            height: 640px;
+            max-width: 800px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50% , -50%);
+            box-shadow: inherit;
+            .custom-popup-header{          
+                background: $green;
+                padding:20px 40px;
+                @include get-flex(flex,center,space-between);
+                .custom-popup-header-left{
+                    width:40%;
+                    @include get-flex(flex,center,flex-start);
+                    span{
+                        display: block;
+                        width:100%;
+                        font-weight: bold;
+                        font-size:17px;
+                        margin-left:10px;
+                    }
+                }
+                .custom-popup-header-right{
+                    width:60%;
+                    @include get-flex(flex,center,flex-end);
+                    .suggAddedFirst{
+                        background: none;
+                        padding:0px;
+                        color:$black !important;
+                        font-size:14px;
+                        text-decoration: underline;
+                        margin-right:15px;
+                    }   
+                    .btnDefault{
+                        min-width: 210px;
+                        padding:14px;
+                        font-weight: 400;
+                        font-size:15px;
+                    }
+                }
+            }
+            .custom-popup-body{
+                display: block;
+                padding:40px 30px;
+            }
+            .widget{
+                .swiper-pagination{
+                    display: none;
+                }
+                .swiper-button-prev{
+                    left:-30px;
+                }
+                .swiper-button-next{
+                    right:-30px;
+                }
+                .title-line{
+                    font-size:22px;
+                    font-weight: bold;
+                    font-family: $gilroy;
+                }
+            }
+            .custom-popup-footer{
+                display: none;
+            }
+        }
+        .vail.vailProductPp{
+            opacity: 1;
+            visibility: visible;
+            z-index: 2000;
+        }
+    }
 
 
         

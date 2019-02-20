@@ -118,8 +118,8 @@ select{
         transition: all .333s ease-in-out;
         &::before{
             content: "";
-            width: 10px;
-            height: 10px;
+            width: 14px;
+            height: 14px;
             border-radius: 2px;
             background: $white;
             position: absolute;
@@ -129,9 +129,13 @@ select{
             transition: all .333s ease-in-out;
         }
         &.checked{
-            border-color: $grey-d;
+            border-color: $carmine;
             &::before{
-                background: $grey-d;
+                content: '\e96b';
+                color:$carmine;
+                font-weight: bold;
+                font-family: icomoon;
+                background-color: $white;
             }
         }
     }
@@ -152,14 +156,14 @@ input[type="checkbox"], input[type="radio"]{
 //----- CHECKBOX STYLE
 //-------------------------------------------//
 input[type="checkbox"]{
-    width: 18px !important;
-    height: 18px;
+    width: 16px !important;
+    height: 16px;
     padding: 0;
     position: absolute;
     opacity: 0;
 }
 input[type="checkbox"]:checked{
-    border-color: $grey-d;
+    border-color: $carmine;
     background-color: $grey-d;
 }
 

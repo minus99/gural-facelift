@@ -14,7 +14,9 @@
 }
 
 .widget{
-    margin:top
+    ul.emosInfinite{
+        flex-wrap:inherit;
+    }
 }
 @media screen and (max-width: $breakpoint-medium) {
  

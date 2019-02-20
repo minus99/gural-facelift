@@ -108,6 +108,15 @@ ul.emosInfinite{
             font-size:12px;
            color:$charcoal-grey;
         }
+        &-new{
+            margin-top:5px;
+            .urunListe_yeniUrun{
+                display: block !important;
+                > span{
+                    font-size:12px;
+                }
+            }
+        }
     }
 }
         

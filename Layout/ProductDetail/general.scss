@@ -46,8 +46,18 @@
             .main-wrapper{
                 grid-template-areas: 
                 ". HDR HDR ."
-                ". MAI MAI ."
+                "MAI MAI MAI MAI"
                 ". FTR FTR ." !important;
+                main{
+                    max-width: 100%;
+                    .site-pages-detailpage.grid-container{
+                        .grid-column{
+                            width:100%;
+                            max-width: 1290px;
+                            margin:0 auto;
+                        }
+                    }
+                }
                 aside{
                     display: none;
                 }

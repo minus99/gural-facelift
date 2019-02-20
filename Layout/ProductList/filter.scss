@@ -1,0 +1,240 @@
+// Ürün Liste Filtre 
+
+.grid-column-flt{
+    display: none;
+}
+
+body{
+    &.filter-popup-ready{
+        overflow: hidden !important;
+        .grid-column-flt{
+            display: block;
+        }
+        .vailFilter{
+            visibility: visible !important;
+            opacity: 1 !important;
+            z-index: 1001;
+        }
+    }
+}
+    .grid-container{
+        .grid-column{
+            &.grid-column-flt{
+                position: fixed;
+                right: 0px;
+                width: 385px !important;
+                background: #fff;
+                height: 100%;
+                top: 0px;
+                z-index: 1005;
+                overflow-y: scroll;
+            }
+        }  
+    }
+
+    .grid-column-flt{
+        .kutuHeaderOzellikFiltre{
+            background: $white;
+            padding:0 25px;
+            position: absolute;
+            top:0px;
+            width:100%;
+            left:0px;
+            > span{
+                border-bottom:1px solid $grey-d;
+                height:65px;
+                @include get-flex(flex,center,space-between);
+                > span{
+                    font-weight: 700;
+                    font-size:16px;
+                }
+                .ems-filter-clear-btn{
+                    @include get-flex(flex,center,space-between);
+                    span{
+                        font-size:14px;
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                    i{
+                        cursor: pointer;
+                        font-size:26px;
+                    }
+                }
+            }
+        }
+        .kutuBodyOzellikFiltre{
+            padding:20px 25px;
+            position: absolute;
+            top:65px;
+            width:100%;
+            left:0px;
+            height:calc( 100% - 125px );
+            overflow-y:scroll;
+            > table{
+                width:100%;
+                display: table !important;
+                .urunKiyaslamaOzellik_ozellik{
+                    .urunKiyaslamaOzellik_ozellikAd{
+                        font-family: $gilroy;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: centeR;
+                        justify-content: space-between;
+                        padding-left:50px;
+                        margin-bottom:15px;
+                        position: relative;
+                        height:40px;
+                        color:$carmine;
+                        cursor: pointer;
+                        &:before{
+                            position: absolute;
+                            left:0px;
+                            width:40px;
+                            font-family: icomoon;
+                            font-size:40px;
+                            font-weight: 400;
+                            color:$carmine;
+                        }
+                        &:after{
+                            position: absolute;
+                            right:0px;
+                            width:40px;
+                            content: "\e90e";
+                            font-family: icomoon;
+                            font-weight: 400;
+                            font-size:40px;
+                        }
+                        .mobile-element-filter-span-select{
+                            display: none;
+                        }
+                    }
+                    &.filter-price-btw{
+                        .urunKiyaslamaOzellik_ozellikAd{
+                            &::before{
+                                content: "\e951";
+                            }
+                        }
+                    }
+                    &.filter-color{
+                        .urunKiyaslamaOzellik_ozellikAd{
+                            &::before{
+                                content: "\e94f";
+                            }
+                        }
+                    }
+                    &.filter-collection{
+                        .urunKiyaslamaOzellik_ozellikAd{
+                            &::before{
+                                content: "\e94d";
+                            }
+                        }
+                    }
+                    &.kapali{
+                        .urunKiyaslamaOzellik_ozellikAd{
+                            color:$black;
+                            &::before{
+                                color:$black;
+                            }
+                            &::after{
+                                content: "\e906";
+                            }
+                        }
+                    }
+
+                    /* Özellik İçerik Checkbox */
+                    .urunKiyaslamaOzellik_ozellikIcerik{
+                        padding-left:50px;
+                        table{
+                            display: table;
+                            width:100%;
+                            a.urunKiyaslamaOzellik{
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                margin-bottom:20px;
+                                &::before{
+                                    content:'';
+                                    border:1px solid $grey-d;
+                                    border-radius:2px;
+                                    width:16px;
+                                    height:16px;
+                                    display: inline-block;
+                                    margin-right: 10px;
+                                }
+                                &.link_selected{
+                                    &::before{
+                                        content:'\e96b';
+                                        color:$carmine;
+                                        border:1px solid $carmine;
+                                        font-weight: bold;
+                                        font-family: icomoon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .urunKiyaslamaOzellik_temizle{
+                        display: none;
+                    }
+                }
+            }
+        }
+        /* Seçim Daralt */
+        .pnlUrunKiyasSecim{
+            background: $white;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+            height:65px;
+            position: absolute;
+            bottom:0px;
+            width:100%;
+            left:0px;
+            @include get-flex(flex,center,flex-start);
+            padding:0px 25px;
+            .urunKiyaslamaOzellik_secimbaslik{
+                display: none;
+            }
+            .urunKiyaslamaOzellik_UrunSayi{
+                width:100%;
+                cursor: pointer;
+                > span{
+                    font-size:17px;
+                    font-family: $gilroy;
+                    font-weight: bold;
+                    @include get-flex(flex,center,space-between);
+                    &:after{
+                        font-family: icomoon;
+                        font-size:40px;
+                        content:'\e926';
+                    }
+                }
+            }
+            .urunKiyaslamaOzellik_secimler{
+                > a{
+                    display: none;
+                }
+                .urunKiyaslamaOzellik_tumunuTemizle{
+                    display: block !important;
+                    position: fixed;
+                    top:25px;
+                    right:65px;
+                    span{
+                        font-size:14px;
+                    text-decoration: underline;
+                    cursor: pointer;
+                    }
+
+                }
+            }
+        }
+    }
+
+
+
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+
+
+
+    }
+}

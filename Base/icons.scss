@@ -16,6 +16,14 @@
 
 /*  */
 
+.icon-checkbox-active:before {
+  content: "\e96b";
+}
+
+.icon-cart-true:before {
+  content: "\e96a";
+}
+
 .icon-zoomminus:before {
   content: "\e966";
   color: #fff;
