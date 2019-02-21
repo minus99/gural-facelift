@@ -309,7 +309,6 @@
 
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
-        
         .ems-page-cart{
             .grid-column-crt{    
                 display: grid;

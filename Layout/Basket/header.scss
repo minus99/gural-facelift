@@ -1,0 +1,109 @@
+
+.grid-column-hdr{
+    .header-steps{
+        table{
+            width:100%;
+            max-width: 600px;
+            margin:20px auto;
+            td{
+                > span{
+                    position: relative;
+                    display: inline-block;
+                    width:33%;
+                    a{
+                        display: block;
+                         > span{
+                             display: block;
+                             .step-icon{
+                                position: relative;
+                                z-index: 2;
+                                display: block;
+                                width: 15px;
+                                height: 15px;
+                                border-radius: 100%;
+                                background: $grey-d;
+                                margin-top:20px;
+                             }
+                             .step-text{
+                                display: block;
+                                letter-spacing: 2px;
+                                font-weight: bold;
+                             }
+                         }
+                    }
+                }
+            }
+        }
+    }               
+}
+
+
+.tabloTabBtnAdimSiparis td>span:last-child:after , 
+.tabloTabBtnAdimSiparis td>span:last-child:before{
+    content: none !important;
+}
+.tabloTabBtnAdimSiparis td>span:after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    width: 100%;
+    border-top: 5px solid $grey-d;
+}
+
+.tabloTabBtnAdimSiparis td>span:before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    width: 50%;
+    z-index: 1;
+}
+.tabloTabBtnAdimSiparis td>span:first-child:before{
+    border-top: 5px solid $greyish-brown;
+}
+
+.tabloTabBtnAdimSiparis td>span:first-child .step-icon{
+    background: $greyish-brown !important;
+}
+
+
+
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        
+        .grid-column-hdr{
+            > div{
+                display: grid;
+                grid-template-columns:minmax(auto , 240px) 1fr minmax(auto , 240px);
+                .header-logo{
+                    @include get-flex(flex,center,flex-start);
+                    .basket-logo{
+                        max-width: 110px;
+                    }
+                }
+                .header-steps{
+                    @include get-flex(flex,center,center);
+                    > div {
+                        width:100%;
+                    }
+                }
+                .header-info{
+                    @include get-flex(flex,center,center);
+                    > div {
+                        width:100%;
+                    }
+                    .header-info-wrapper{
+                        @include get-flex(flex,center,space-between);
+                        width: 100%;
+                        > span{
+                            @include get-flex(flex,center,center);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

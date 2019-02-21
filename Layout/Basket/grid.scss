@@ -1,6 +1,6 @@
 // Sepet Sayfaları Grid 
 
-.ems-page-basket{
+.ems-page-basket , .ems-page-delivery{
     .main-wrapper{
         grid-template-areas: 
         "HDR"
@@ -47,7 +47,7 @@
 
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
-    .ems-page-basket{   
+    .ems-page-basket , .ems-page-delivery{   
         .sticky-header-ready header , header{
             display: none !important;
         }
