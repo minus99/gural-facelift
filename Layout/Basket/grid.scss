@@ -1,6 +1,9 @@
 // Sepet Sayfaları Grid 
 
 .ems-page-basket , .ems-page-delivery{
+    .navbar-item-search{
+        display: none;
+    }
     .main-wrapper{
         grid-template-areas: 
         "HDR"
@@ -28,13 +31,13 @@
                         grid-area: crt;
                     }
                     display: grid;
+                    grid-row-gap: 25px;
                     grid-template-columns:minmax(calc(100% - 100px) , auto);
                     grid-template-areas: 
                     "hdr"
                     "bnr"
                     "crt"
                     ;
-                    
                 }
             }
         }       

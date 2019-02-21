@@ -1,15 +1,35 @@
 
 .grid-column-hdr{
+    .header-logo , .header-info{
+        display: none;
+    }
     .header-steps{
+        margin-top:10px;
         table{
             width:100%;
             max-width: 600px;
-            margin:20px auto;
+            margin:0 auto;
             td{
                 > span{
                     position: relative;
                     display: inline-block;
                     width:33%;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 40px;
+                        width: 100%;
+                        z-index: 1;
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 40px;
+                        width: 100%;
+                        border-top: 5px solid $grey-d;
+                    }
                     a{
                         display: block;
                          > span{
@@ -26,10 +46,41 @@
                              }
                              .step-text{
                                 display: block;
-                                letter-spacing: 2px;
                                 font-weight: bold;
                              }
                          }
+                    }
+                }
+            }
+            td{
+                > span{
+                    .step-wrapper{
+                        position: relative;
+                        .step-text{
+                            text-align: left;
+                        }
+                        .step-icon{
+                            position: absolute;
+                            left:0px;
+                        }
+                    }
+                    &:nth-child(2){
+                        .step-text{
+                            text-align: center;
+                        }
+                        .step-icon{
+                            left:50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+                    &:last-child{
+                        .step-text{
+                            text-align: right;
+                        }
+                        .step-icon{
+                            left:100%;
+                            transform: translateX(-100%);
+                        }
                     }
                 }
             }
@@ -40,24 +91,7 @@
 
 .tabloTabBtnAdimSiparis td>span:last-child:after , 
 .tabloTabBtnAdimSiparis td>span:last-child:before{
-    content: none !important;
-}
-.tabloTabBtnAdimSiparis td>span:after{
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 40px;
-    width: 100%;
-    border-top: 5px solid $grey-d;
-}
-
-.tabloTabBtnAdimSiparis td>span:before{
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 40px;
-    width: 50%;
-    z-index: 1;
+    content: '' !important;
 }
 .tabloTabBtnAdimSiparis td>span:first-child:before{
     border-top: 5px solid $greyish-brown;
@@ -70,6 +104,7 @@
 
 
 
+
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
         
@@ -77,6 +112,7 @@
             > div{
                 display: grid;
                 grid-template-columns:minmax(auto , 240px) 1fr minmax(auto , 240px);
+                grid-template-rows: 80px;
                 .header-logo{
                     @include get-flex(flex,center,flex-start);
                     .basket-logo{
@@ -84,9 +120,38 @@
                     }
                 }
                 .header-steps{
-                    @include get-flex(flex,center,center);
+                    @include get-flex(flex,flex-end,center);
+                    margin-top:0px;
                     > div {
                         width:100%;
+                    }
+                    table{
+                        td{
+                            > span{
+                                &::before{
+                                    left:50%;
+                                    width:50%;
+                                }
+                                &::after{
+                                    left:50%;
+                                }
+                            }
+                        }
+                        td{
+                            > span{
+                                .step-wrapper{
+                                    position: inherit !important;
+                                    .step-text{
+                                        text-align: center !important;
+                                    }
+                                    .step-icon{
+                                        position: inherit !important;
+                                        transform: inherit !important;
+                                        left:0px !important
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
                 .header-info{
@@ -105,5 +170,15 @@
             }
         }
 
+
+        .tabloTabBtnAdimSiparis td>span:last-child:after , 
+        .tabloTabBtnAdimSiparis td>span:last-child:before{
+            content: none !important;
+        }
+        .tabloTabBtnAdimSiparis td>span:first-child:after , 
+        .tabloTabBtnAdimSiparis td>span:first-child:before{
+            content:'' !important;
+        }
+    
     }
 }

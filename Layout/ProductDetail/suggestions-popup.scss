@@ -101,6 +101,10 @@
                 padding:40px 30px;
             }
             .widget{
+                .swiper-slide{
+                    width:33%;
+                    margin-right:30px;
+                }
                 .swiper-pagination{
                     display: none;
                 }
