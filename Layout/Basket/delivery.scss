@@ -1,0 +1,205 @@
+.ems-page-default-order-delivery{
+    .ems-grid-default-cart{
+        display: none;
+    }
+    .page-top-title{
+        display: inline-block !important;
+        width:50%;
+        font-weight: bold;
+    }
+    .add-new-address{
+        display: inline-block;
+        width:50%;
+        text-align: right;
+        .btnDefault{
+            font-weight: 400;
+            padding: 0px;
+            font-size:12px;
+            color:$charcoal-grey !important;
+            background: none;
+            text-decoration: underline;
+        }
+    }
+    .dvFarkliFatAdrSec{
+        @include get-flex(flex,center,flex-start);
+        font-size:14px;
+    }
+    .ems-cargo-tab{
+        margin-top:30px;
+        .ems-delivery-tab-header{
+            font-weight: bold;
+            font-family: $gilroy;
+            font-size:16px;
+            margin-bottom:10px;
+        }
+        .divTeslimatKargo{
+            ul{
+                @include get-flex(flex,center,flex-start);
+                li{
+                    cursor: pointer;
+                    width:110px;
+                    height: 150px;
+                    @include get-flex(flex,center,center);
+                    align-content: center;
+                    flex-wrap: wrap;
+                    margin-right:10px;
+                    border:1px solid $white-two;
+                    border-radius: 3px;
+                    img{
+                        width:50px;
+                    }
+                    > span{
+                        width:100%;
+                        display: block !important;
+                        text-align: center;
+                        font-size:12px;
+                        margin-top:8px;
+                    }
+                    .kargoAdi{
+                        font-family: $gilroy;
+                        font-weight: bold;
+                    }
+                    .kargoBilgi{
+                        display: none !important;
+                    }
+                    .sStylerWrp_radio{
+                        width:20px;
+                        height:20px;
+                        border:1px solid $grey-d;
+                        @include get-flex(inline-flex !important,center,center);
+                        border-radius: 100%;
+                        .rStyler{
+                            width:17px;
+                            height:17px;
+                            display: inline-block;
+                            border-radius: 100%;
+                            background: $white;
+                            &.checked{
+                                background:$carmine;
+                                width:8px;
+                                height:8px;
+                            }
+                        }
+                        input{
+                            position: absolute;
+                            visibility: hidden;
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ems-grid-default-address{
+        margin-top:20px;
+        .ems-grid-adress-row{
+            border:1px solid $grey-d;
+            border-radius: 3px;
+            margin-bottom:20px;
+            padding:20px;
+            @include get-flex(flex,center,space-between);
+            flex-wrap:wrap;
+            position: relative;
+            .ems-grid-adress-top{
+                width:60%;
+                .ems-grid-address-name{
+                    font-weight: bold;
+                }
+                .ems-grid-address{
+                    line-height: 1.4;
+                    color:$grey-9;
+                    font-size:13px;
+                    margin-top: 5px;
+                }
+            }
+            .ems-grid-adress-bottom{
+                width:100%;
+                margin-top:15px;
+                @include get-flex(flex,center,flex-start);
+                .btnDefault{
+                    width:50%;
+                    padding:0px;
+                    margin-right:20px;
+                    background: none;
+                    color:$charcoal-grey !important;
+                    font-weight: 400;
+                    font-size:12px;
+                    @include get-flex(flex,center,flex-start);
+                    &::before{
+                        content:'';
+                        margin-right:10px;
+                        border:1px solid $charcoal-grey;
+                        width:25px;
+                        height:25px;
+                        border-radius: 100%;
+                        display: block;
+                        color:$white;
+                        font-size:15px;
+                        font-family: icomoon;
+                    }
+                    &.emos_selected{
+                        &::before{
+                            background: $green;
+                            border:none;
+                            content: '\e96b';
+                            @include get-flex(flex,center,center);
+                            transition: background .33s;
+                        }
+                    }
+                }
+            }
+            .ems-grid-adress-edit{
+                position: absolute;
+                top:20px;
+                right:20px;
+                .btnAdresListeGuncelle{
+                    padding: 0px;
+                    color:$charcoal-grey !important;
+                    font-weight: 400;
+                    font-size:12px;
+                    text-decoration: underline;
+                    background: none;
+                }
+            }
+        }
+    }
+}
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        
+        .ems-page-default-order-delivery{    
+            .ems-grid-default-address{
+                .ems-grid-adress-row{
+                    flex-wrap: nowrap ;
+                    .ems-grid-adress-top{
+                        width:30%;
+                    }
+                    .ems-grid-adress-bottom{
+                        width:50%;
+                        margin-top:0px;
+                    }
+                    .ems-grid-adress-edit{
+                        position: relative;
+                        top:0px;
+                        right:0px;
+                    }
+                }
+            }
+            .ems-cargo-tab{
+                .divTeslimatKargo{
+                    ul{
+                        li{
+                            width:148px;
+                            height:163px;
+                            img{
+                                width:65px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -15,13 +15,18 @@
             max-width: 100% !important;
             .ems-page-cart{
                 &.grid-container{
+                    .ems-page-cart-row{
+                        padding:0px 20px;   
+                    }
                     .grid-column-hdr{
                         grid-area: hdr;
+                        height:80px;
                     }
                     .grid-column-bnr{
+                        padding:0px;
                         width: 100%;
                         max-width: 1290px;
-                        margin:0 auto;
+                        margin:0 auto 20px auto;
                         grid-area: bnr;
                     }
                     .grid-column-crt{

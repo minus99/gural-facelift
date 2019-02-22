@@ -75,7 +75,6 @@
                 }
                 border-bottom:1px solid $grey-d;
                 padding:20px 0px;
-                margin:0px 20px;
                 position: relative;
                 @include get-flex(flex,inherit,flex-start);
                 .ems-grid-left{
@@ -229,7 +228,7 @@
             }
         }
         .ems-page-cart-colmn-2{
-            padding:0px 20px;
+            padding:0px;
             position: relative;
             .cart-section-right-append{
                 position: sticky;
@@ -237,8 +236,6 @@
             }
             .ems-cart-summary{
                 position: sticky;
-                top:80px;
-                margin-top:20px;
                 .ems-cart-summary-coupon{
                     &-header{
                         @include get-flex(flex,center,space-between);
