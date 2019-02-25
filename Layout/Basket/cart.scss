@@ -312,7 +312,7 @@
                 grid-template-columns: minmax(auto , 77%) minmax(auto , 33%);
                 grid-column-gap: 30px;
                 .ems-page-cart-colmn-1{
-                    width:inherit !important;
+                    overflow: hidden;
                     .ems-cart-btn{
                         .btnDefault{
                             font-size:15px;
@@ -361,7 +361,7 @@
                     }
                 }
                 .ems-page-cart-colmn-2{
-                    width:inherit !important;
+                    overflow: hidden;
                 }
             }
         }

@@ -1,0 +1,120 @@
+.ems-page-payment{
+    .grid-column-crt{
+        padding:0px !important;
+    }
+}
+    .page-top-desc{
+        display: none;
+    }           
+    .ems-cart-pay-tab{
+        ul{
+            @include get-flex(flex,center,space-between);
+            li{
+                width:50%;
+                border-bottom:1px solid $grey-d;
+                a{
+                    width:100%;
+                    text-align: center;
+                    font-weight: bold;
+                    font-family: $gilroy;
+                    font-size:16px;
+                    text-transform: uppercase;
+                    border-bottom: 4px solid transparent;
+                    padding:10px;
+                    &.emos_selected{
+                        border-bottom:4px solid $carmine;
+                        span{
+                            color:$black !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ems-cart-pay-type{
+        padding:20px;
+        .tableTitleOdemeBilgiKrediKarti{
+            > span{
+            display: block;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-family: $gilroy;
+            font-size:16px;
+            }  
+        }
+        .ems-card-wrapper{
+            display: none;
+        }
+        .tableOdemeBilgiKrediKarti{
+            width:100% !important;
+            th{
+                display: block;
+                text-align: left;
+                font-weight: 400;
+                font-size:12px;
+                padding-bottom: 10px;
+            }
+            td{
+                display: block;
+                padding-bottom: 20px;
+                .minusNumKeyPadWrapper{
+                    width:100%;
+                }
+                .minusNumKeyPad{
+                    display: none;
+                }
+                .div-cc-carttype{
+                    right:10px !important;
+                    top:7px !important;
+                }
+                input{
+                    width:100% !important;
+                }
+            }
+            .tableOdemeBilgiKrediKarti_tddrpKSA_SPR_ID{
+                @include get-flex(flex,center,space-between);
+                span{
+                    width:48%;
+                    color:$grey-d;
+                }
+            }
+            .tableOdemeBilgiKrediKarti_tdtxtKKARTCVCNO{
+                position: relative;
+                width:120px;
+                > span{
+                    &::after{
+                        position: absolute;
+                        top:0px;
+                        right:0px;
+                        color:$grey-a;
+                        border-left:1px solid $grey-d;
+                        content:'\e946';                        
+                        font-family: icomoon;
+                        font-size:40px;
+                        padding:1px;
+                    }
+                    .cvc{
+                        display: none;
+                    }
+                }
+                &.opened{
+                    .cvc{
+                        width:300px;
+                        display: block;
+                        border:1px solid $grey-d;
+                        font-size:12px;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .ems-page-payment{
+
+        }
+    }
+}

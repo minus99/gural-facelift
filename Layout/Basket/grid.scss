@@ -1,6 +1,6 @@
 // Sepet Sayfaları Grid 
 
-.ems-page-basket , .ems-page-delivery{
+.ems-page-basket , .ems-page-delivery , .ems-page-payment{
     .navbar-item-search{
         display: none;
     }
@@ -55,7 +55,7 @@
 
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
-    .ems-page-basket , .ems-page-delivery{   
+    .ems-page-basket , .ems-page-delivery , .ems-page-payment{   
         .sticky-header-ready header , header{
             display: none !important;
         }
