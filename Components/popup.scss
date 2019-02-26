@@ -1,0 +1,26 @@
+.jconfirm-box{
+    padding: 0px !important;
+    background: $white !important;
+    .jconfirm-closeIcon{
+        display: inline;
+        width:40px;
+        height:40px;
+        position: absolute;
+        right:0px;
+        top:0px;
+        z-index: 99;
+        &::before{
+            content:'\e922';
+            font-family: icomoon;
+            color:$black;
+            font-size:40px;
+        }
+    }
+
+}
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+
+    }
+}

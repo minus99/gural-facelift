@@ -34,6 +34,9 @@
         }
         .ems-cart-pay-type{
             padding:20px;
+            .ems-pay-point{
+                margin-top:20px;
+            }
             .tableTitleOdemeBilgiKrediKarti{
                 > span{
                 @include get-flex(flex,center,space-between);
@@ -123,10 +126,16 @@
         }
     }
     
+    .ems-page-cart-colmn-2{
+        .ems-cart-summary{
+            padding:0px 20px;
+        }
+    }
     .ems-cart-payment-wrapper{
         padding:20px;
         .ems-payment-info-title{
             @include get-flex(flex,center,space-between);
+            cursor: pointer;
             border:1px solid $grey-d;   
             border-radius: 3px;
             margin-top: 10px;    
@@ -139,6 +148,9 @@
             }
             .icon-arrowdown{
                 transition:  all .33s;
+            }
+            .icon-carrot01{
+                display: none;
             }
         }
         .ems-grid-payment-wrapper{
@@ -245,6 +257,74 @@
     }
     .pageOdemeBilgi_odemeTaksit{
         grid-area: tks;
+        border:1px solid $white-two;
+        background: $white-three;
+        border-radius: 3px;
+        .pageOdemeBilgi_lbfOdemeTaksit{
+            display: none !important;
+        }
+        #imgBANKALOGO{
+            border:1px solid red;
+            height:54px;
+            width: auto;
+            margin:5px 50px 2px 50px;
+        }
+        .tableOdemeTaksit{
+            width:100%;
+            background: $white;
+            .tableTitleOdemeTaksit{
+                display: block;
+                padding:20px;
+                font-family: $gilroy;
+                font-size:14px;
+                td{
+                    width:33%;
+                    font-weight: bold;
+                    &:first-child{
+                        width:22px;
+                        padding-right:30px;
+                    }
+                }
+            }
+            .taksit_pesin{
+                font-weight: 400;
+                display: block;
+                border-top:1px solid $white-three;
+                color:$grey-9;
+                padding:20px;
+                td{
+                    width:33%;
+                    .sStylerMainWrp{
+                        @include get-flex(flex,center,center);
+                        .rStyler{
+                            border:1px solid $grey-d;
+                            display: block;
+                            width:22px;
+                            height:22px;
+                            border-radius: 100%;
+                            transition: background .33s;
+                            &.checked{
+                                border:1px solid $green;
+                                background: $green;
+                                color:$white;
+                                &::before{
+                                    content:'\e96b';
+                                    font-family: icomoon;
+                                    font-size:19px;
+                                }
+                            }
+                        }
+                        input{
+                            opacity: 0;
+                        }
+                    }
+                    &:first-child{
+                        width:22px;
+                        padding-right:20px;
+                    }
+                }
+            }
+        }
     }
 
 @supports(grid-area: auto) {
@@ -256,11 +336,17 @@
                     > div{
                         display: grid;
                         grid-template-areas: 
-                        "ttl ttl"
                         "tbl pym"
+                        "ttl ttl"
                         "bns bns"
                         "tks tks"
                         ;
+                        position: relative;
+                    }
+                    .tableTitleOdemeBilgiKrediKarti{
+                        position: absolute;
+                        bottom:115px;
+                        right:0px;
                     }
                     .tableTitleOdemeBilgiKrediKarti{
                         > span{
@@ -282,6 +368,71 @@
             }
             .ems-cart-payment-wrapper{
                 padding:0px;
+                .ems-grid-payment-wrapper{
+                    .ems-payment-info-title{
+                        border:none;
+                        border-bottom:1px solid $grey-d;
+                        span{
+                            color:$black;
+                            font-weight: bold;
+                        }
+                        .icon-cartblack{
+                            display: none;
+                        }
+                        .icon-arrowdown{
+                            display: none;
+                        }
+                        .icon-carrot01{
+                            display: block;
+                            transition: all .33s;
+                            &:before{
+                                color:$black;
+                            }
+                        }
+                    }
+                    .ems-grid-row{
+                        border: none;
+                        border-bottom:1px solid $grey-d;
+                        &:last-child{
+                            border-bottom:1px solid $grey-d;
+                        }
+                    }
+                    &.active{
+                        .ems-payment-info-title{
+                            span{
+                                color:$carmine;
+                            }
+                            .icon-carrot01{
+                                transform: rotate(-180deg);
+                                &:before{
+                                    color:$carmine;
+                                }
+                            }
+                        }
+                    }
+                }
+                .ems-cart-pay-adress{
+                    margin-top:20px;
+                    .ems-cart-payment-trigger{
+                        display: none;
+                    }
+                    .ems-cart-pay-inner{
+                        display: flex !important;
+                        .ems-delivery-address{
+                            border:1px solid $grey-d !important;
+                            border-radius: 3px;
+                            padding:20px;
+                            .ems-delivery-address-obj{
+                                color:$grey-9;
+                                font-size:14px;
+                                line-height: 1.43;
+                            }
+                            &:first-child{
+                                margin-right:20px;
+                            }
+                        }
+                    }
+                }
             }
             .ems-cart-agreement{
                 display: block;
@@ -298,9 +449,16 @@
                             overflow:scroll !important;
                             overflow-x:hidden !important;
                             padding: 10px;
+                            color:$grey-9;
                         }
                     }
                 }
+            }
+        }
+
+        .ems-page-cart-colmn-2{
+            .ems-cart-summary{
+                padding:0px;
             }
         }
     }
