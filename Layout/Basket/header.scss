@@ -101,6 +101,39 @@
 }
 
 
+.ems-page-delivery{
+    .header-steps{
+        td{
+            > span{
+                &:nth-child(2){
+                    .step-icon{
+                        background: $greyish-brown !important;
+                    }
+                    &:after{
+                        border-top:5px solid $greyish-brown !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ems-page-payment{
+    .header-steps{
+        td{
+            > span{
+                .step-icon{
+                    background: $greyish-brown !important;
+                }
+                &:after{
+                    border-top:5px solid $greyish-brown !important;
+                }
+            }
+        }
+    }
+}
+
+
 
 
 
@@ -179,5 +212,25 @@
             content:'' !important;
         }
     
+        .ems-page-delivery{
+            .header-steps{
+                td{
+                    > span{
+                        &:nth-child(2){
+                            .step-icon{
+                                background: $greyish-brown !important;
+                            }
+                            &:after{
+                                border-top:5px solid $greyish-brown !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }
+
+
+

@@ -129,6 +129,41 @@
     .ems-page-cart-colmn-2{
         .ems-cart-summary{
             padding:0px 20px;
+            .pageSiparisOnay_lbfOnBilgilendirmeForm , .pageSiparisOnay_lbfSatisSozlesme{
+                margin-top:10px;
+                position: relative;
+                height:50px;
+                @include get-flex(flex,center,flex-start);
+                .pageSiparisOnay_chkOnBilgilendirmeForm , .pageSiparisOnay_chkSatisSozlesme{
+                    > span{
+                        &:last-child{
+                            display: none;
+                        }
+                    }
+                }
+                .pageSiparisOnay_btnOnBilgilendirmeFormOnizle , .pageSiparisOnay_btnSatisSozlesmeOnizle{
+                    position: absolute;
+                    top: 50%;
+                    left: 25px;
+                    transform: translateY(-50%);
+                    .btnDefault{
+                        background: none;
+                        padding: 0px;
+                        color:$black !important;
+                        font-size:14px;
+                        font-weight: 400;
+                        > span{
+                            width:225px;
+                            display: block;
+                            text-align: left;
+                            line-height: 1.2;
+                            > span{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     .ems-cart-payment-wrapper{
@@ -166,6 +201,11 @@
                         width:100%;
                         height:auto;
                         flex-direction: column-reverse;
+                        .ems-grid-top{
+                            .piece-wrapper{
+                                display: none;
+                            }
+                        }
                         .ems-grid-bottom{
                             position: relative;
                             padding:0px;
@@ -463,3 +503,7 @@
         }
     }
 }
+.pageSepetToplam_lblHavaleIndirimi{
+    display: none;
+}
+

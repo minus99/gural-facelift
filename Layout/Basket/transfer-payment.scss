@@ -1,0 +1,124 @@
+/* Havale ile Ödeme */
+.grid-column-crt{
+    .ems-pay-transfer{
+        .tableTitleOdemeBilgiHavale{
+            display: none;
+        }
+        .tableOdemeBilgiHavale , tbody , tr , td{
+            width:100%;
+        }
+        .tableOdemeBilgiHavale {
+            th{
+                span{
+                    font-size:16px;
+                    font-weight: bold;
+                    font-family: $gilroy;
+                    display: block;
+                    text-align: left;
+                }
+            }
+            table{
+                tbody{
+                    @include get-flex(flex,center,center);
+                    flex-wrap:wrap;
+                    tr{
+                        width:100%;
+                        display: flex;
+                        flex-direction: row-reverse;
+                        border:1px solid $grey-d;
+                        margin:10px 0px;
+                        border-radius: 3px;
+                        td{
+                            padding:15px;
+                            &.link{
+                                width:65px;
+                                @include get-flex(flex,center,center);
+                                .btnDefault{
+                                    padding: 0px;
+                                    background: none;
+                                    font-size:12px;
+                                    color:$black !important;
+                                    font-weight: 400;
+                                    width:100%;
+                                    > span{
+                                        font-size:0px;  
+                                    @include get-flex(flex,center,flex-start);
+                                        &::before{
+                                            content:'';
+                                            margin-right:10px;
+                                            border:1px solid $grey-6;
+                                            width:25px;
+                                            height: 25px;
+                                            border-radius: 100%;
+                                            display: block;
+                                        }
+                                    }
+                                    &.emos_selected{
+                                        > span{
+                                            &::before{
+                                                background: $green;
+                                                border:none;
+                                                color:$white;
+                                                font-family: icomoon;
+                                                content: '\e96b';
+                                                @include get-flex(flex,center,center);
+                                                transition: background .33s;
+                                                font-size:20px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.banka{
+                                width:100%;
+                                > b{
+                                    font-size:14px;
+                                    margin-bottom:5px;
+                                    display: inline-block;
+                                }
+                                > span{
+                                    color:$grey-9;
+                                    font-size:14px;
+                                    line-height: 1.43;
+                                }
+                            }
+                        }
+                        &:hover{
+                            border:1px solid $black;
+                            transition: border .33s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+
+        .grid-column-crt{
+            .ems-pay-transfer{
+                .tableOdemeBilgiHavale {
+                    table{
+                        td{
+                            &.banka{
+                                width:calc(100% - 150px);
+                            }
+                            &.link{
+                                width:150px !important;
+                                .btnDefault{
+                                    > span{
+                                        font-size:12px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
