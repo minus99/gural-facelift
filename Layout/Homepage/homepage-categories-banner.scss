@@ -1,16 +1,19 @@
 /* Homepage Second Banner Categories */
 
-.grid-item-c {
-    grid-area: c;
-}
-.grid-item-d {
-    grid-area: d;
-}
-.grid-item-f {
-    grid-area: f;
-}
-.grid-item-e {
-    grid-area: e;
+.homepage-categories-banner
+{
+    .grid-item:nth-child(1) {
+        grid-area: c;
+    }
+    .grid-item:nth-child(2) {
+        grid-area: d;
+    }
+    .grid-item:nth-child(3) {
+        grid-area: f;
+    }
+    .grid-item:nth-child(4) {
+        grid-area: e;
+    }
 }
 
 .homepage-categories-banner-title{
@@ -71,7 +74,7 @@
     @media screen and (min-width: $breakpoint-medium) {
 
         .homepage-categories-banner{
-            margin-top:50px;
+            margin-bottom:50px;
             &.grid-container {
                 display: grid;            
                 grid-column-gap: 15px;

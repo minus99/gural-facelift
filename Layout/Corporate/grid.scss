@@ -1,0 +1,95 @@
+// Kurumsal Sayfalar
+
+
+.ems-page-corporate-ready{
+    .aside-menu{
+        .kutuBodySolMenuTree{
+            display: none;
+        }
+    }
+}
+    .ems-page-corporate-content{
+    .ems-corporate-breadcrumb{
+        background: $light-grey;
+        padding:20px;
+    }
+    .member-navigation {
+        margin-top: 15px;
+        padding-left:20px;
+        .swiper-slide {
+        width: auto;
+        margin-right:5px;
+        a {
+            font-family: "proxima";
+            font-size: 15px;
+            line-height: 1.33;
+            text-align: center;
+            color: #0f1015;
+            padding: 8px 14px;
+            border: 1px solid #dddddd;
+            border-radius: 3px; 
+        }
+        &.act{
+            a{
+                font-weight: bold;
+                border-color: #0f1015; 
+                }
+            }
+        }
+    }
+    .ems-page-corporate-desc{
+        padding:0px 20px;
+        h3{
+            font-size:16px;
+            font-family: $gilroy;
+            line-height: 1.25;
+            margin:20px 0 10px;
+        }
+        p{
+            line-height: 1.43;
+            font-size:14px;
+            color:$greyish-brown;
+            margin-bottom:20px;
+        }
+    }
+}
+
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+       
+        .ems-page-corporate-ready{
+            .aside-menu{
+                .kutuBodySolMenuTree{
+                    display: block;
+                }
+                .kutuBodyKategori{
+                    display: none;
+                }
+            }
+        }
+
+        .ems-page-corporate-content{
+            .ems-corporate-breadcrumb{
+                background: none;
+                padding:20px 0px;
+                a{
+                    color:$grey-6;
+                    margin-bottom:5px;
+                    display: inline-block;
+                }
+                h2{
+                    display: block;
+                    font-family: $gilroy;
+                }
+            }
+            .ems-page-corporate-desc{
+                padding: 0px;
+                h3{
+                    display: none;
+                }
+            }            
+        }
+
+    }
+}

@@ -1,6 +1,7 @@
 // Sepet Sayfaları Grid 
 
-.ems-page-basket , .ems-page-delivery , .ems-page-payment , .ems-page-payment-result , .ems-page-guest-layout{
+//.ems-page-basket , .ems-page-delivery , .ems-page-payment , .ems-page-payment-result , .ems-page-guest-layout{
+    .ems-cart-layout{
     .navbar-item-search{
         display: none;
     }
@@ -20,7 +21,7 @@
                     }
                     .grid-column-hdr{
                         grid-area: hdr;
-                        height:80px;
+                        height:48px;
                     }
                     .grid-column-bnr{
                         padding:0px;
@@ -46,16 +47,14 @@
                 }
             }
         }       
-        aside{
-            display: none;
-        }
     }
 
 }
 
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
-    .ems-page-basket , .ems-page-delivery , .ems-page-payment , .ems-page-payment-result , .ems-page-guest-layout{   
+    //.ems-page-basket , .ems-page-delivery , .ems-page-payment , .ems-page-payment-result , .ems-page-guest-layout{   
+        .ems-cart-layout{
         .sticky-header-ready header , header{
             display: none !important;
         }
@@ -68,6 +67,9 @@
         }
         footer{
             max-width: 1290px;
+        }
+        aside{
+            display: none;
         }
     }
         .ems-page-cart{

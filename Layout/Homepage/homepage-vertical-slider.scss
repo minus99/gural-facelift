@@ -11,14 +11,21 @@
 
         .homepage-banner-vertical-widget{
             &.grid-container{
-                margin-top:50px;
+                margin-bottom:50px;
                 display: grid;
                 grid-template-areas:"one two";
-                grid-template-columns: minmax( auto , 834px  ) minmax( auto , 410px  );
+                grid-template-columns: minmax(auto , 1fr) minmax( auto , 330px);
+                grid-template-rows: minmax(800px , auto);
                 grid-column-gap: 45px;
                 .grid-item{
                     position: relative;
                     &.grid-one{
+                        > div{
+                            height:100%;
+                            background-size:cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
                         .content{
                             position: absolute;
                             top:50%;
@@ -43,9 +50,41 @@
                                 font-size:25px;
                             }
                         }
+                        .buttons{
+                            position: absolute;
+                            width:100%;
+                            height: 100px;
+                            bottom:0px;
+                            @include get-flex(flex,center,space-evenly);
+                            .btnLine{
+                                position: relative;
+                                bottom:inherit;
+                                left:inherit;
+                                transform: inherit;
+                                font-size:17px;
+                                font-weight: bold;
+                                &::after{
+                                    font-weight: 400;
+                                }
+                            }
+                        }
                     }
                     &.grid-two{
-                        border:1px solid #ddd;
+                        .homepage-vertical-widget{
+                            .swiper-button-prev , .swiper-button-next{ 
+                                width:40px;
+                                height:40px;
+                                left:50%;
+                                transform: translate(-50%);
+                            }
+                            .swiper-button-prev{
+                                top:0px;
+                            }
+                            .swiper-button-next{
+                                bottom:0;
+                                top:auto;
+                            }
+                        }
                     }
                 }
             }

@@ -1,16 +1,302 @@
-//
 // Static:       Mobile Menü
 //
 // ========================================================================
 
+
+.aside-menu{
+    display: none;
+    width:94.7% !important;
+    .kutuKategori{
+        font-weight: bold;
+        font-family: $gilroy;
+        .kutuHeaderKategori{
+            .ems-mobi-menu-header{
+                font-weight: 400;
+                font-family: $proxima;
+                @include get-flex(flex,center,space-between);
+                border-bottom:1px solid $grey-d;
+                padding:10px 0px;
+                width:calc(100% - 20px);
+                margin: 0 auto;
+                a{
+                    @include get-flex(flex,center,center);
+                }
+            }
+        }
+        .kutuBodyKategori{
+            position: absolute;
+            top:60px;
+            left:0px;
+            height:calc(100% - 150px);
+            overflow-y:scroll;
+            width:100%;
+            .ems-find-store-btn{
+                @include get-flex(flex,center,flex-start);
+                margin-top:30px;
+                padding: 10px;
+            }
+            .menuKategori{
+                > li{
+                    &:not(.sub-items){
+                        b{
+                            display: none;
+                        }
+                    }
+                    &:first-child{
+                        padding-top:20px;
+                        b{
+                            height:60px;
+                        }
+                    }
+                    margin-bottom:10px;
+                    position: relative;
+                    > b{
+                        height:40px;
+                    }
+                    > a{
+                        @include get-flex(flex,center,flex-start);
+                        &::before{
+                            font-weight: 400;
+                            font-family: icomoon;
+                            font-size:40px;
+                            margin:0 10px;
+                        }
+                    }
+                    > ul{
+                        padding:10px 0px 20px 50px;
+                        background: $light-grey;
+                        font-family: $proxima;
+                        font-weight: 400;
+                        a{
+                            display: block;
+                            line-height: 2.6;
+                        }
+                    }
+                    &.opened.sub-items{
+                        &:first-child{
+                            padding-top:0px;
+                            > b{
+                                height: 120px;
+                            }
+                        }
+                        > b{
+                            height:120px;
+                            background-size:contain; 
+                            position: relative;
+                            display: block;
+                            &::after{
+                                content:'';
+                                background: rgba($color: #000000, $alpha: .3);
+                                width:100%;
+                                height:100%;
+                                top:0px;
+                                left:0px;
+                                position: absolute;
+                            }
+                        }
+                        > a{
+                            pointer-events: none;
+                            position: absolute;
+                            top:30px;
+                            left:50px;
+                            font-size:22px;
+                            color:$white;
+                            &:before{
+                                content:none;
+                            }
+                        }
+                        ul{
+                            background: $light-grey;
+                        }
+                    }
+                }
+            }
+        }
+        .kutuFooterKategori{
+            position: absolute;
+            bottom:0;
+            left:0px;
+            width:100%;
+            background: #fff;
+            .ems-mobi-menu-footer ul{
+                height:90px;
+                @include get-flex(flex,center,space-around);
+            }
+        }
+    }
+}
 
 
 
 
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
+    
+        .ems-page-accounts{
+            .aside-menu{
+                .kutuBodyKategori{
+                    display: none;
+                }
+                .mod-mini-login-body{
+                    visibility: visible !important;
+                    opacity: 1 !important;
+                    left:0px !important;
+                    display: block !important;
+                    .login{
+                        .ems-user-pages{
+                            .left-menu-account.ems-none{
+                                @include get-flex(flex !important,center,flex-start);
+                                position: relative;
+                                margin-bottom:10px;
+                                &::before{
+                                    content:"\e939";
+                                    font-family: "icomoon";
+                                    font-size: 40px;
+                                    color: #aaa !important;
+                                    font-weight: 100;
+                                    left:-40px;
+                                    position: absolute;
+                                }
+                            }
+                            .ems-col{
+                                margin-left:10px;
+                                font-weight: 400;
+                                font-family: $proxima;
+                                font-size: 15px;
+                                color:$grey-6;
+                                line-height: 1.73;
+                            }
+                            .ems-mini-logout{
+                                max-width: 160px;
+                                margin-top:30px;
+                                .btnKutuLogout{
+                                    width:100%;
+                                    border:1px solid $grey-d;
+                                    background: $white !important;
+                                    color:$black !important;
+                                    padding:4px;
+                                    > span{
+                                        @include get-flex(flex,center,space-around);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
-       
+        aside{
+            position: relative;
+        }
+        .aside-menu{
+            display: grid;
+            position: sticky;
+            top:120px;
+            width:100% !important;
+            .kutuKategori{
+                .kutuHeaderKategori , .kutuFooterKategori{
+                    display: none;
+                }
+                .kutuBodyKategori{
+                    position: relative;
+                    height:inherit !important;
+                    top:inherit;
+                    left:inherit;
+                    overflow: inherit !important;
+                    .menuView{
+                        max-width: 260px;          
+                        li.s1{
+                            &:first-child{
+                                padding-top:0px;
+                            }
+                            margin-bottom:0px;
+                            font-family: $gilroy;
+                            font-weight: bold;
+                            font-size:15px;    
+                            position: relative;
+                            > a{
+                                padding: 12.5px 0px;
+                                color:$black !important;
+                                font-size:15px !important;
+                                position: inherit !important;
+                                top:0px !important;
+                                left:0px !important;
+                                &::before{
+                                    content: none;
+                                }
+                            }
+                            > ul {
+                                background: none !important;
+                                display: none;
+                                margin-left:10px;
+                                padding-left:0px !important;
+                                li.s2{
+                                    font-family: $proxima;
+                                    font-weight: 400;
+                                    font-size:15px;
+                                    color:$grey-6;
+                                    > a{
+                                        line-height: 1;
+                                        padding:5.5px;
+                                    }
+                                    &.opened{
+                                        color:$black;
+                                    }
+                                }
+                            }
+                            &.sub-items{
+                                > b{
+                                    background-image: none;
+                                    position: absolute;
+                                    left:-40px;
+                                    width:40px;
+                                    height:40px !important;
+                                    top:0px;
+                                    &:after{
+                                        content:"\e942";
+                                        font-family: "icomoon";
+                                        font-size:40px;
+                                        color:#aaa !important;
+                                        font-weight: 100;
+                                        background: none;
+                                    }
+                                }
+                            }
+                            &.opened{
+                                > b{
+                                    &::after{
+                                        content:"\e939";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .ems-find-store-btn{
+                        flex-direction: row-reverse;
+                        justify-content: flex-end;
+                    }
+                }
+            }
+        }
+
+
+        .aside-menu .kutuKategori .kutuBodyKategori .menuKategori > li.opened.sub-items > b{
+            background-image: none !important;
+        }
 
     }
 }
+
+
+
+
+/**/
+
+.aside-menu .menuKategori > li.sofra > a::before{content:"\e957";}
+.aside-menu .menuKategori > li.mutfak > a::before{content:"\e93a";}
+.aside-menu .menuKategori > li.sunum > a::before{content:"\e959";}
+.aside-menu .menuKategori > li.gastro > a::before{content:"\e930";}
+.aside-menu .menuKategori > li.el-dekoru > a::before{content:"\e925";}
+.aside-menu .kutuKategori .kutuBodyKategori .menuKategori > li.yildizli > a{color:$carmine !important;}
+.aside-menu .kutuKategori .menuKategori > li.yildizli > a::before{content:"\e93d";color:$carmine}

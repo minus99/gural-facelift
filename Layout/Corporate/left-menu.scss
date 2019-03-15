@@ -1,0 +1,85 @@
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        
+        
+        
+        
+        
+        .aside-menu{
+            .kutuBodySolMenuTree{
+                > ul{
+                    max-width: 260px;          
+                    li.sev1{
+                        &:first-child{
+                            padding-top:0px;
+                        }
+                        margin-bottom:0px;
+                        font-family: $gilroy;
+                        font-weight: bold;
+                        font-size:15px;    
+                        position: relative;
+                        > a{
+                            padding: 12.5px 0px;
+                            color:$black !important;
+                            font-size:15px !important;
+                            position: inherit !important;
+                            top:0px !important;
+                            left:0px !important;
+                            &::before{
+                                content: none;
+                            }
+                        }
+                        > ul {
+                            background: none !important;
+                            margin-left:10px;
+                            padding-left:0px !important;
+                            li.sev2{
+                                font-family: $proxima;
+                                font-weight: 400;
+                                font-size:15px;
+                                color:$grey-6;
+                                > a{
+                                    line-height: 1;
+                                    padding:5.5px;
+                                }
+                                &.act{
+                                    color:$black;
+                                }
+                            }
+                        }
+                        &.icr{
+                            > b{
+                                background-image: none;
+                                position: absolute;
+                                left:-40px;
+                                width:40px;
+                                height:40px !important;
+                                top:0px;
+                                &:after{
+                                    content:"\e939";
+                                    font-family: "icomoon";
+                                    font-size:40px;
+                                    color:#aaa !important;
+                                    font-weight: 100;
+                                    background: none;
+                                }
+                            }
+                        }
+                        &.act{
+                            > b{
+                                &::after{
+                                    content:"\e939";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+
+    }
+}

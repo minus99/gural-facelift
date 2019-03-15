@@ -127,3 +127,24 @@ img {
 [editabletype="editable-block-script"]{
     margin-left: 0;
 }
+
+/* visible@m hidden@m */
+
+
+.visible\@m{
+    display:none;
+}
+.hidden\@m{
+    display: block;
+}
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .visible\@m{
+            display:block;
+        }
+        .hidden\@m{
+            display: none;
+        }
+    }
+}

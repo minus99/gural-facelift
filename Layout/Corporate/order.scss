@@ -1,0 +1,36 @@
+
+.ems-page-corporate{
+    .kutuOrderQuery{
+        max-width: 335px;
+        margin: 20px auto;
+        .kutuBodyOrderQuery{
+            > div {
+                margin-bottom:20px;
+                >span{
+                    font-size:12px;
+                    color:$black;
+                }
+                > input{
+                    margin-top:10px;
+                }
+                > table{
+                    display: table !important;
+                    width:100%;
+                    .btnOrderQueryGonder{
+                        width:100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .ems-page-corporate{
+            .kutuOrderQuery{
+                margin: 0px;
+            }
+        }
+    }
+}

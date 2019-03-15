@@ -1,8 +1,8 @@
-.basket-empty{
+.basket-empty , .ems-cart-layout-success{
     .grid-column-crt{
         grid-template-columns: 100% !important;
         .ems-page-cart-colmn-1{
-            .card-error{
+            .ems-card-status{
                 height:330px;
                 background: $white-three;
                 @include get-flex(flex,center,center);
@@ -17,6 +17,7 @@
                     span{
                         display: block;
                         font-size:16px;
+                        line-height: 1.4;
                     }
                 }
                 &-btn{
@@ -36,6 +37,7 @@
     }
 }
 
+
 .ems-page-cart{
     .grid-column-crt{    
         display: grid;
@@ -47,7 +49,7 @@
             }
             .ems-cart-btn{
                 width:100%;
-                padding:0px 20px;
+                padding:0px;
                 margin-top:10px;
                 @include get-flex(flex,center,space-between);
                 .btnDefault{
@@ -324,7 +326,7 @@
                     .ems-grid-row{
                         justify-content: center;
                         align-items: center;
-                        padding:20px 10px;
+                        padding:20px 0px;
                         .ems-grid-left{
                             width:150px;
                         }

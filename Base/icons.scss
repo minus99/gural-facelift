@@ -137,11 +137,11 @@
 .icon-cartblack:before {
   content: "\e919";
 }
-.icon-cartblackaddwhite-copy .path1:before {
+.icon-cart-success:before {
   content: "\e91a";
   color: rgb(42, 45, 55);
 }
-.icon-cartblackaddwhite-copy .path2:before {
+.icon-cart-success:after {
   content: "\e91b";
   margin-left: -1em;
   color: rgb(179, 202, 178);

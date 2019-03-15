@@ -85,9 +85,9 @@
         .ems-search-body {
             width: 94.7%;
             margin: 20px auto;
-            .search-populer-words {
+            .search-populer-words , .last-search{
                 padding-left:20px;
-                .populer-words-list{
+                .populer-words-list , ul{
                     a{
                         line-height: 2.6;
                         font-size:15px;
