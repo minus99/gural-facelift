@@ -1,0 +1,11 @@
+.ems-page-search-list{
+    .tableArama , .tblBtnAraIptal , .pageArama{
+        display: none;
+    }
+}
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+
+    }
+}
