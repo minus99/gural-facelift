@@ -1,58 +1,90 @@
 // Üyeliksiz Alışveriş
 
-.ems-page-guest-layout{
-    .divTeslimatKargo{
-        ul{
-            @include get-flex(flex,center,flex-start);
-            li{
-                cursor: pointer;
-                width:110px;
-                height: 150px;
-                @include get-flex(flex,center,center);
-                align-content: center;
-                flex-wrap: wrap;
-                margin-right:10px;
-                border:1px solid $white-two;
-                border-radius: 3px;
-                img{
-                    width:50px;
-                }
-                > span{
-                    width:100%;
-                    display: block !important;
-                    text-align: center;
-                    font-size:12px;
-                    margin-top:8px;
-                }
-                .kargoAdi{
-                    font-family: $gilroy;
-                    font-weight: bold;
-                }
-                .kargoBilgi{
-                    display: none !important;
-                }
-                .sStylerWrp_radio{
-                    width:20px;
-                    height:20px;
-                    border:1px solid $grey-d;
-                    @include get-flex(inline-flex !important,center,center);
-                    border-radius: 100%;
-                    .rStyler{
-                        width:17px;
-                        height:17px;
-                        display: inline-block;
-                        border-radius: 100%;
-                        background: $white;
-                        &.checked{
-                            background:$carmine;
-                            width:8px;
-                            height:8px;
-                        }
+.guest-page-layout{
+    .guestCheckoutInner{
+        margin-top:30px;
+        .ems-form{
+            margin-top:20px;
+        }
+    }
+    .page-top-desc{
+        display: block;
+    }
+    .page-top-title{
+        margin-bottom:20px;
+        display: block !important;
+        > span {
+            a{
+               color: $grey-6;
+               display: inline-block;
+            }
+            span{
+                font-size:22px;
+                font-weight: bold;
+                font-family: $gilroy;
+                display: block;
+            }
+        }
+    }
+    .guestCargo{
+        [id$="lbf_KARGOBILGI"]{
+            font-weight: bold;
+            font-size:16px;
+            font-family: $gilroy;
+            margin-bottom:10px;
+            display: inline-block;
+        }
+        .divTeslimatKargo{
+            ul{
+                @include get-flex(flex,center,flex-start);
+                li{
+                    cursor: pointer;
+                    width:110px;
+                    height: 150px;
+                    @include get-flex(flex,center,center);
+                    align-content: center;
+                    flex-wrap: wrap;
+                    margin-right:10px;
+                    border:1px solid $white-two;
+                    border-radius: 3px;
+                    img{
+                        width:50px;
+                    }
+                    > span{
+                        width:100%;
+                        display: block !important;
+                        text-align: center;
+                        font-size:12px;
+                        margin-top:8px;
+                    }
+                    .kargoAdi{
+                        font-family: $gilroy;
+                        font-weight: bold;
+                    }
+                    .kargoBilgi{
+                        display: none !important;
                     }
                     input{
-                        position: absolute;
-                        visibility: hidden;
-                        opacity: 0;
+                        margin-top:5px;
+                        border:1px solid $grey-d;
+                        background: $white;
+                        width:17px !important;
+                        height:17px;
+                        position: relative;
+                    }
+                    input[type="radio"]:checked{
+                        &:after{
+                            background: $carmine;
+                            border-radius: 100%;
+                            content:'';
+                            width:8px;
+                            height:8px;
+                            position: absolute;
+                            left:50%;
+                            top:50%;
+                            transform: translate(-50% , -50%);
+                            display: inline;
+                        }
                     }
                 }
             }

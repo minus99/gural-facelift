@@ -17,7 +17,7 @@
                         content: "";
                         position: absolute;
                         left: 0;
-                        top: 40px;
+                        top: 32px;
                         width: 100%;
                         z-index: 1;
                     }
@@ -25,7 +25,7 @@
                         content: "";
                         position: absolute;
                         left: 0;
-                        top: 40px;
+                        top: 32px;
                         width: 100%;
                         border-top: 5px solid $grey-d;
                     }
@@ -41,7 +41,7 @@
                                 height: 15px;
                                 border-radius: 100%;
                                 background: $grey-d;
-                                margin-top:20px;
+                                margin-top:11px;
                              }
                              .step-text{
                                 display: block;
@@ -141,6 +141,7 @@
     @media screen and (min-width: $breakpoint-medium) {
         
         .grid-column-hdr{
+            height:auto !important;
             > div{
                 display: grid;
                 grid-template-columns:minmax(auto , 240px) 1fr minmax(auto , 240px);
@@ -216,12 +217,21 @@
             .header-steps{
                 td{
                     > span{
+                        &::before{
+                            width:100% !important;
+                            border-top:5px solid $greyish-brown !important;
+                        }
                         &:nth-child(2){
                             .step-icon{
                                 background: $greyish-brown !important;
                             }
-                            &:after{
+                            &::before{
+                                width:50% !important;
                                 border-top:5px solid $greyish-brown !important;
+                            }
+                            &::after{
+                                width:100% !important;
+                                border-top:5px solid $grey-d !important;
                             }
                         }
                     }

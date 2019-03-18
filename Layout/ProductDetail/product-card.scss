@@ -283,11 +283,11 @@
             .grid-column-dtl{
                 .ems-prd-detail-inner{
                     display: grid;
-                    grid-template-columns: 50% 50%;
+                    justify-content: space-between;
+                    grid-template-columns: 50% calc(50% - 70px);
                     .inner-row-1{
                     }
                     .inner-row-2{
-                        margin-left:130px;
                         .ems-prd{
                             padding: 0;
                             display: grid;
@@ -311,6 +311,9 @@
                             }
                             .ems-detail-havale{
                                 margin-top:10px;
+                            }
+                            .ems-prd-whatsapp-share{
+                                display: none !important;
                             }
                         }
                     }

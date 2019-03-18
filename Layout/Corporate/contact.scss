@@ -1,0 +1,136 @@
+.ems-page-contact{
+    .ems-page-corporate-content{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-areas: 
+            "bc"
+            "ci"
+            "cf";
+        .ems-corporate-breadcrumb{
+            grid-area: bc;
+        }
+        .ems-page-contact-form{
+            padding:0px 20px;
+            grid-area: cf;
+            .tableTitleMesajGonder{
+                font-size:16px;
+                font-family:$gilroy;
+                margin-bottom:5px;
+            }
+            table , tbody , tr , th ,td{
+                display: block;
+                width:100%;
+            }
+            .tableMesajGonder{
+                .tableMesajGonder_aciklama{
+                    line-height: 1.43;
+                    color:$greyish-brown;
+                    font-size:14px;
+                    .required-form-desc{
+                        margin:20px 0px 40px;
+                        display: block;
+                    }
+                    .required-form-text{
+                        display: block;
+                        font-size:12px;
+                        margin-bottom:15px;
+                    }
+                }
+                .tableMesajGonder_mesajIcerik{
+                    table{
+                        tr{
+                            margin-bottom:20px;
+                            th{
+                                text-align: left;
+                                span{
+                                    font-size:12px;
+                                    font-weight: 400;
+                                    display: block;
+                                    margin-bottom:5px;
+                                }
+                            }
+                            td{
+                            
+                            }
+                        }
+                    }
+                }
+                .pageMesajGonder_CaptchaImage1{
+                    img{
+                        max-width:250px;
+                    }
+                    [id$="lbfUYE_KONTROLKODU"]{
+                        display: block;
+                        margin:20px 0px 0px;
+                        font-size: 12px;
+                    }
+                }
+                .pageMesajGonder_btnMesajGonder{
+                    display: block !important;
+                    width:100%;
+                    margin-top:20px;
+                    .btnDefault{
+                        width:100%;
+                    }
+                }
+            }
+        }
+        .ems-page-contact-info{
+            height:400px;
+            grid-area: ci;
+            .ems-page-corporate-desc{
+                > b{
+                    margin:30px 0px 6px;
+                    display: block;
+                }
+                > span{
+                    margin-bottom:20px;
+                    display: block;
+                }
+            }
+            .ems-contact-info-icons{
+                > div{
+                    @include get-flex(flex,center,flex-start);
+                    .desc{
+                        padding:10px;
+                        b{
+                            display: block;
+                            font-size:16px;
+                        }
+                        p{
+                            font-size:12px;
+                            margin-bottom:0px;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .ems-page-contact{
+            .ems-page-corporate-content{
+                position: relative;
+                grid-column-gap: 150px;
+                grid-template-areas: 
+                "bc bc"
+                "cf ci";
+                grid-template-columns: 335px;
+                .ems-page-contact-form{
+                    padding:0px;
+                }
+                .ems-page-contact-info{
+                    position: sticky;
+                    top:100px;
+                    .ems-page-corporate-desc{
+                        b{
+                            margin:10px 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

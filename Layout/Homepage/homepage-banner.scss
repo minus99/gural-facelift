@@ -60,6 +60,26 @@
             img{
                 width:100%;
             }
+            &.new-banner-icon{
+                position: relative;
+                &::before{
+                @include get-flex(flex,center,center);
+                content: 'YENİ';
+                position: absolute;
+                z-index: 99;
+                width: 70px;
+                height: 70px;
+                background: $light-peach;
+                text-align: center;
+                border-radius: 100%;
+                transform: rotate(-15deg);
+                top: -12px;
+                left: 20px;
+                font-size:18px;
+                font-family: $gilroy;
+                font-weight: bold;
+                }
+            }
         }
     }
 }
@@ -78,8 +98,9 @@
                 grid-column-gap: 20px;
                 grid-template-areas: "a b";
                 margin:inherit;
+                margin-bottom:50px;
                 .grid-item{
-                    margin-bottom:inherit;
+                    margin-bottom:0px;
                     a{
                         .content{
                             .desc{
@@ -108,6 +129,12 @@
                     }
                     &.grid-item-b {
                         grid-area: b;
+                    }
+                    &.new-banner-icon{
+                        &::before{
+                            left:-25px;
+                            top:30px;
+                        }
                     }
                 }
             }

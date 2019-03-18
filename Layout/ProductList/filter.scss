@@ -70,6 +70,97 @@ body{
             left:0px;
             height:calc( 100% - 125px );
             overflow-y:scroll;
+            .ems-prd-list-sort-products , .ems-prd-list-view{
+                margin-bottom:15px;
+                >span{
+                        font-family: $gilroy;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: centeR;
+                        justify-content: space-between;
+                        padding:0px 50px;
+                        position: relative;
+                        height:40px;
+                        color:$carmine;
+                        cursor: pointer;
+                        small{
+                            font-weight: 400;
+                        }
+                        &:before{
+                            position: absolute;
+                            left:0px;
+                            width:40px;
+                            font-family: icomoon;
+                            font-size:40px;
+                            font-weight: 400;
+                            color:$carmine;
+                        }
+                        &:after{
+                            position: absolute;
+                            right:0px;
+                            width:40px;
+                            content: "\e90e";
+                            font-family: icomoon;
+                            font-weight: 400;
+                            font-size:40px;
+                        }
+                        &.kapali{
+                            color:$black;
+                            &::before{
+                                color:$black;
+                            }
+                            &::after{
+                                content: "\e906";
+                            }
+                        }
+                }
+                ul{
+                    margin-left:50px;
+                    margin-top:15px;
+                    li{
+                        a{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            margin-bottom:20px;
+                            &::before{
+                                content:'';
+                                border:1px solid $grey-d;
+                                border-radius:2px;
+                                width:16px;
+                                height:16px;
+                                display: inline-block;
+                                margin-right: 10px;
+                            }
+                        }
+                        &.selected{
+                            a{
+                                &::before{
+                                    content:'\e96b';
+                                    color:$carmine;
+                                    border:1px solid $carmine;
+                                    font-weight: bold;
+                                    font-family: icomoon;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .ems-prd-list-sort-products{
+                > span{
+                    &::before{
+                        content:"\e94b";
+                    }
+                }
+            }
+            .ems-prd-list-view{
+                > span{
+                    &::before{
+                        content:"\e954";
+                    }
+                }
+            }
             > table{
                 width:100%;
                 display: table !important;
@@ -234,7 +325,26 @@ body{
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
 
-
+        .grid-column-flt{
+            .pnlUrunKiyasSecim{
+                width:320px;
+                left:30px;
+                bottom:30px;
+                border:1px solid $grey-d;
+                box-shadow: none;
+                border-radius: 3px;
+                .urunKiyaslamaOzellik_UrunSayi{
+                    >span{
+                        font-family: $proxima;
+                        font-weight: 400;
+                        &:after{
+                            color:$black;
+                        }
+                    }
+                }
+            }
+        }
+        
 
     }
 }
