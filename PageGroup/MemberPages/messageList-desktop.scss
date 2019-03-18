@@ -1,0 +1,72 @@
+
+// MESSAGES MENU
+// ========================================================================
+.ems-member-kutuMesaj{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d8d8d8;
+}
+.kutuMesaj{
+
+}
+.kutuHeaderMesaj{
+    display: none;
+}
+.kutuBodyMesaj{
+    display: flex;
+
+    a{
+        text-align: center;
+        &::after{
+            content: none;
+        }
+        &::before{
+            content: "";
+            width: 100%;
+            height: 0;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: $carmine;
+        }
+    }
+    > div{
+        width: 25%;
+        margin-bottom: 0px;
+        border-bottom-width: 0px;
+        &.active{
+            a{
+                &::before{
+                    height: 5px;
+                }
+            }
+        }
+    }
+}
+
+
+// MESSAGES DETAIL
+// ========================================================================
+.ems-member-message-detail{
+
+    .ems-member-icr{
+        max-width: 600px;
+    }
+}
+
+
+
+// MESSAGES WRITE
+// ========================================================================
+.ems-member-page{
+    #mesajGonder{
+        max-width: 350px;
+    }
+    .tableTitleMesajGonder{
+        font-family: $gilroy;
+        font-size: 25px;
+        font-weight: bold;
+        color: $black;
+        margin-bottom: 30px;
+        border-bottom-width: 0;
+    }
+}

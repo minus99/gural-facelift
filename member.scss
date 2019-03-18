@@ -1,0 +1,34 @@
+@import 'Base/variables.scss';
+@import 'Base/color-palette.scss';
+@import 'Base/mixins.scss';
+
+// ========================================================================
+// MOBILE DESIGN
+// ========================================================================
+@import 'PageGroup/MemberPages/layout-mobile.scss';
+@import 'PageGroup/MemberPages/default-mobile.scss';
+@import 'PageGroup/MemberPages/passwordChange-mobile.scss';
+@import 'PageGroup/MemberPages/orderList-mobile.scss';
+@import 'PageGroup/MemberPages/orderDetail-mobile.scss';
+@import 'PageGroup/MemberPages/favorites-mobile.scss';
+@import 'PageGroup/MemberPages/addressInfo-mobile.scss';
+@import 'PageGroup/MemberPages/followlist-mobile.scss';
+@import 'PageGroup/MemberPages/messageList-mobile.scss';
+
+
+// ========================================================================
+// DESKTOP DESIGN
+// ========================================================================
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        @import 'PageGroup/MemberPages/layout-mobile.scss';
+        @import 'PageGroup/MemberPages/default-desktop.scss';
+        @import 'PageGroup/MemberPages/passwordChange-desktop.scss';
+        @import 'PageGroup/MemberPages/orderList-desktop.scss';
+        @import 'PageGroup/MemberPages/orderDetail-desktop.scss';
+        @import 'PageGroup/MemberPages/favorites-desktop.scss';
+        @import 'PageGroup/MemberPages/addressInfo-desktop.scss';
+        @import 'PageGroup/MemberPages/followlist-desktop.scss';
+        @import 'PageGroup/MemberPages/messageList-desktop.scss';
+    }
+}

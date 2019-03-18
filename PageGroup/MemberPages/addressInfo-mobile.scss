@@ -1,0 +1,97 @@
+.ems-member-address{
+    // DISPLAY GRID
+    // ========================================================================
+    [id$="lblJavaScript"]{
+        &::before{
+            content: none;
+        }
+    }
+    .ems-address-form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .add-new-address{
+        order: 3;
+    }
+    .ems-grid-default-address{
+        order: 2;
+    }
+
+
+    // ADDRESS LIST HOLDER
+    // ========================================================================
+    .ems-grid-adress-row{
+        position: relative;
+        display: flex;
+        border-radius: 3px;
+        border: solid 1px $grey-d;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    // ADDRESS TOP
+    // ========================================================================
+    .ems-grid-adress-top{
+        width: 70%;
+    }
+    .ems-grid-address-name{
+        font-family: $proxima;
+        font-size: 14px;
+        font-weight: 600;
+        color: $black;
+        margin-bottom: 10px;
+    }
+    .ems-grid-address{
+        font-family: $proxima;
+        font-size: 14px;
+        line-height: 1.43;
+        color: $grey-9;
+    }
+
+    // ADDRESS EDIT
+    // ========================================================================
+    .ems-grid-adress-edit{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 30%;
+        border-left: solid 1px $grey-d;
+        a.btnDefault{
+            display: inline-flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+
+            background: none;
+            color: $charcoal-grey !important;
+            border-radius: 0;
+            font-size: 12px;
+            padding: 0;
+            text-decoration: underline;
+        }
+    }
+
+
+
+
+    // ADD NEW ADDRESS
+    // ========================================================================
+    .add-new-address{
+        a.btnAdresEkle{
+            width: 100%;
+        }
+    }
+
+
+    // ========================================================================
+    // NEW ADDRESS
+    // ========================================================================
+    .ems-page-new-address{
+        .page-top-title{
+            display: none;
+        }
+    }
+}

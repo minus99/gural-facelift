@@ -1,0 +1,38 @@
+.ems-member-address{
+
+    // ADDRESS LIST HOLDER
+    // ========================================================================
+    .ems-grid-adress-row{
+        align-items: center;
+    }
+
+    // ADDRESS TOP
+    // ========================================================================
+    .ems-grid-address{
+        max-width: 260px;
+    }
+
+    // ADDRESS EDIT
+    // ========================================================================
+    .ems-grid-adress-edit{
+        position: initial;
+        width: initial;
+        margin-left: auto;
+        border-left: 0;
+        a.btnDefault{
+            font-weight: 400;
+        }
+    }
+
+
+
+
+    // ADD NEW ADDRESS
+    // ========================================================================
+    .add-new-address{
+        text-align: right;
+        a.btnAdresEkle{
+            max-width: 300px;
+        }
+    }
+}

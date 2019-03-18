@@ -1,0 +1,103 @@
+.ems-member-follow-list{
+
+    // Tab display selectbox
+    .ems-tab-menu-selecbox{
+        display: none;
+    }
+
+    //Tab Head
+    .navigation-js{
+        margin-bottom: 30px;
+        li{
+            width: 100%;
+            max-width: 290px;
+            margin-right: 10%;
+        }
+        a{
+            font-size: 16px;
+            padding: 12px 58px;
+        }
+    }
+
+
+    //Tab Content
+    .content-js{
+
+        .ems-grid-default{
+            margin-bottom: 40px;
+        }
+
+        .ems-grid-header{
+            font-size: 14px;
+            font-weight: 700;
+            font-family: $gilroy;
+            border-bottom: 1px solid #d8d8d8;
+            &:first-child{
+                display: flex;
+            }
+            .ems-grid-remove{
+                font-size: 0;
+            }
+        }
+        .ems-grid-img{
+            width: 100px !important;
+            padding: 12px 0;
+        }
+        .ems-grid-code,
+        .ems-grid-name,
+        .ems-grid-date,
+        .ems-grid-price{
+            width: calc((100% - 150px) / 4) !important;
+            padding: 12px 3% !important;
+        }
+
+        .ems-grid-row{
+            flex-direction: initial;
+            flex-wrap: nowrap;
+            height: auto;
+            align-items: center;
+            padding: 10px 0;
+            
+            .ems-grid-img,
+            .ems-grid-code,
+            .ems-grid-name,
+            .ems-grid-date,
+            .ems-grid-price{
+                order: 0;
+                margin-bottom: 0px;
+                margin-right: 0px;
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+            .ems-grid-remove{
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+
+    //  EMPTY
+    .ems-followlist-empty-price,
+    .ems-followlist-empty-price{
+
+    }
+    .ems-page-followlist-empty-stock,
+    .ems-page-followlist-empty-price{
+        padding: 60px 0 80px;
+        > i{
+            font-size: 80px;
+        }
+        .text{
+            line-height: 1.38;
+            max-width: 250px;
+            margin: 0 auto;
+        }
+        > a{
+            margin-top: 40px;
+            padding: 13px 23px;
+            min-width: 210px;
+        }
+    }
+}

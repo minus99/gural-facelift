@@ -1,0 +1,122 @@
+// BREADCRUMB STYLES
+// ========================================================================
+.ems-breadcrumb{
+    background: $light-grey;
+    padding: 13px 20px 11px;
+    display: flex;
+    align-items: center;
+}
+
+.bc-route{
+    > div{
+        display: none;
+
+        font-family: $proxima;
+        font-size: 15px;
+        color: $charcoal-grey;
+
+        &:nth-child(1){
+            display: inline-block;
+        }
+    }
+}
+.bc-logout{
+    margin-left: auto;
+    .btnDefault{
+        background: none;
+        border: 1px solid $black;
+        padding: 8px 14.3px;
+        font-size: 15px;
+        font-weight: 400;
+        color: $black !important;
+        i{
+            display: none;
+        }
+    }
+}
+
+// NAVIGATION STYLES
+// ========================================================================
+.member-navigation{
+    margin-top: 15px;
+    .swiper-slide{
+        width: auto;
+        margin: 0 5px;
+        a{
+            font-family: $proxima;
+            font-size: 15px;
+            line-height: 1.33;
+            text-align: center;
+            color: $dark;
+
+            padding: 8px 14px;
+            border: 1px solid $grey-d;
+            border-radius: 3px;
+        }
+        &.selected{
+            a{
+                font-weight: bold;
+                border-color: $dark;
+            }
+        }
+    }
+}
+
+// CONTENT WRAPPER
+// ========================================================================
+.ems-member-page-content{
+    padding: 30px 19px;
+}
+
+
+// CONTENT
+// ========================================================================
+.ems-member-inner{
+    .ems-form{
+        max-width: 335px;
+    }
+}
+.ems-member-page-title{
+    display: none;
+}
+.ems-member-page-desc{
+    display: none;
+}
+.ems-member-icr{
+    position: relative;
+}
+
+// MEMBER INFO PAGE
+// ========================================================================
+@mixin phoneArea($col) {
+	width: calc( ((100% - 10px) / 4) * #{$col} ) !important;
+}
+.ems-member-info{
+    .ems-field{
+        &.phone{
+            [id$="txtUYE_CEPTELEFONALAN"]{
+                @include phoneArea(1);
+                margin-right: 10px;
+            }
+            [id$="txtUYE_CEPTELEFON"]{
+                @include phoneArea(3);
+            }
+        }
+        &.button{
+            .btnUyeBilgi{
+                width: 100%;
+            }
+        }
+
+        &.ems-field-check{
+            .obj-check{
+                > span:last-child{
+                    font-size: 14px;
+                    line-height: 1.29;
+                    color: $dark;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

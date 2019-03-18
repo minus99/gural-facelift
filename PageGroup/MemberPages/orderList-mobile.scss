@@ -1,0 +1,65 @@
+.ems-member-page {
+    
+    .ems-grid-default-order{
+        .ems-grid-header{
+            display: none;
+        }
+        .ems-grid-row{
+            position: relative;
+            border-radius: 3px;
+            border: solid 1px $grey-d;
+            margin-bottom: 10px;
+            padding: 20px 100px 20px 20px;
+            > div{
+                margin-top: 10px;
+                font-family: $proxima;
+                font-size: 14px;
+                color: $charcoal-grey;
+                > span{
+                    font-weight: 700;
+                    &:not(:empty){
+                        margin-right: 4px;
+                    }
+                }
+                &:first-child{
+                    margin-top: 0;
+                }
+            }
+
+            .ems-grid-status{
+                color: $carmine;
+                font-weight: 700;
+            }
+
+            .ems-grid-detail{
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 80px;
+                border-left: solid 1px $grey-d;
+                margin-top: 0;
+                display: flex;
+                > span{
+                    display: none;
+                }
+                a{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    font-family: $proxima;
+                    font-size: 14px;
+                    color: $charcoal-grey;
+                    text-decoration: underline;
+                }
+            }
+
+            
+        }
+    }
+    .urunPaging_pageNavigation{
+        margin-top: 20px;           
+    }
+}

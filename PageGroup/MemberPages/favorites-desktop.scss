@@ -1,0 +1,120 @@
+.ems-member-favorites{
+    .fav-group{
+        border-bottom: 1px solid $grey-d;
+    }
+    .fav-item{
+        align-items: inherit;
+        &:nth-child(even){
+            background-color: #fbf8f7;
+        }
+    }
+    .fav-media{
+        width: 150px;
+        margin-bottom: 0px;
+    }
+    .fav-info{
+        width: calc(100% - 150px);
+        padding-left: 20px;
+        padding-top: 16px;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .fav-name{
+        width: 75%;
+        max-width: initial;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+    .fav-piece-calc{
+        .count,
+        [rel="lbfFavBrPrice"]{
+            margin-right: 4px;
+        }
+        .calc-brackets{
+            margin: 0 4px;
+        }
+    }
+
+    .fav-price{
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+        font-size: 15px;
+    }
+
+    .fav-basket-opt{
+        position: initial;
+        display: inline-flex;
+        margin-top: auto;
+        align-items: flex-start;
+    }
+
+    .fav-addCart{
+        margin-right: 15px;
+        .btnSepeteAtFavori{
+            padding: 13px 14px;
+        }
+    }
+    .fav-piece-select{
+        position: relative;
+        font-size: 15px;
+        font-weight: bold;
+        display: inline-flex;
+        align-items: center;
+        
+        [id$="txtURN_ADET"]{
+            width: 130px !important;
+            height: 46px;
+            padding-left: 32px;
+            padding-right: 80px;
+            font-size: 15px;
+            font-weight: 700;
+            color: $black;
+            text-align: right;
+        }
+        
+        [id$="lbfAdet"]{
+            position: absolute;
+            top: 50%;
+            right: 45px;
+            transform: translateY(-50%);
+        }
+
+        .counter-btn{
+            position: absolute;
+
+            &.bottom-btn{
+                left: 0;
+            }
+            &.top-btn{
+                right: 0;
+            }
+        }
+    }
+
+    .fav-remove{
+        position: absolute;
+        top: 24px;
+        right: 8px;
+    }
+
+
+
+
+
+    .ems-page-favorites-empty{
+        padding: 60px 0 80px;
+        .text{
+            line-height: 1.38;
+        }
+
+        > a{
+            margin-top: 40px;
+            padding: 13px 23px;
+            min-width: 210px;
+        }
+    }
+}
