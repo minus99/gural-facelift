@@ -1,11 +1,49 @@
 .ems-page-search-list{
-    .tableArama , .tblBtnAraIptal , .pageArama{
+    .tableArama , .tblBtnAraIptal , .pageArama , .tableTitleArama{
         display: none;
+    }  
+    .ems-search-result-text{
+        h1{
+            font-family: $gilroy;
+            font-weight: bold;
+            font-size:25px;
+            text-transform: capitalize; 
+            display: none;
+        }
+        span{
+            font-size:15px;
+            color:$grey-6;
+            margin-top:5px;
+            display: block;
+            .cat-name{
+                text-transform: capitalize;
+            }
+            b{
+                font-weight: 400;
+            }
+        }
+    }
+    .grid-column-cat{
+        .category-widget{
+            .menuView{
+                > li{
+                    > ul{
+                        display: none !important;  
+                    }
+                }
+            }
+        }
     }
 }
 
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
+
+        .ems-search-result-text{
+            h1{
+                display: block !important;
+            }
+        }
 
     }
 }

@@ -27,6 +27,7 @@ body.view-map{
         top:0px;
         width:100%;
         background: $white;
+        z-index: 1;
         h2{
             display: none;
         }
@@ -168,6 +169,8 @@ body.view-map{
                 &.ems-dsc{
                     color: $grey-9; 
                     font-size:14px;
+                    max-width: 235px;
+                    line-height: 1.43;
                 }
             }
         }

@@ -17,6 +17,14 @@ body{
         }
     }
 }
+
+.ems-page-list.filter-selected{
+    .pnlUrunKiyasSecim{
+        display: flex !important;
+    }
+}
+    
+
     .grid-container{
         .grid-column{
             &.grid-column-flt{
@@ -180,6 +188,7 @@ body{
                         &:before{
                             position: absolute;
                             left:0px;
+                            top:0px;
                             width:40px;
                             font-family: icomoon;
                             font-size:40px;
@@ -189,6 +198,7 @@ body{
                         &:after{
                             position: absolute;
                             right:0px;
+                            top:0px;
                             width:40px;
                             content: "\e90e";
                             font-family: icomoon;
@@ -288,10 +298,13 @@ body{
                 width:100%;
                 cursor: pointer;
                 > span{
+                    b{
+                        margin-right:5px;
+                    }
                     font-size:17px;
                     font-family: $gilroy;
                     font-weight: bold;
-                    @include get-flex(flex,center,space-between);
+                    @include get-flex(flex,center,flex-start);
                     &:after{
                         font-family: icomoon;
                         font-size:40px;
@@ -335,6 +348,9 @@ body{
                 border-radius: 3px;
                 .urunKiyaslamaOzellik_UrunSayi{
                     >span{
+                        b{
+                            font-weight: 400;
+                        }
                         font-family: $proxima;
                         font-weight: 400;
                         &:after{

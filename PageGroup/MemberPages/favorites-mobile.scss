@@ -1,0 +1,113 @@
+.ems-member-favorites{
+    .fav-group{
+        
+    }
+    .fav-item{
+        position: relative;
+        padding: 20px 0;
+        border-top: 1px solid $grey-d;
+        font-family: $proxima;
+        color: $charcoal-grey;
+
+        display: flex;
+        align-items: flex-start;
+    }
+    .fav-media{
+        width: 130px;
+        font-size: 0;
+        margin-bottom: 46px;
+    }
+    .fav-info{
+        width: calc(100% - 130px);
+        padding-left: 10px;
+    }
+
+
+    .fav-name{
+        width: 75%;
+        max-width: 130px;
+        margin-bottom: 30px;
+        font-size: 12px;
+    }
+
+    .fav-piece{
+        margin-bottom: 3px;
+    }
+
+    .fav-price{
+        font-size: 14px;
+        font-weight: 700;
+        [id$="lbfURN_KDVDAHIL"]{
+            display: none;
+        }
+    }
+
+
+    .fav-basket-opt{
+        position: absolute;
+        left: 0;
+        bottom: 20px;
+    }
+    .fav-addCart{
+        .btnSepeteAtFavori{
+            width: 130px;
+            padding: 8px 14px;
+            font-size: 14px;
+            line-height: 1.43;
+            > span{
+                display: block;
+                padding: 0px;
+                background: none;
+                font-size:14px;
+            }
+        }
+    }
+
+    .fav-remove{
+        position: absolute;
+        top: 5px;
+        right: 0;
+        .btnFavoriListeSil{
+            border-radius: 0px;
+            background: none;
+            color: $black !important;
+            padding: 7px;
+            font-size: 10px;
+            i{
+                font-size: 26px;
+            }
+        }
+    }
+
+
+
+
+
+    .ems-page-favorites-empty{
+        display: block !important;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 30px 38px 60px;
+        background-color: $white-three;
+
+        > i{
+            font-size: 80px;
+        }
+        .text{
+            font-family: $proxima;
+            font-size: 16px;
+            text-align: center;
+            color: $charcoal-grey;
+        }
+
+        > a{
+            margin-top: 30px;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.33;
+            padding: 8px 20px;
+            min-width: 180px;
+        }
+    }
+}

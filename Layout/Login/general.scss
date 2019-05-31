@@ -3,7 +3,6 @@
 //
 // ========================================================================
 
-
 /* Login Page Tab Hide-Show */
 .ems-signup{
     display: none;
@@ -202,6 +201,19 @@
  ========================================================================== */
  @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
+            .ems-login-pages-ready{
+                .main-wrapper{
+                    grid-template-areas:
+                    ". HDR HDR ."
+                    ". MAI MAI ."
+                    ". FTR FTR ."
+                    ;
+                    aside{
+                        display: none !important;
+                    }
+                }
+            }
+
             .ems-login{
                 .ems-login-content{
                     display: grid;
@@ -227,8 +239,8 @@
                     }
                     .ems-login-cover{
                         display: block;
-                        border:1px solid yellowgreen;
                         grid-area: ELC;
+                        background-size: cover;
                     }
                 }
             }
@@ -257,8 +269,8 @@
                     }
                     .ems-signup-cover{
                         display: block;
-                        border:1px solid yellowgreen;
                         grid-area: ESC;
+                        background-size: cover;
                     }
                 }
             }

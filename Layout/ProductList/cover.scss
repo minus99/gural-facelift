@@ -25,6 +25,9 @@
         }
         .pl-desc , .pl-cover-count{
             color:$grey-6;
+            .prd-show-text{
+                display: none;
+            }
         }
     }
 }
@@ -39,12 +42,13 @@
        
         .site-page-cover{
             @include get-flex(grid,center,center);
-            grid-template-columns: minmax(530px , auto) auto;
+            grid-template-columns: 2fr 1fr;
+            background: #eee;
             > div{
                 width:inherit;
             }
             .pl-cover-desc{
-                margin-left:40px;
+                padding:0 30px;
                 text-align: left;
                 .pl-title{
                     font-size:35px;

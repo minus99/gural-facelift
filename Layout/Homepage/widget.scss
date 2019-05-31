@@ -1,7 +1,9 @@
 
 .homepage-widget{
-    padding-left:20px;
     margin-bottom:75px;
+    .swiper-inner{
+        padding-left:20px;
+    }
     .swiper-pagination{
         display: none !important;
     }
@@ -11,6 +13,7 @@
     font-weight: bold;
     font-family: $gilroy;
     margin-bottom:25px;
+    padding-left:20px;
 }
 
 .widget{
@@ -37,9 +40,30 @@
  
         .homepage-widget{
             margin-top:80px;
-            padding-left:0;
+            .swiper-inner{
+                padding-left:0;
+            }
             ul.emosInfinite{
                 flex-wrap:inherit;
+            }
+        }
+
+        .widget-view-four , .widget-view-three{
+            .ems-prd{
+                padding-right: 20px;
+            }
+        }
+
+        .widget{
+            ul.emosInfinite{
+                flex-wrap:inherit;
+                .ems-prd{
+                    &.spr10{
+                        &::before{
+                            right:20px;
+                        }
+                    }
+                }
             }
         }
 

@@ -21,9 +21,12 @@
                         }
                     }
                     &.navigasyonSeviye3{
-                        display: none;
+                        display: none;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
                     }
                 }
+            }
+            .bread-crumb-count{
+                display: none;
             }
         }
         .ems-prd-list-filter-button{
@@ -45,8 +48,37 @@
  * Desktop
  *  
  ========================================================================== */
-@supports(grid-area: auto) {
+@supports(grid-area: auto) {    
     @media screen and (min-width: $breakpoint-medium) {
+
+        .ems-page-list.ems-brd-second{
+            .product-list-navigasyon{
+                .navigasyonSeviye1{
+                    &::after{
+                        content:' /';
+                    }
+                }
+                .navigasyonSeviye2{
+                    font-size:25px;
+                    font-weight: bold;
+                    font-family: $gilroy;
+                    display: block;
+                    color:$black;
+                    margin-top:5px;
+                    &::before{
+                        content: none !important;
+                    }
+                }
+                .navigasyonSeviye3{
+                    display: none;
+                }
+                .bread-crumb-count{
+                    display: block;
+                    color:$grey-6;
+                    margin-top:5px;
+                }
+            }
+        }
 
         .ems-page-list{
             .grid-column-brd{

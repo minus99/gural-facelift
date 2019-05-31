@@ -1,10 +1,10 @@
-.aside-menu-ready.mini-login-mobi-ready .ems-user-pages .ems-col:nth-child(1):before{content:"\e93f" !important;}
-.aside-menu-ready.mini-login-mobi-ready .ems-user-pages .ems-col:nth-child(2):before{content:"\e956" !important;}
-.aside-menu-ready.mini-login-mobi-ready .ems-user-pages .ems-col:nth-child(3):before{content:"\e958" !important;}
-.aside-menu-ready.mini-login-mobi-ready .ems-user-pages .ems-col:nth-child(4):before{content:"\e95b" !important;}
-.aside-menu-ready.mini-login-mobi-ready .ems-user-pages .ems-col:nth-child(5):before{content:"\e941" !important;}
-.aside-menu-ready.mini-login-mobi-ready .ems-user-pages .ems-col:nth-child(6):before{content:"\e938" !important;}
-.aside-menu-ready.mini-login-mobi-ready .ems-user-pages .ems-col:nth-child(7):before{content:"\e95a" !important;}
+.aside-menu-ready.mini-login-mobi-ready .ems-user-pages .ems-col:nth-child(2):before{content:"\e93f" !important;}
+.aside-menu-ready.mini-login-mobi-ready .ems-user-pages .ems-col:nth-child(3):before{content:"\e956" !important;}
+.aside-menu-ready.mini-login-mobi-ready .ems-user-pages .ems-col:nth-child(4):before{content:"\e958" !important;}
+.aside-menu-ready.mini-login-mobi-ready .ems-user-pages .ems-col:nth-child(5):before{content:"\e95b" !important;}
+.aside-menu-ready.mini-login-mobi-ready .ems-user-pages .ems-col:nth-child(6):before{content:"\e941" !important;}
+.aside-menu-ready.mini-login-mobi-ready .ems-user-pages .ems-col:nth-child(7):before{content:"\e938" !important;}
+.aside-menu-ready.mini-login-mobi-ready .ems-user-pages .ems-col:nth-child(8):before{content:"\e95a" !important;}
 
 
 
@@ -373,6 +373,7 @@ body{
             background: $white;
             width: 94.7%;
             padding:10px 10px 0px 10px;
+            overflow-y: auto;
             .ems-form{
                 .form-title{
                     display: none;

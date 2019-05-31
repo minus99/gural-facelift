@@ -18,7 +18,7 @@ body{
     -webkit-tap-highlight-color: rgba(0,0,0,.05);
 
     font-size: 15px;
-    font-family: $proxima;
+    font-family: $proxima , Arial, Helvetica, sans-serif;
     overflow-y: auto;
     overflow-x: hidden;
     font-weight: 400;
@@ -87,6 +87,9 @@ img {
  ========================================================================== */
 .img-responsive{ width: 100%; }
 .scroll-hidden { overflow: hidden !important; }
+.category-widget .swiper-cat-hidden{
+    display: none !important;
+}
 .relative{
     position: relative;
 }
@@ -106,7 +109,6 @@ img {
     justify-content: center;
     width: 36px;
     height: 36px;
-    border: 1px solid $alto;
     border-radius: 50%;
     font-size: 12px;
 }
@@ -138,6 +140,14 @@ img {
     display: block;
 }
 
+
+body .emos-confirm{
+    width:98% !important;
+    margin: 0 auto;
+}
+
+
+
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
         .visible\@m{
@@ -146,5 +156,10 @@ img {
         .hidden\@m{
             display: none;
         }
+        body .emos-confirm{
+            width:500px !important;
+        }
+
+
     }
 }

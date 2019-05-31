@@ -67,6 +67,9 @@
                         background: $light-grey;
                         font-family: $proxima;
                         font-weight: 400;
+                        .s3{
+                            display: none;
+                        }
                         a{
                             display: block;
                             line-height: 2.6;
@@ -133,7 +136,7 @@
     @media screen and (min-width: $breakpoint-medium) {
     
         .ems-page-accounts{
-            .aside-menu{
+            .aside-menu{ 
                 .kutuBodyKategori{
                     display: none;
                 }
@@ -207,6 +210,17 @@
                     .menuView{
                         max-width: 260px;          
                         li.s1{
+                            > b{
+                                visibility: hidden;
+                                opacity: 0;
+                                transition: opacity .3s;
+                            }
+                            &:hover{
+                                > b{
+                                    visibility: visible;
+                                    opacity: 1;
+                                }
+                            }
                             &:first-child{
                                 padding-top:0px;
                             }
@@ -265,6 +279,8 @@
                             }
                             &.opened{
                                 > b{
+                                    visibility: visible !important;
+                                    opacity: 1;
                                     &::after{
                                         content:"\e939";
                                     }
@@ -273,6 +289,7 @@
                         }
                     }
                     .ems-find-store-btn{
+                        padding-left:0px;
                         flex-direction: row-reverse;
                         justify-content: flex-end;
                     }
@@ -297,6 +314,6 @@
 .aside-menu .menuKategori > li.mutfak > a::before{content:"\e93a";}
 .aside-menu .menuKategori > li.sunum > a::before{content:"\e959";}
 .aside-menu .menuKategori > li.gastro > a::before{content:"\e930";}
-.aside-menu .menuKategori > li.el-dekoru > a::before{content:"\e925";}
+.aside-menu .menuKategori > li.el-dekoru > a::before{content:"\e924";}
 .aside-menu .kutuKategori .kutuBodyKategori .menuKategori > li.yildizli > a{color:$carmine !important;}
 .aside-menu .kutuKategori .menuKategori > li.yildizli > a::before{content:"\e93d";color:$carmine}

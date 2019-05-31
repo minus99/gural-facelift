@@ -3,12 +3,13 @@
         grid-template-columns: 100% !important;
         .ems-page-cart-colmn-1{
             .ems-card-status{
-                height:330px;
+                min-height:330px;
                 background: $white-three;
                 @include get-flex(flex,center,center);
                 flex-wrap: wrap;
                 align-content: center;
                 text-align: center;
+                padding:40px 0px;
                 &-icon{
                     width:100%;
                     i{
@@ -29,6 +30,23 @@
                         font-weight: 400;
                     }
                 }
+                &.ems-card-status-err{
+                    .ems-card-status-icon{
+                        i{
+                            &::after{
+                                content: '\e923';
+                                font-size: 30px;
+                                border-radius: 100%;
+                                background: $carmine;
+                                color: $white;
+                                position: absolute;
+                            }
+                        }
+                    }
+                }
+            }
+            .pageSiparisSonuc_btnSiparisSonuc{
+                display: none;
             }
         }
         .ems-page-cart-colmn-2{
@@ -133,7 +151,7 @@
                                  margin-left:0px;
                              }
                             .gridSepetListe_gercekFiyat ~ [id$="lblURN_INDIRIMLIFIYAT"] .satBrFiyatVrg:before{
-                                content: 'İnidirimli fiyat';
+                                content: 'İndirimli fiyat';
                                 margin-right:2px;
                             }
                             /**/
@@ -185,7 +203,7 @@
                         .ems-grid-price-total{
                             @include get-flex(flex,center,center);
                             .discountRatio{
-                                @include get-flex(flex,center,center);
+                                @include get-flex(none,center,center);
                                 border-radius: 3px;
                                 margin-right: 10px;
                                 width: 36px;
@@ -246,6 +264,7 @@
                             text-decoration: underline;
                             font-size:14px;
                             color:$charcoal-grey;
+                            cursor: pointer;
                         }
                         .summary-title{
                             font-size:20px;
@@ -254,7 +273,7 @@
                         }
                     }
                     &-body{
-                        display: block;
+                        display: none;
                         position: relative;
                         input{
                             width:100% !important;
@@ -274,7 +293,7 @@
                     }
                     &.opened{
                         .ems-cart-summary-coupon-body{
-                            display: none;
+                            display: block;
                         }
                     }
                 }
@@ -299,6 +318,7 @@
                     margin-top:15px;
                     a.btnDefault{
                         width:100%;
+                        margin-bottom:10px;
                     }
                 }
             }
@@ -370,7 +390,3 @@
 
     }
 }
-
-
-
-

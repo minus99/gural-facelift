@@ -93,7 +93,7 @@
                     @include get-flex(flex,center,space-between);
                     span{
                         width:48%;
-                        color:$grey-d;
+                        color:$grey-9;
                     }
                 }
                 .tableOdemeBilgiKrediKarti_tdtxtKKARTCVCNO{
@@ -174,7 +174,7 @@
         .ems-payment-info-title{
             @include get-flex(flex,center,space-between);
             cursor: pointer;
-            border:1px solid $grey-d;   
+            border:1px solid $greyish-brown;   
             border-radius: 3px;
             margin-top: 10px;    
             i , span{
@@ -307,8 +307,7 @@
             display: none !important;
         }
         #imgBANKALOGO{
-            border:1px solid red;
-            height:54px;
+            height:25px;
             width: auto;
             margin:5px 50px 2px 50px;
         }

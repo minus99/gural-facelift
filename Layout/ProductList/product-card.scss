@@ -5,10 +5,38 @@
 
 .ems-prd-list{
     ul.emosInfinite{
-        margin-top:30px;
+        margin-top:15px;
         .ems-prd{
-            width:calc(50% - 30px);
-            margin:20px 15px ;
+            width:calc(100% - 30px);
+            margin:20px auto;
+        }
+    }
+}
+.tekli{
+    .ems-prd-list{
+        ul.emosInfinite{
+            .ems-prd{
+                width:calc(100% - 30px);
+            }
+        }
+    }
+}
+.ikili{
+    .ems-prd-list{
+        ul.emosInfinite{
+            .ems-prd{
+                width:calc(50% - 30px);
+                .ems-prd-price{
+                    width: 100%;
+                }
+                .ems-prd-last-prd{
+                    width:100%;
+                    margin:5px 0px;
+                    span{
+                        text-align: left;
+                    }
+                }
+            }
         }
     }
 }
@@ -19,6 +47,18 @@ ul.emosInfinite{
     display: flex;
     flex-wrap:wrap;
     .ems-prd{
+        position: relative;
+        &.spr10{
+            &:before{
+                content:' \e958';
+                font-family: 'icomoon';
+                font-size:40px;
+                position: absolute;
+                right:0px;
+                z-index: 1;
+                color:$carmine;
+            }
+        }
         &-inner{
             position: relative;
         }
@@ -57,7 +97,7 @@ ul.emosInfinite{
             }
         }
         &-price{
-            width:50%;
+            width:65%;
             @include get-flex(flex,center,flex-start);
             &-first{
                 font-size:15px;
@@ -93,7 +133,7 @@ ul.emosInfinite{
             }
         }
         &-last-prd{
-            width:50%;
+            width:35%;
             > div {
                 display: block !important;
                 font-size:12px;
@@ -123,7 +163,12 @@ ul.emosInfinite{
 
 
 /* Product List No product & no result */
-.ems-page-product-list{
+.ems-page-product-list , .ems-ntf-404{
+    .ems-product-list-empty-layout{
+        .grid-column-cat , .ems-header-breadcrumb .ems-prd-list-filter-button{
+            display: none;    
+        }
+    }
     .ems-empty{
         margin:20px;
         height:260px;
@@ -187,12 +232,35 @@ ul.emosInfinite{
         ul.emosInfinite{
             display: grid !important;
             grid-template-columns: repeat(3, 1fr);
-            grid-gap: 60px;
+            grid-column-gap: 60px;
             .ems-prd{
                 width:inherit;
             }
         }
-    }        
+    }   
+    .dortlu{
+        .ems-prd-list{
+            ul.emosInfinite{
+                display: grid !important;
+                grid-template-columns: repeat(4, 1fr);
+                grid-column-gap: 60px;
+                grid-row-gap: 10px;
+                .ems-prd{
+                    width:inherit;
+                    .ems-prd-price{
+                        width:100% !important;
+                    }
+                    .ems-prd-last-prd{
+                        width:100%;
+                        margin-top:5px;
+                        span{
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }      
+    }
     
     /* Product List No product & no result */
     .ems-page-product-list{

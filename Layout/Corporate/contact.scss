@@ -37,7 +37,7 @@
                     }
                 }
                 .tableMesajGonder_mesajIcerik{
-                    table{
+                    table{  
                         tr{
                             margin-bottom:20px;
                             th{
@@ -51,6 +51,9 @@
                             }
                             td{
                             
+                            }
+                            &.tableMesaj_trUYM_URNKOD{
+                                display: none !important;
                             }
                         }
                     }
@@ -76,7 +79,7 @@
             }
         }
         .ems-page-contact-info{
-            height:400px;
+            padding-bottom: 40px;
             grid-area: ci;
             .ems-page-corporate-desc{
                 > b{
@@ -117,13 +120,15 @@
                 grid-template-areas: 
                 "bc bc"
                 "cf ci";
-                grid-template-columns: 335px;
+                grid-template-columns: 40% 335px;
                 .ems-page-contact-form{
                     padding:0px;
                 }
                 .ems-page-contact-info{
                     position: sticky;
                     top:100px;
+                    padding-bottom: inherit;
+                    height:400px;
                     .ems-page-corporate-desc{
                         b{
                             margin:10px 0px;

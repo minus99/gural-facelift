@@ -84,6 +84,7 @@
             height:100vh;
             img{
                 width:inherit !important;
+                cursor: zoom-in;
             }
         }
         .swiper-button-next , .swiper-button-prev{
@@ -143,6 +144,9 @@
                     display: inherit;
                 }
             }
+            .swiper-pagination{
+                display: none;
+            }            
         }
         .zoom-gallery{
             &.gallery-ready{

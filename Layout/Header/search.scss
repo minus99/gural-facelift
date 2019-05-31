@@ -162,8 +162,48 @@
                             &:nth-child(4){
                                 overflow: hidden;
                                 display: block;
-                                margin-left:110px;
+                                margin-left:154px;
                                 font-weight: bold;
+                            }
+                            &:nth-child(6){
+                                overflow: hidden;
+                                display: block;
+                                margin-left:154px;
+                                margin-top:5px;
+                                > span{
+                                    display: inline-block !important;
+                                    position: relative;
+                                    &::after{
+                                        content:'';
+                                        position: absolute;
+                                        left:0px;
+                                        right:0px;
+                                        top:50%;
+                                        transform:translateY(-50%);
+                                        height:4px;
+                                        background: $light-peach;
+                                        z-index: -1;
+                                    }
+                                }
+                            }
+                            &:nth-child(9){
+                                overflow: hidden;
+                                display: block;
+                                margin-left:110px;
+                                > span{
+                                    @include get-flex(flex,center,center);
+                                    position: absolute;
+                                    background: $light-peach;
+                                    width:36px;
+                                    height:36px;
+                                    border-radius: 3px;
+                                    >span{
+                                        &::before{
+                                            content:'%';
+
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -289,7 +329,8 @@ body.search-keyup{
                 .prd{
                     width:336px;
                     padding-right:20px;
-                    overflow-x:auto;
+                    overflow-y:scroll;
+                    overflow-x:hidden;
                     height: 420px;
                 }
                 .cat{
@@ -322,6 +363,15 @@ body.search-keyup{
                 }
                 .ems-search-body{
                     max-width: 600px;
+                    @include get-flex(flex !important,inherit,flex-start);
+                    .last-search{
+                        overflow-y: scroll;
+                        width:50%;
+                        height:300px;
+                    }
+                    .search-populer-words{
+                        width:50%;
+                    }
                 }
             }
         }

@@ -1,0 +1,143 @@
+.ems-member-order-detail{
+
+    .order-again{
+        position: initial;
+        margin-bottom: 15px;
+        text-align: right;
+    }
+    // ORDER INFO
+    // ========================================================================
+    .order-detail-holder{
+        padding: 30px 25px 40px;
+        border-radius: 3px;
+        border: solid 1px $grey-d;
+    }
+    .order-detail-title{
+        margin-bottom: 12px;
+    }
+    .order-detail-info{
+        border-width: 0;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        height: 275px;
+        &:before{
+            content: "";
+            position: absolute;
+            left: 325px;
+            width: 1px;
+            height: 100%;
+            background: $grey-d;
+        }
+        > div{
+            width: 360px;
+            padding-right: 60px;
+        }
+    }
+
+
+    // ADDRESS
+    // ========================================================================
+    .order-address-group{
+        display: flex;
+        margin-top: 30px;
+    }
+    .order-address{
+        width: calc((100% - 26px) / 2);
+        &:first-child{
+            margin-right: 26px;
+        }
+        + .order-address{
+            margin-top: 0px;
+        }
+    }
+
+    // CART
+    // ========================================================================
+    .order-cart-holder{
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    .order-cart-title{
+    }
+
+    .order-cart-inner{
+
+    }
+
+    .order-prd{
+        display: flex;
+        padding: 20px 0;
+        border-bottom: 0;
+    }
+
+    .order-prd-media{
+        width: 100px;
+        font-size: 0;
+    }
+
+    .order-prd-info{
+        width: calc(100% - 110px);
+        display: flex;
+        flex-direction: column;
+
+        .order-prd-name{
+            order: 2;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        .order-prd-piece{
+            order: 3;
+            margin-bottom: 0px;
+            span{
+                + span{
+                    margin-left: 4px;
+                }
+            }
+        }
+        .order-prd-price{
+            order: 1;
+            margin-bottom: 5px;
+        }
+        .order-prd-prices{
+            display: inline-block;
+            font-family: $proxima;
+            font-size: 14px;
+            font-weight: 400;
+            color: $charcoal-grey;
+            > span:not([id$="lblURN_INDIRIMLIFIYAT"]){
+                margin-bottom: 1px;
+                text-decoration: none !important;
+                position: relative;
+                &:before{
+                    content: "";
+                    background: $light-peach;
+                    width: 110%;
+                    height: 30%;
+                    position: absolute;
+                    left: 50%;
+                    top: 45%;
+                    transform: translate(-50%, -50%);
+                    z-index: -1;
+                }
+            }
+            [id$="lblURN_INDIRIMLIFIYAT"]{
+                font-weight: bold;
+            }
+        }
+    }
+
+    .cancel-order{
+        margin-top: 30px;
+        text-align: right;
+        .btnSipIptal{
+            max-width: 230px;
+        }
+    }
+}

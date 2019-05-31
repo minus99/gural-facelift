@@ -16,11 +16,15 @@
        div.ems-page-detail{
            display: grid;
            grid-template-columns: 100%;
+           grid-row-gap: 30px;
            > .grid-column{
            }
            .grid-column-dtl{
                 
            }    
+           .grid-column-dtl-bnr{
+               max-width: 100% !important;
+           }
        }
         
     }

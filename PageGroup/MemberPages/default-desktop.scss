@@ -1,0 +1,41 @@
+// BREADCRUMB STYLES
+// ========================================================================
+.ems-breadcrumb{
+    background: none;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.bc-route{
+    > div{
+        display: inline-block;
+        color: $grey-6; 
+    }
+    .bc-slash{
+        margin: 0 3px;
+    }
+}
+
+
+// CONTENT WRAPPER
+// ========================================================================
+.ems-member-page-content{
+    padding: 0;
+}
+
+
+// CONTENT
+// ========================================================================
+.ems-member-inner{
+}
+.ems-member-page-title{
+    display: block;
+
+    font-family: $gilroy;
+    font-size: 25px;
+    font-weight: bold;
+    color: $black;
+}
+.ems-member-icr{
+    margin-top: 30px;
+}

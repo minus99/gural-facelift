@@ -56,7 +56,7 @@ select{
     &:not(.ui-datepicker-month):not(.ui-datepicker-year){
         padding: 10px 16px;
         &:focus{
-            border: 1px solid $emperor;
+            border: 1px solid $grey-d;
         }
     }
 }
@@ -180,8 +180,8 @@ input[type="radio"]{
     padding: 0;
 }
 input[type="radio"]:checked{
-    border-color: $frenchRose;
-    background-color: $frenchRose;
+    border-color: $carmine;
+    background-color: $carmine;
 }
 
 //-------------------------------------------//
@@ -218,7 +218,7 @@ input[type="radio"]:checked{
         }
         > span:last-child{
             font-size: 16px;
-            color: $emperor;
+            color: $grey-9;
             line-height: 1.44;
             //margin-top: 5px;
             a{
@@ -246,7 +246,7 @@ input[type="radio"]:checked{
         input:not([type="checkbox"]):not([type="radio"]),
         select,
         textarea{
-            border: 1.35px solid $frenchRose;
+            border: 1.35px solid $carmine;
         }
     }
 }

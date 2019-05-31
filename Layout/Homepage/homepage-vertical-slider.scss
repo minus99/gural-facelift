@@ -17,20 +17,48 @@
                 grid-template-columns: minmax(auto , 1fr) minmax( auto , 330px);
                 grid-template-rows: minmax(800px , auto);
                 grid-column-gap: 45px;
+                position: relative;
                 .grid-item{
                     position: relative;
                     &.grid-one{
+                        overflow: hidden;
                         > div{
                             height:100%;
-                            background-size:cover;
                             background-position: center;
                             background-repeat: no-repeat;
+                            background-size:cover;
+                            &::after{
+                                content:'';
+                                position: absolute;
+                                width:100%;
+                                height:100%;
+                                background: linear-gradient(to top, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 100%);
+                                left:0px;
+                                bottom:0px; 
+                                transition: height .8s cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+                            }
+                            &:hover{
+                                .content{
+                                    transform:translate(-50% , -60%);
+                                    transition-duration: 3s;
+                                }
+                                img{
+                                    transform: scale(1.05);
+                                    transition-duration: 3s;
+                                }
+                                &:after{
+                                    height:30%;
+                                    transition-duration: 3s;
+                                }
+                            }
                         }
                         .content{
                             position: absolute;
                             top:50%;
                             left:50%;
                             transform:translate(-50% , -50%);
+                            transition: transform .8s cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+                            z-index: 1;
                             span{
                                 font-family: $gilroy;
                                 font-weight: bold;
@@ -48,6 +76,7 @@
                                 font-family: $gilroy;
                                 font-weight: 400;
                                 font-size:25px;
+                                z-index: 1;
                             }
                         }
                         .buttons{
@@ -55,6 +84,7 @@
                             width:100%;
                             height: 100px;
                             bottom:0px;
+                            z-index: 1;
                             @include get-flex(flex,center,space-evenly);
                             .btnLine{
                                 position: relative;
@@ -63,8 +93,13 @@
                                 transform: inherit;
                                 font-size:17px;
                                 font-weight: bold;
+                                transition: bottom .2s cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
                                 &::after{
                                     font-weight: 400;
+                                }
+                                &:hover{
+                                    color:$white;
+                                    bottom:5px;
                                 }
                             }
                         }
@@ -85,6 +120,26 @@
                                 top:auto;
                             }
                         }
+                    }
+                }
+                &.new-banner-icon{
+                    position: relative;
+                    &::before{
+                    @include get-flex(flex,center,center);
+                    content: 'YENİ';
+                    position: absolute;
+                    z-index: 99;
+                    width: 70px;
+                    height: 70px;
+                    background: $light-peach;
+                    text-align: center;
+                    border-radius: 100%;
+                    transform: rotate(-15deg);
+                    top: 30px;
+                    left: -20px;
+                    font-size:18px;
+                    font-family: $gilroy;
+                    font-weight: bold;
                     }
                 }
             }

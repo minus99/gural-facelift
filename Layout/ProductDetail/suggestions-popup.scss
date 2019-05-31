@@ -39,6 +39,13 @@
                         font-weight: bold;
                     }
                 }
+                a{
+                    display: block;
+                    text-align: left;
+                    margin-left:20px;
+                    margin-bottom: 5px;
+                    font-size:13px;
+                }
             }
         }
     }
@@ -118,6 +125,7 @@
                     font-size:22px;
                     font-weight: bold;
                     font-family: $gilroy;
+                    margin-bottom:20px;
                 }
             }
             .custom-popup-footer{

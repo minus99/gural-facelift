@@ -2,9 +2,7 @@
 // Component:       Product List Footer
 //
 // ========================================================================
-.ems-prd-list-footer{
-    
-}
+
 
 
 
@@ -12,17 +10,18 @@
  * Desktop
  *  
  ========================================================================== */
-@supports(grid-area: auto) {
-    @media screen and (min-width: $breakpoint-medium) {
+    @media screen and (max-width: $breakpoint-medium) {
 
         .ems-prd-list-footer{
-
-        }
-
-
-        .ems-prd-list-paging{
-            
+            .ems-prd-list-paging{
+                display: block;
+                margin-bottom:20px;
+                .urunListePagingAlt{
+                    [id$="lnkNext"] , [id$="lnkPrev"]{
+                        display: none !important;
+                    }
+                }
+            }
         }
 
     }
-}

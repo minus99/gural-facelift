@@ -17,7 +17,6 @@
     @include get-flex(flex,center,space-between);
     > div {
         @include get-flex(flex,center,center);
-        cursor: pointer;
         flex-wrap: wrap;
         text-align: center;
         i {

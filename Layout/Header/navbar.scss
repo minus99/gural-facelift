@@ -1,7 +1,10 @@
 /* Navbar Logo & Right Menu */
-
 .navbar-holder{
     @include get-flex(flex,center,space-around);
+    background: $white;
+    position: fixed;
+    width:100%;
+    top:0px;
     flex-wrap: wrap;
     .navbar-item-alternate-icons{
         width:33%;
@@ -24,6 +27,9 @@
 
 .sticky-header-ready{
     .site-header{
+        .navbar-holder{
+            padding-bottom:0px;
+        }
         .navbar-item-search{
             display:none;
         }
@@ -44,13 +50,17 @@
 }
 
 .site-header{
-    position: sticky;
     top: 0px;
     z-index:1000;
     background: $white;
     width:100%;
+    position: relative;
+    height: 48px;
 }
 
+.ems-page-home .site-header , .ems-login-pages-ready .site-header{
+    height:100px !important;
+}
 
 /*  Media Query ========= */
 @supports(grid-area: auto) {
@@ -66,7 +76,9 @@
             }
         }
 
-        
+        .ems-page-home .site-header , .ems-login-pages-ready .site-header{
+            height: 80px !important;
+        }
 
         .site-header{
             height: 80px;
@@ -78,6 +90,8 @@
                 height:inherit;
                 grid-template-columns: minmax(240px , 1fr) minmax(auto,600px) minmax(240px , 1fr);
                 grid-template-areas: "LGO SCH NBR";
+                left:0px;
+                padding:0px 50px;
                 > div{
                     width:inherit !important;
                 }

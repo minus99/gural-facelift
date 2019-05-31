@@ -10,6 +10,7 @@
 			   url(#{$baseHref + $url + '.ttf'}) format('truetype');
 		font-weight: $fontWeight;
 		font-style: $fontStyle;
+		font-display: swap;
 	}
 }
 
@@ -63,7 +64,7 @@
 
 			/* width */
 			::-webkit-scrollbar {
-				width: 3px;
+				width: 10px;
 			}
 			
 			/* Track */
@@ -75,6 +76,14 @@
 			::-webkit-scrollbar-thumb {
 				background: #d2cac5; 
 			}
+
+			-webkit-font-smoothing:antialiased;
+			-moz-font-smoothing:none;
+			font-smoothing:antialiased;
+			text-rendering:optimizeLegibility!important;
+			-moz-osx-font-smoothing:grayscale!important;
+
+
 
 		}
 	}
