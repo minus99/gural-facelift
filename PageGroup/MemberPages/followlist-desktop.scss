@@ -1,5 +1,15 @@
 .ems-member-follow-list{
 
+    .ems-grid-default-follow-price{
+        .ems-grid-row{
+            .ems-grid-price , .ems-grid-price2{
+                [id$="lbfURN_ILKKDVDAHIL"] , [id$="lbfURN_KDVDAHIL"]{
+                    display: none;
+                }
+            }
+        }
+    }
+
     // Tab display selectbox
     .ems-tab-menu-selecbox{
         display: none;
@@ -46,7 +56,8 @@
         .ems-grid-code,
         .ems-grid-name,
         .ems-grid-date,
-        .ems-grid-price{
+        .ems-grid-price,
+        .ems-grid-price2{
             width: calc((100% - 150px) / 4) !important;
             padding: 12px 3% !important;
         }
@@ -62,14 +73,17 @@
             .ems-grid-code,
             .ems-grid-name,
             .ems-grid-date,
-            .ems-grid-price{
+            .ems-grid-price,
+            .ems-grid-price2{
                 order: 0;
                 margin-bottom: 0px;
                 margin-right: 0px;
                 font-size: 14px;
                 font-weight: 400;
             }
-
+            .ems-grid-price{
+                text-decoration: line-through
+            }
             .ems-grid-remove{
                 top: 50%;
                 transform: translateY(-50%);
