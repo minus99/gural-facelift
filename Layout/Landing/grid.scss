@@ -156,6 +156,7 @@
                 }
             }
             .landing-text-area{
+                margin-bottom:50px;
                 .title{
                     font-size:35px;
                     font-weight: bold;
@@ -168,6 +169,10 @@
                     text-align: center;
                     color:$grey-6;
                     line-height: 1.4;
+                    margin-bottom:30px;
+                }
+                .down-icon{
+                    text-align: center;
                 }
             }
             .landing-binary{
