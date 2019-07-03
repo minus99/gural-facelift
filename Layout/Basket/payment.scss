@@ -479,6 +479,11 @@
             .ems-cart-agreement{
                 display: block;
                 margin-top:40px;
+                .sepetListe{
+                    .urunResmi{
+                        width:100px;
+                    }
+                }
                 .siparisOnaySozlesme , .onBilgilendirmeForm{
                     border:1px solid $grey-d;
                     padding:20px;
