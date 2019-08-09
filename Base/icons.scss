@@ -15,6 +15,53 @@
 
 
 /*  */
+
+.icon-ramadan:before {
+  content: "\e96d";
+}
+.icon-father-day:before {
+  content: "\e96e";
+}
+.icon-mothere-day:before {
+  content: "\e96f";
+}
+.icon-wedding:before {
+  content: "\e970";
+}
+.icon-smallappliances:before {
+  content: "\e971";
+}
+.icon-hometextiles:before {
+  content: "\e972";
+}
+.icon-campaign-day:before {
+  content: "\e973";
+}
+.icon-sacrifice:before {
+  content: "\e974";
+}
+.icon-christmas:before {
+  content: "\e975";
+}
+.icon-sun:before {
+  content: "\e976";
+}
+.icon-winter:before {
+  content: "\e977";
+}
+.icon-spring .path1:before {
+  content: "\e978";
+  color: rgb(42, 45, 55);
+}
+.icon-spring .path2:before {
+  content: "\e979";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-autumn:before {
+  content: "\e97a";
+}
+
 .icon-tc:before {
   content: "\e96c";
 }

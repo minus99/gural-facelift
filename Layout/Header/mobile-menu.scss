@@ -315,5 +315,18 @@
 .aside-menu .menuKategori > li.sunum > a::before{content:"\e959";}
 .aside-menu .menuKategori > li.gastro > a::before{content:"\e930";}
 .aside-menu .menuKategori > li.el-dekoru > a::before{content:"\e924";}
-.aside-menu .kutuKategori .kutuBodyKategori .menuKategori > li.yildizli > a{color:$carmine !important;}
+.aside-menu .menuKategori > li.ramazan > a::before{content:"\e96d";}  //ramazan
+.aside-menu .menuKategori > li.father-day > a::before{content:"\e96e";} //babalar Günü
+.aside-menu .menuKategori > li.mother-day > a::before{content:"\e96f";} // Anneler Günü
+.aside-menu .menuKategori > li.wedding > a::before{content:"\e970";} // Düğün
+.aside-menu .menuKategori > li.smallappliances > a::before{content:"\e971";} // Küçük Ev Aletleri
+.aside-menu .menuKategori > li.hometextiles > a::before{content:"\e972";} // Ev Tekstili
+.aside-menu .menuKategori > li.campaign-day > a::before{content:"\e973";} // Kampanya İkonu
+.aside-menu .menuKategori > li.sacrifice > a::before{content:"\e974";} // Kurban Bayramı
+.aside-menu .menuKategori > li.christmas > a::before{content:"\e975";} // Yılbaşı İkon
+.aside-menu .menuKategori > li.sun > a::before{content:"\e976";} // Yaz Sofraları
+.aside-menu .menuKategori > li.winter > a::before{content:"\e977";} // Kış Sofraları
+.aside-menu .menuKategori > li.spring > a::before{content:"\e978";} // İlkbahar
+.aside-menu .menuKategori > li.autumn > a::before{content:"\e97a";} // Sonbahar
 .aside-menu .kutuKategori .menuKategori > li.yildizli > a::before{content:"\e93d";color:$carmine}
+.aside-menu .kutuKategori .kutuBodyKategori .menuKategori > li.yildizli > a{color:$carmine !important;}
