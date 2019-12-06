@@ -99,6 +99,10 @@
         }
     }
 
+    .dtl-bnr-collection{
+        display: none;
+    }
+
 }
 
 
@@ -203,6 +207,74 @@
                     &.left{
                         .landing-binary-content{
                             padding-left:50px;
+                        }
+                    }
+                }
+            }
+            .dtl-bnr-collection{
+                display: grid !important;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 606px;
+                .dtl-bnr-collection-item{
+                    padding-top: 90px;
+                    .content{
+                        max-width: 645px;
+                        color:$light-grey;
+                        position: relative;
+                        z-index: 1;
+                    }
+                    &.left{
+                        background-image:url('/UPLOAD/facelift-banner/homepage-banner/gural-anasayfa-img-03@1x.jpg');
+                        background-position: center;
+                        background-size:140%;
+                        display: flex;
+                        justify-content: flex-end;
+                        position: relative;
+                        padding-left:40px;
+                        &::after{
+                            content: '';
+                            background: rgba($color: #000000, $alpha: 0.5);
+                            position: absolute;
+                            left:0px;
+                            top:0px;    
+                            width:100%;
+                            height:100%;
+                            z-index: 0;
+                        }
+                        .content{
+                            h2{
+                                font-size:25px;
+                                font-family: $gilroy;
+                            }
+                            p{
+                                margin-top:45px;
+                                font-size:22px;
+                                line-height: 1.18;
+                                margin-right:50px;
+                            }
+                        }
+                    }
+                    &.right{
+                        background: $greyish-brown;
+                        .content{
+                            padding-left:50px;
+                            .title{
+                                @include get-flex(flex,center,flex-start);
+                                font-weight: bold;
+                                span{
+                                    margin-left:10px;
+                                }
+                            }
+                            ul{
+                                margin-top:50px;
+                                padding-left:50px;
+                                li{
+                                    line-height:1.33;
+                                    font-size:15px;
+                                    font-family: $proxima;
+                                    text-transform: uppercase;
+                                }
+                            }
                         }
                     }
                 }
